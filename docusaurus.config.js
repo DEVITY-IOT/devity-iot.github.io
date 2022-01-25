@@ -13,8 +13,9 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'DEVITY', // Usually your GitHub org/user name.
-  projectName: 'Device onboarding', // Usually your repo name.
+  organizationName: 'DEVITY-IOT', // Usually your GitHub org/user name.
+  projectName: 'devity-iot.github.io', // Usually your repo name.
+  deploymentBranch: 'main',
 
   presets: [
     [
