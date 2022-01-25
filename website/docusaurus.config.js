@@ -15,7 +15,6 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'DEVITY-IOT', // Usually your GitHub org/user name.
   projectName: 'devity-iot.github.io', // Usually your repo name.
-  deploymentBranch: 'main',
 
   presets: [
     [
