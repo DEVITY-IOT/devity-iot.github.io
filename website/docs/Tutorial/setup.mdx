@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="x86" label="x86" default>
 
-Download package for **[x86 architecture](./assets/test.docx)**.  
+Download package for **[x86 architecture](./assets/demo_test_device_1_x86.tar.gz)**.  
 Alternatively you can use this curl command:  
 ```
 curl -o devity_onboarding_package.tar.gz "https://path/to/download/package/demo_x86.tar.gz"
@@ -23,7 +23,7 @@ curl -o devity_onboarding_package.tar.gz "https://path/to/download/package/demo_
   </TabItem>
   <TabItem value="armv7" label="armv7">
 
-Download package for **[armv7 architecture](./assets/test.docx)**.  
+Download package for **[armv7 architecture](./assets/demo_test_device_1_x86.tar.gz)**.  
 Alternatively you can use this curl command:  
 ```
 curl -o devity_onboarding_package.tar.gz "https://path/to/download/package/demo_armv7.tar.gz"
@@ -39,13 +39,30 @@ Make sure that your current user that read, write and execution permission in th
 tar -xvf devity_onboarding_package.tar.gz
 ``` 
   
-**Is a picture here usefull?**  
+In the package you just unpacked are three sperate software packages.
+The package should look like this.
+```
+.
+├── cert_management
+│   ├── cert_man
+│   ├── config
+│   └── creds
+├── conf_management
+│   ├── bin
+│   │   └── conf_man
+│   ├── conf.d
+│   └── templates
+├── initial
+│   ├── data
+│   ├── linux-client
+└── mqtt_client
+    └── demo-client
+```
   
-In the package you just unpacked are three sperate software packages:
 - Initial onboarding
   - Recieves initial data and configurations
 - Configuration management
-  - Generates and updates configurations for other apllications(e.g. certificate management)
+  - Generates and updates configurations for other apllications (e.g. certificate management)
 - Certificate management
   - Generates new certificates and renews them when expiring
 

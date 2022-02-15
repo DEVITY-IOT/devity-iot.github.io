@@ -5,7 +5,7 @@ slug: /
 
 # Introduction
 
-## Status
+## Goal
 
 This tutorial will guide you through the DEVITY device onboarding process.
 It will work on Linux machines compatible with x86 or armv7 architecture.
@@ -16,6 +16,25 @@ After the onboarding is complete you can run a MQTT client.
 It connects to a MQTT broker we make available.
 Then it authenticates via certificates that are generated during the onboarding process.
 
+## Overview
+
+Device onboarding process describes the process of configurating and putting secrets onto a device.
+These are then used to interact with IoT platforms and send data securely.
+Current state of the art is that the onboarding process of devices is done manually by a technician.
+The DEVITY onboarding process is seperated into three main steps.
+- Preprovisioning
+- Shipment of the device and configuration of the device
+- Installation in the shopfloor
+
+The preprovisioning step is done during the manufacturing process of the device.
+It consists of generating the device identity and placing the DEVITY software on the device.
+Additionally, the device is registrated at our services.
+After that, the device can be sold and shiped to the customer.
+During shipment the customer can use our webapp to configure the device to his likings.
+When it arrives and gets "unboxed" and started up for the first time our software conntects to our services.
+Then it receives the previsiosly estabiled configuration data.
+With that the DEVITY device onboarding process is complete.
+
 ## Approach
 
 Here we assume that the device has already been preprovisioned during the manufacturing process.
@@ -24,7 +43,7 @@ During the onboarding process the device will connect to these services to recie
 
 To run the onboarding process you will be guided through these three simple steps.
 - Setup
-    - Download and place our software on your device
+    - Download and place our software with a generated identity on your device
 - Configuration
     - Configure the device to your needs
 - Execution
