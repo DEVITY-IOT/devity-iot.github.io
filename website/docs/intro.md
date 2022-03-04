@@ -43,9 +43,9 @@ During the onboarding process the device will connect to these services to recie
 
 To run the onboarding process you will be guided through these three simple steps.
 - Setup
-    - Download and place our software with a generated identity on your device
+    - Download and place our preprovisioned software package on our device
 - Configuration
-    - Configure the device to your needs
+    - Configure the device to run the example program
 - Execution
     - Complete the DEVITY onboarding process and run an example MQTT client
 

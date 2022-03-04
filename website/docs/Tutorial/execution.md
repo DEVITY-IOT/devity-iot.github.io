@@ -11,45 +11,70 @@ Under normal circumstances these terminals are not neccessary because the proces
 ## Initial onboarding
 
 First you will need to complete the initial setup of the device.
+This will get the certificates and configuration data from our services that our other tools will use to authenticate.
+For this a secure channel is used that was setup during preprovisioning.
+The data is only used by our tools and not by the MQTT client.
+Its configuration and certificats will be obtained in the next two steps.
 Run the following commands to do so:  
 ```
-cd initial
-./linux-client
+./onboarder
 ```
 
-The output shoudl look like:
+The output should end like this:
 
+```
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@ DEVITY Onboard Complete    @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+```
 
 This completes the initial onboarding.
 
 ## Certificate Management
 
-To complete the onboarding process, get the certificaes for the MQTT client 
-
+The certificate manager is used to generate and update certificates of programs.
+The onboarder provides initial certificates and configurations for the certificate manager.
+Now the certificate manager generates the certificate for the MQTT client:
+Run the following command:
 ```
-cd ../cert_management
+cd cert_man
 ./cert_man
 ```
 
-This completes the onboarding process.
+The output should end like this:
+
+```
+mqtt: Success
+Init_cert: Success
+```
+
+Now you have generated the certificates for the MQTT client.
 
 ## Configuration management
 
-Next you activate the configuration management.
+The configuration manager is used to continously provide updated configurations for programs.
+During this tutorial it will create the configuration for the MQTT client.
+Run the following command:
+```
+cd conf_man
+./conf_man
+```
+
+The output should look like:
 
 ```
-cd ../conf_management
-./bin/conf_man
+Put confd output here
 ```
 
-Now you have successfully setup the certification management.
+Now you have generated the configuration for the MQTT client.
+Also this compeltes the onboarding process and operation of the device can continue as normal.
 
 ## MQTT client
 
 Now that you have completed the onboarding process you can run the MQTT client.
 
 To confirm the connection was successfull you can use a MQTT subscribtion.
-We recommend to use the **[Paho MQTT client](github.com/eclipse/paho.mqtt.c)**.
+We recommend to use the **[Paho MQTT client](github.com/eclipse/paho.mqtt.c)** CLI interface.
 Although you can use any MQTT subscriber to your liking.
 For authentication use this **[certificate](./assets/demo.crt.pem)** with your subscriber.
 

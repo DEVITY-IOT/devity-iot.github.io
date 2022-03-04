@@ -43,27 +43,30 @@ In the package you just unpacked are three sperate software packages.
 The package should look like this.
 ```
 .
-├── cert_management
-│   ├── cert_man
-│   ├── config
-│   └── creds
-├── conf_management
-│   ├── bin
-│   │   └── conf_man
+├── cert_man
+│   ├── authentication (with certificate management server)
+│   ├── cert_man (executable)
+│   └── config (configurations for )
+├── conf_man
 │   ├── conf.d
+│   ├── conf_man
 │   └── templates
-├── initial
-│   ├── data
-│   ├── linux-client
-└── mqtt_client
-    └── demo-client
+├── mqtt_client
+│   └── demo-client
+├── onboarder
+├── onboarding_identity
+│   └── identity files
+└── truststore
+
 ```
-  
-- Initial onboarding
+
+- onboarder and onboarding_identity
   - Recieves initial data and configurations
-- Configuration management
-  - Generates and updates configurations for other apllications (e.g. certificate management)
 - Certificate management
   - Generates new certificates and renews them when expiring
+- Configuration management
+  - Generates and updates configurations for other apllications (e.g. certificate management)
+- truststore
+  - Stores certificate authority certificates
 
 Now proceed to configurating your devie.
