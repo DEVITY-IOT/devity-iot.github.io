@@ -80,90 +80,30 @@ Hint: If you can't find the attribute temperature, the test device hasn't sent d
 ![Temperature Validation Node](/img/tb/18.png)
 
 ### Temperature Graph
-
+- The second widget should display a graph showing the temperature curve. To do this, select "Add new widget" again via the button at the bottom right. Then select the widget type "Timeseires Line Chart".
 ![Temperature Validation Node](/img/tb/19.png)
+
+- Insert the data shown below and click "Add"
 ![Temperature Validation Node](/img/tb/20.png)
+
+### Alarms Table
+- The third widget should now show the incoming alarms. Therefore, add a new widget, this time with the type "Alarm Widgets".
 ![Temperature Validation Node](/img/tb/21.png)
+
+- Choose "Alarms table"
 ![Temperature Validation Node](/img/tb/22.png)
+
+- Enter the two fields marked below. Select the "Active" and "Cleared" state as well as your Entity alias
 ![Temperature Validation Node](/img/tb/23.png)
+
+- You can adjust the sizes of the widget acording to your preferences. ***Very Important:*** Do not forget to click "Apply Changes" at the bottom right. Otherwise your Dashboard won't be saved.
 ![Temperature Validation Node](/img/tb/24.png)
+
+## Check the incoming alarms
+- If the temperature rises above 35°, a new entry should occur in the Alarm table. The rule we defined before triggers the action that creates a new alarm
 ![Temperature Validation Node](/img/tb/25.png)
+
+- If the temperature falls below 35°, the state of the alarm will change to "cleared"
 ![Temperature Validation Node](/img/tb/26.png)
 
-
-
-
-
-
-
-
-
-
-
-![Temperature Validation Node](/img/tb/initial-root-chain.png)
-
-- Drag and Drop Script Filter rule node to the chain. Node configuration window will be opened. We will use this script for data validation:
-
-		return typeof msg.temperature === 'undefined' 
-			|| (msg.temperature >= -40 && msg.temperature <= 80);
-
-![Script Config](/img/tb/script-config.png)
-
-- If temperature property not defined or temperature is valid - script will return True, otherwise it will return False. If script returns True incoming message will be routed to the next nodes that are connected with True relation.
-
-- Now we want that all telemetry requests pass through this validation script. We need to remove the existing Post Telemetry relation between Message Type Switch node and Save Telemetry node:
-
-![Script Config](/img/tb/remove-relation.png)
-
-
-- In our newer Thingsboard version, the element "SaveTS" will be named "Save Timeseries"
-
-- And connect Message Type Switch node with Script Filter node using Post Telemetry relation:
-
-![Script Config](/img/tb/relation-window.png)
-
-![Script Config](/img/tb/connect-script.png)
-
-- Next, we need to connect Script Filter node with Save Telemetry node using True relation. So all valid telemetry will be saved:
-
-![Script Config](/img/tb/script-to-save.png)
-
-- Also, we will connect Script Filter node with Log Other node using False relation. So that all not valid telemetry will be logged in the system log:
-
-![Script Config](/img/tb/false-log.png)
-
-- Press Save button to apply changes.
-
-## Validate results
-
-```
-Dieser Abschnitt muss angepasst werden, je nachdem was wir für Daten senden. 
-Die Testmethode muss auf jedenfall geändert werden
-```
-
-- For validating results we will need to create Device and submit telemetry to the Thingsboard. So go to Devices section and create new Device:
-
-![Script Config](/img/tb/create-device.png)
-
-- For posting device telemetry we will use Rest API. To do this this we will need to copy device access token from the device Thermostat Home.
-
-![Script Config](/img/tb/copy-access-token.png)
-
-- Lets post temperature = 99. We will see that telemetry was not added in Device Latest Telemetry section:
-
-
-	curl -v -X POST -d "{\"temperature\": 99}" https://thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
-	*you need to replace $ACCESS_TOKEN with actual device token
-
-![Script Config](/img/tb/empty-telemetry.png)
-
-- Lets post temperature = 24. We will see that telemetry was saved successfully.
-
-
-	curl -v -X POST -d "{\"temperature\": 24}" https://thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
-
-
-- For windows users: Do not use Windows Powershell , use the default command line instead. Otherwise, the request with the telemetry data will not be send to Thingsboard
-
-
-![Script Config](/img/tb/saved-ok.png)
+- You can adapt the Dashboard according to your wishes. Insert widgets and explore the Thingsboard functionalities 
