@@ -6,9 +6,15 @@ sidebar_position: 2
 
 In this part you will configure the specifications that will be put onto the device.
 
-Visit the **[configuration page](https://develop.ava.devity.eu)**.
+Visit the **[configuration page](https://develop.carl.devity.eu)**.
 
-**From here we need to include screenshots with guidence throught the process. This is currently under construction until 0.4.0 is rolled out.** 
+**From here we need to include screenshots with guidence throught the process. This is currently under construction until 0.5.0 is rolled out.** 
+
+## Generate Templates
+
+### Cloud Template
+
+![Cloud Template](./assets/CloudTemplate.png)
 
 Start the configuration process by creating a new Cloud template.
 It is used to tell the MQTT client the cloud endpoint it is connecting to.
@@ -23,6 +29,8 @@ Fill with the following settings:
 - Certificate authority: demo CA
 
 Submit with "CREATE".
+
+### MQTT Template
 
 After the cloud template is create you can use it to specify that your device recieves that configuration.
 To do so, create a MQTT template by  clicking on the "CREATE" button again and select "MQTT Template".

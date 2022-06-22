@@ -15,18 +15,18 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="x86" label="x86" default>
 
-Download package for **[x86 architecture](./assets/demo_test_device_1_x86.tar.gz)**.  
+Download package for **[x86 architecture](./assets/demo-kit_x86.tar.gz)**.  
 Alternatively you can use this curl command:  
 ```
-curl -o devity_onboarding_package.tar.gz "https://path/to/download/package/demo_x86.tar.gz"
+curl -o devity_onboarding_package.tar.gz "https://path/to/download/package/demo-kit_x86.tar.gz"
 ```
   </TabItem>
   <TabItem value="armv7" label="armv7">
 
-Download package for **[armv7 architecture](./assets/demo_test_device_1_x86.tar.gz)**.  
+Download package for **[armv7 architecture](./assets/demo-kit_x86.tar.gz)**.  
 Alternatively you can use this curl command:  
 ```
-curl -o devity_onboarding_package.tar.gz "https://path/to/download/package/demo_armv7.tar.gz"
+curl -o devity_onboarding_package.tar.gz "https://path/to/download/package/demo-kit_armv7.tar.gz"
 ```
   </TabItem>
 </Tabs>
@@ -36,31 +36,31 @@ curl -o devity_onboarding_package.tar.gz "https://path/to/download/package/demo_
 Open a terminal and unpack the download package to your desired destination.
 Make sure that your current user that read, write and execution permission in that folder.  
 ```
-tar -xvf devity_onboarding_package.tar.gz
+tar -xvf demo-kit.tar.gz
 ``` 
   
 In the package you just unpacked are three sperate software packages.
 The package should look like this.
 ```
 .
-├── cert_man
-│   ├── authentication (with certificate management server)
-│   ├── cert_man (executable)
-│   └── config (configurations for )
-├── conf_man
+├── cert-man
+│   ├── creds (with certificate management server)
+│   ├── cert-man (executable)
+│   └── config (configurations for certificate management)
+├── conf-man
 │   ├── conf.d
-│   ├── conf_man
+│   ├── conf-man
 │   └── templates
-├── mqtt_client
+├── mqtt-client
 │   └── demo-client
-├── onboarder
-├── onboarding_identity
-│   └── identity files
+├── onboarding
+│   ├── data
+│   └── onboarder
 └── truststore
 
 ```
 
-- onboarder and onboarding_identity
+- Onboarding
   - Recieves initial data and configurations
 - Certificate management
   - Generates new certificates and renews them when expiring

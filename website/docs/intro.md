@@ -8,7 +8,7 @@ slug: /
 ## Goal
 
 This tutorial will guide you through the DEVITY device onboarding process.
-It will work on Linux machines compatible with x86 or armv7 architecture.
+It will work on Linux machines compatible with x86, armv7, or aarch64 architecture.
 We will assume your workstation to be the device you want to onboard.
 Alternatively you can use a Raspberry Pi or similar devices to your convenience.
 During the tutorial you will download executables that will run within your userspace.
