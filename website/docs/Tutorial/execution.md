@@ -81,7 +81,7 @@ For authentication use this **[certificate](./assets/demo.crt.pem)** with your s
 With the subscriber setup you can start the MQTT client publisher:
 ```
 cd ../mqtt_client
-./demo-client "Hello from DEVITY"
+./demo-client config.ini --simulator
 ```
 You can supply a string as a command line argument to the MQTT client to change the message it sends.
 
