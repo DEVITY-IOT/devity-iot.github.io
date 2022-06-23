@@ -25,4 +25,5 @@ Run prepare_device.sh in client-sdk folder with correct settings (model, serial,
 Delete prepare_device.sh
 Run onboarder
 Bundle up everything in a tar file
+Upload voucher
 ```

@@ -87,13 +87,15 @@ You can supply a string as a command line argument to the MQTT client to change 
 
 The output should look similar to this:
 ```
-Got message: Hello from DEVITY
 Connecting
 Starting transmission
-Waiting for up to 1 seconds for publication of Hello from DEVITY
+Waiting for up to 1 seconds for publication of {temperature:...}
 on topic demo_messages for client with ClientID: ...
 Message with delivery token 0 delivered
-Disconnecting
+Waiting for up to 1 seconds for publication of {temperature:...}
+on topic demo_messages for client with ClientID: ...
+Message with delivery token 1 delivered
+...
 ```
 
 On the subscribtion you can now see the message you provided to the MQTT client.
