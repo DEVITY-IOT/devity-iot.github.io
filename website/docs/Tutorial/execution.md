@@ -56,8 +56,15 @@ The configuration manager is used to continously provide updated configurations 
 During this tutorial it will create the configuration for the MQTT client.
 Run the following command:
 ```
-cd conf_man
-./conf_man
+cd conf-man
+source confd.conf
+./conf-man /home/pi/dty/conf-man/conf-man \
+    -backend=etcdv3 \
+    -client-ca-keys=${CLIENT_CA_KEYS} \
+    -client-cert=${CLIENT_CERT} \
+    -client-key=${CLIENT_KEY} \
+    -confdir=${CONFD_DIR} \
+    -node=${NODE}
 ```
 
 The output should look like:
@@ -80,7 +87,7 @@ For authentication use this **[certificate](./assets/demo.crt.pem)** with your s
 
 With the subscriber setup you can start the MQTT client publisher:
 ```
-cd ../mqtt_client
+cd ../mqtt-client
 ./demo-client config.ini --simulator
 ```
 You can supply a string as a command line argument to the MQTT client to change the message it sends.
