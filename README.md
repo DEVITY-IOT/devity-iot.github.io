@@ -27,3 +27,19 @@ Run onboarder
 Bundle up everything in a tar file
 Upload voucher
 ```
+
+### Initial Setup after cloning and creating a new branch
+Install Node.js according to https://docusaurus.io/docs/installation
+Go to the website folder in the root directory of your Git project and run this in your command line:
+
+```
+npm i
+```
+
+as second step run:
+
+```
+npm run start
+```
+
+Now a window should open with a local development server on localhost
