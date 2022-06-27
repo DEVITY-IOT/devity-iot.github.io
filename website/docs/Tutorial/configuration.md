@@ -8,7 +8,7 @@ In this part you will configure the specifications that will be put onto the dev
 
 Visit the **[configuration page](https://develop.carl.devity.eu)**.
 
-**From here we need to include screenshots with guidence throught the process. This is currently under construction until 0.5.0 is rolled out.** 
+**From here we need to include screenshots with guidence through the process. This is currently under construction until 0.5.0 is rolled out.** 
 
 ## Generate Templates
 
@@ -39,7 +39,7 @@ Submit with "CREATE".
 
 ### MQTT Template
 
-After the cloud template is create you can use it to specify that your device recieves that configuration.
+After the cloud template is created you can use it to specify that your device recieves that configuration.
 To do so, create a MQTT template by  clicking on the "CREATE" button again and select "MQTT Template".
 
 ![MQTT Template](./assets/MQTTTemplate.png)

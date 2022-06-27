@@ -12,7 +12,7 @@ It will work on Linux machines compatible with x86, armv7, or aarch64 architectu
 We will assume your workstation to be the device you want to onboard.
 Alternatively you can use a Raspberry Pi or similar devices to your convenience.
 During the tutorial you will download executables that will run within your userspace.
-After the onboarding is complete you can run a MQTT client.
+After the onboarding is complete, you can run a MQTT client.
 It connects to a MQTT broker we make available.
 Then it authenticates via certificates that are generated during the onboarding process.
 
@@ -28,11 +28,11 @@ The DEVITY onboarding process is seperated into three main steps.
 
 The preprovisioning step is done during the manufacturing process of the device.
 It consists of generating the device identity and placing the DEVITY software on the device.
-Additionally, the device is registrated at our services.
-After that, the device can be sold and shiped to the customer.
+Additionally, the device is registered at our services.
+After that, the device can be sold and shipped to the customer.
 During shipment the customer can use our webapp to configure the device to his likings.
-When it arrives and gets "unboxed" and started up for the first time our software conntects to our services.
-Then it receives the previsiosly estabiled configuration data.
+When it arrives and gets "unboxed" and started up for the first time our software connects to our services.
+Then it receives the previsiously estabiled configuration data.
 With that the DEVITY device onboarding process is complete.
 
 ## Approach
