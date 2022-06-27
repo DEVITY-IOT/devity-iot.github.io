@@ -17,6 +17,7 @@ The data is only used by our tools and not by the MQTT client.
 Its configuration and certificats will be obtained in the next two steps.
 Run the following commands to do so:  
 ```
+cd onboarding
 ./onboarder
 ```
 
@@ -37,8 +38,8 @@ The onboarder provides initial certificates and configurations for the certifica
 Now the certificate manager generates the certificate for the MQTT client:
 Run the following command:
 ```
-cd cert_man
-./cert_man
+cd cert-man
+./cert-man
 ```
 
 The output should end like this:
