@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Execution
 
-In this part you will compelte the onboarding process and run the example usecase of an MQTT client.
+In this part you will complete the onboarding process and run the example use case of an MQTT client.
 For this process you will need three seperate terminals.
 Under normal circumstances these terminals are not neccessary because the processes would be run by a daemon like systemd.
 
@@ -75,13 +75,13 @@ Put confd output here
 ```
 
 Now you have generated the configuration for the MQTT client.
-Also this compeltes the onboarding process and operation of the device can continue as normal.
+Also this compeltes the onboarding process and the operation of the device can continue as normal.
 
 ## MQTT client
 
 Now that you have completed the onboarding process you can run the MQTT client.
 
-To confirm the connection was successfull you can use a MQTT subscribtion.
+To confirm that the connection was successfull you can use a MQTT subscribtion.
 We recommend to use the **[Paho MQTT client](github.com/eclipse/paho.mqtt.c)** CLI interface.
 Although you can use any MQTT subscriber to your liking.
 For authentication use this **[certificate](./assets/demo.crt.pem)** with your subscriber.
