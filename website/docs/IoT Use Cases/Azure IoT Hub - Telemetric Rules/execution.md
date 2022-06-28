@@ -23,37 +23,89 @@ Hier muss der Onboarding Prozess beschrieben werden
 Cloud Configuration, Template erstellen, Gerät attributiesieren
 ```
 
-## Gerätevorlage erstellen
+## Create Device Template
+In order to access attributes and models in Azure IoT Central, device templates are used, which can be assigned to a device group. 
+This makes the administration scalable, as devices only need to be added to a group.
 
-- Neue Vorlage erstellen
-- Attribute der Vorlage hinzufügen
-- Cloudeigenschaft: Sendeintervall
-- Navigiere zu Geräte und Gerätevorlage zuweisen
+- To demonstrate this process, we will first create a new device template. To do this, navigate to the "Device Templates" section and click on "New".
+![DevityHub](/img/az/1.png)
+- Select the custom template with the type "IoT Device"
+![DevityHub](/img/az/2.png)
+- Name the template and tick the gateway checkbox. Continue to the next page
+![DevityHub](/img/az/3.png)
+- Confirm the Review with a click on "Create"
+![DevityHub](/img/az/4.png)
 
-## Gerätegruppe erstellen
-- Neue Gruppe erstellen
-![DevityHub](/img/tb/1.png)
-- Gerätevorlage zuweisen
-![DevityHub](/img/tb/1.png)
-## Auftrag anlegen um Sendeintervall hochsetzen
-- Neuer Auftrag erstellen
-![DevityHub](/img/tb/1.png)
-- Gerätegruppe auswählen
-![DevityHub](/img/tb/1.png)
-- Auftragseigenschaft
-![DevityHub](/img/tb/1.png)
-	- Auftragstyp - Cloudeigenschaft
-	- Name Eigenschaft - Sendeintervall 
-	- Wert - 30 (Minuten)
-	- Weiter, Weiter
-- Zeitplan aktivieren
-![DevityHub](/img/tb/1.png)
-	- täglich wiederholen
-	- Uhrzeit einstellen
-	- Enddatum eingeben
-## Auftrag anlegen um Sendeintervall runterzusetzen
-## Testen
-- Dashboard erstellen
-![DevityHub](/img/tb/1.png)
-	- Widget hinzufügen
-	- Tabelle mit Eigenschaften für Gerät, Sendeintervall beobachten
+- Next, we need to let the template know what attributes, properties, commands the IoT devices have. This is what models are used for. We will now create our own model. Click on "Custom model" for this.
+![DevityHub](/img/az/5.png)
+
+- Navigate to the Cloud Properties section. First enter the property Sending interval. Click on the arrow pointing downwards to the far right to open the "Schema" area. Enter the data for the schema here as well. Save your entries by clicking on "Save".
+![DevityHub](/img/az/6.png)
+
+- In order to use the template, Azure requires a relationship to an existing template. To do this, navigate to the "Relations" area, enter a name for the relation and select "Digital Distribution Gateway" as the target. Save your entries with "Save"
+- Click on "Publish" to be able to use the template in the entire IoT Central.
+![DevityHub](/img/az/7.png)
+- Confirm the review screen with a click on "Publish" again.
+![DevityHub](/img/az/8.png)
+
+## Assign Device to Device Template
+
+- To link our IoT sensor to the template we created, navigate to the Devices section and click the name of the IoT sensor to go to the Details page. Select "Manage Templates" and "Assign Template" in the drop-down that appears. Select the template we just created and click "Assign".
+![DevityHub](/img/az/23.png)
+
+
+
+## Create Device Group
+- Next we can create a new device group. To do this, navigate to the "Device Groups" section and click on "New". Give the group a name and select the template we created. To test the filter click on "Run query". You should now see the IoT sensor we just assigned to the template.
+![DevityHub](/img/az/9.png)
+
+
+
+
+
+## Create a job to increase the sending interval
+- With this preliminary work, jobs can now be created very easily. To do this, navigate to the "Jobs" section and click on "New".
+![DevityHub](/img/az/10.png)
+
+
+- Name the job and specify the device group on which the job should be executed.
+![DevityHub](/img/az/11.png)
+
+- Scroll down to Job Properties. Select "Cloud Property" as the job type. Select the Sending_Interval as the property and set the new value to 15. Click "Next".
+![DevityHub](/img/az/12.png)
+	
+- For the moment, we do not need to set anything in the Delivery Options. Click on "Next
+![DevityHub](/img/az/13.png)
+
+- Enable the schedule. Set the recurrence to daily. Enter 6 o'clock in the evening as the time. Click "Next".
+![DevityHub](/img/az/14.png)
+
+- After reviewing your job configuration you can click on "Schedule".
+![DevityHub](/img/az/15.png)
+	
+## Create a Dashboard to test the job
+- To be able to observe the result of the job, we need a representation of the Sending_interval. For this purpose, we create a dashboard that fulfils this task.
+- Navigate to the "Dashboard" section and click on "Create dashboard". If an old dashboard exists, you can also delete or edit it
+![DevityHub](/img/az/16.png)
+
+- Name the Dashboard an select the Dashboard type "Personal". Click on "Create".
+![DevityHub](/img/az/17.png)
+
+- To add a widget, click on "Edit dashboard" first.
+![DevityHub](/img/az/18.png)
+
+- An overview for a new tile opens on the left-hand side. First switch to the tab "Start with devices". Select the device group and your IoT sensor.
+![DevityHub](/img/az/19.png)
+
+- Scroll down to the Cloud Property field and select the Sending_interval. Click on "Add tile" to create the tile. IMPORTANT: Save your entries by clicking on "Save", otherwise the dashboard will be reset.
+![DevityHub](/img/az/20.png)
+
+- The rudimentary dashboard now looks like this. Your IoT sensor may already be sending data, in which case you already have a Sending_Interval value.
+![DevityHub](/img/az/21.png)
+
+- If the job is triggered when the entered time is reached, the sending_interval should be adjusted. Hint: Change the time in your job so that you do not have to wait until 6PM for the test.
+![DevityHub](/img/az/22.png)
+
+## Reset the Sending Interval
+- For practice: Now create another job that resets the Sending_interval to one minute the next morning. You can do this.
+	
