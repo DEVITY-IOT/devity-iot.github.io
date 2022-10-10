@@ -18,10 +18,48 @@ This should happen completely automatically.
 
 ## Provision the IoT Sensor with KEYNOA
 
-```
-Hier muss der Onboarding Prozess beschrieben werden
-Cloud Configuration, Template erstellen, Gerät attributiesieren
-```
+First you start by configurating the device with the KEYNOA cloud.
+
+- In the KEYNOA UI create the Data Hub you want your device to connect to.
+![KEYNOA](/img/KEYNOA/Dashboard.png)
+
+- Select the IoT-Central data hub.
+![KEYNOA](/img/KEYNOA/IoT-Central/Data-Hub.png)
+
+- Log in with your Microsoft account.
+![KEYNOA](/img/KEYNOA/IoT-Central/Microsoft-login.png)
+
+- Grant access to the to the application.
+![KEYNOA](/img/KEYNOA/IoT-Central/Microsoft-login-2.png)
+
+- Select the proper IoT Central hub. Click on the correct IoT hub on the right.
+![KEYNOA](/img/KEYNOA/IoT-Central/Data-Hub-details.png)
+
+- Select the correct CA and provide an identifier name. Click on "Create Configuration".
+![KEYNOA](/img/KEYNOA/IoT-Central/Data-Hub-details-2.png)
+
+- Create the MQTT Template that assigns your device to the Data Hub.
+![KEYNOA](/img/KEYNOA/Dashboard.png)
+
+- Select your Data Hub. Click on "Next".
+![KEYNOA](/img/KEYNOA/IoT-Central/MQTT-template-1.png)
+
+- Fill in the device details you want your device to match against. Click on "Next".
+![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
+
+- Give the template an identifier. Click on "Save".
+![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
+
+- You have now created the setup for your device to be onboarded. Now upload the voucher you received to KEYNOA.
+![KEYNOA](/img/KEYNOA/upload-voucher.png)
+
+- Select the voucher via the file selector.
+![KEYNOA](/img/KEYNOA/upload-voucher-2.png)
+
+- After that go to the devives tab and wait until the TO0 Status of your device says completed.
+![KEYNOA](/img/KEYNOA/TO0.png)
+
+- Your device is now ready to be onboarded. Continue with the setup in IoT Central.
 
 ## Create Device Template
 In order to access attributes and models in Azure IoT Central, device templates are used, which can be assigned to a device group. 
@@ -29,11 +67,11 @@ This makes the administration scalable, as devices only need to be added to a gr
 
 - To demonstrate this process, we will first create a new device template. To do this, navigate to the "Device Templates" section and click on "New".
 ![DevityHub](/img/az/1.png)
-- Select the custom template with the type "IoT Device"
+- Select the custom template with the type "IoT Device".
 ![DevityHub](/img/az/2.png)
-- Name the template and tick the gateway checkbox. Continue to the next page
+- Name the template and tick the gateway checkbox. Continue to the next page.
 ![DevityHub](/img/az/3.png)
-- Confirm the Review with a click on "Create"
+- Confirm the review with a click on "Create".
 ![DevityHub](/img/az/4.png)
 
 - Next, we need to let the template know what attributes, properties, commands the IoT devices have. This is what models are used for. We will now create our own model. Click on "Custom model" for this.
@@ -42,7 +80,7 @@ This makes the administration scalable, as devices only need to be added to a gr
 - Navigate to the Cloud Properties section. First enter the property Sending interval. Click on the arrow pointing downwards to the far right to open the "Schema" area. Enter the data for the schema here as well. Save your entries by clicking on "Save".
 ![DevityHub](/img/az/6.png)
 
-- In order to use the template, Azure requires a relationship to an existing template. To do this, navigate to the "Relations" area, enter a name for the relation and select "Digital Distribution Gateway" as the target. Save your entries with "Save"
+- In order to use the template, Azure requires a relationship to an existing template. To do this, navigate to the "Relations" area, enter a name for the relation and select "Digital Distribution Gateway" as the target. Save your entries with "Save".
 - Click on "Publish" to be able to use the template in the entire IoT Central.
 ![DevityHub](/img/az/7.png)
 - Confirm the review screen with a click on "Publish" again.
@@ -74,7 +112,7 @@ This makes the administration scalable, as devices only need to be added to a gr
 - Scroll down to Job Properties. Select "Cloud Property" as the job type. Select the Sending_Interval as the property and set the new value to 15. Click "Next".
 ![DevityHub](/img/az/12.png)
 	
-- For the moment, we do not need to set anything in the Delivery Options. Click on "Next
+- For the moment, we do not need to set anything in the Delivery Options. Click on "Next".
 ![DevityHub](/img/az/13.png)
 
 - Enable the schedule. Set the recurrence to daily. Enter 6 o'clock in the evening as the time. Click "Next".
@@ -85,7 +123,7 @@ This makes the administration scalable, as devices only need to be added to a gr
 	
 ## Create a Dashboard to test the job
 - To be able to observe the result of the job, we need a representation of the Sending_interval. For this purpose, we create a dashboard that fulfils this task.
-- Navigate to the "Dashboard" section and click on "Create dashboard". If an old dashboard exists, you can also delete or edit it
+- Navigate to the "Dashboard" section and click on "Create dashboard". If an old dashboard exists, you can also delete or edit it.
 ![DevityHub](/img/az/16.png)
 
 - Name the Dashboard an select the Dashboard type "Personal". Click on "Create".

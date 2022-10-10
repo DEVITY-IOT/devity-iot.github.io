@@ -27,7 +27,7 @@ You can find more details about the use cases and the requirements in the respec
 We recommend the sequence shown, as this will introduce you to complex use cases via an increasing level of difficulty.
 
 - Beginner: Thingsboard - Rule Engine
-- Advanced: zure IoT Hub - Telemetric Rules
+- Advanced: Azure IoT Hub - Telemetric Rules
 - Professional: AWS SiteWise - Windfarm
 
 In the end, you'll realise how simple cloud and IoT with KEYNOA can be

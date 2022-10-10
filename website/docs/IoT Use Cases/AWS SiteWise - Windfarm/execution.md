@@ -1,101 +1,45 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # Execution
 
-In this part you will compelte the onboarding process and run the example usecase of an MQTT client.
-For this process you will need three seperate terminals.
-Under normal circumstances these terminals are not neccessary because the processes would be run by a daemon like systemd.
 
-## Initial onboarding
+## Initial Situation
 
-First you will need to complete the initial setup of the device.
-This will get the certificates and configuration data from our services that our other tools will use to authenticate.
-For this a secure channel is used that was setup during preprovisioning.
-The data is only used by our tools and not by the MQTT client.
-Its configuration and certificats will be obtained in the next two steps.
-Run the following commands to do so:  
-```
-./onboarder
-```
 
-The output should end like this:
+## Provision the IoT Sensor with KEYNOA
 
-```
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ DEVITY Onboard Complete    @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-```
+First you start by configurating the device with the KEYNOA cloud.
 
-This completes the initial onboarding.
+- In the KEYNOA UI create the Data Hub you want your device to connect to.
+![KEYNOA](/img/KEYNOA/Dashboard.png)
 
-## Certificate Management
+- Select the AWS data hub.
+![KEYNOA](/img/KEYNOA/AWS/Data-Hub.png)
+ 
+- Fill in the Key ID and the secret key. Click on "Confirm".
+![KEYNOA](/img/KEYNOA/AWS/Data-Hub-details.png)
 
-The certificate manager is used to generate and update certificates of programs.
-The onboarder provides initial certificates and configurations for the certificate manager.
-Now the certificate manager generates the certificate for the MQTT client:
-Run the following command:
-```
-cd cert_man
-./cert_man
-```
+- Select the correct CA to register at AWS and provide a identifier name. Click on "Regiser CA".
+![KEYNOA](/img/KEYNOA/AWS/Data-Hub-details-2.png)
 
-The output should end like this:
+- Select your Data Hub. Click on "Next".
+![KEYNOA](/img/KEYNOA/IoT-Central/MQTT-template-1.png)
 
-```
-mqtt: Success
-Init_cert: Success
-```
+- Fill in the device details you want your device to match against. Click on "Next".
+![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
 
-Now you have generated the certificates for the MQTT client.
+- Give the template an identifier. Click on "Save".
+![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
 
-## Configuration management
+- You have now created the setup for your device to be onboarded. Now upload the voucher you received to KEYNOA.
+![KEYNOA](/img/KEYNOA/upload-voucher.png)
 
-The configuration manager is used to continously provide updated configurations for programs.
-During this tutorial it will create the configuration for the MQTT client.
-Run the following command:
-```
-cd conf_man
-./conf_man
-```
+- Select the voucher via the file selector.
+![KEYNOA](/img/KEYNOA/upload-voucher-2.png)
 
-The output should look like:
+- After that go to the devives tab and wait until the TO0 Status of your device says completed.
+![KEYNOA](/img/KEYNOA/TO0.png)
 
-```
-Put confd output here
-```
-
-Now you have generated the configuration for the MQTT client.
-Also this compeltes the onboarding process and operation of the device can continue as normal.
-
-## MQTT client
-
-Now that you have completed the onboarding process you can run the MQTT client.
-
-To confirm the connection was successfull you can use a MQTT subscribtion.
-We recommend to use the **[Paho MQTT client](github.com/eclipse/paho.mqtt.c)** CLI interface.
-Although you can use any MQTT subscriber to your liking.
-For authentication use this **[certificate](./assets/demo.crt.pem)** with your subscriber.
-
-With the subscriber setup you can start the MQTT client publisher:
-```
-cd ../mqtt_client
-./demo-client "Hello from DEVITY"
-```
-You can supply a string as a command line argument to the MQTT client to change the message it sends.
-
-The output should look similar to this:
-```
-Got message: Hello from DEVITY
-Connecting
-Starting transmission
-Waiting for up to 1 seconds for publication of Hello from DEVITY
-on topic demo_messages for client with ClientID: ...
-Message with delivery token 0 delivered
-Disconnecting
-```
-
-On the subscribtion you can now see the message you provided to the MQTT client.
-The MQTT client establishes the connection via certificate based TLS.
-That way without the onboarding process authentication would not be possible.
+- Your device is now ready to be onboarded. Continue with the setup in AWS.
