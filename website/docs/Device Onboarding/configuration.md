@@ -8,8 +8,6 @@ In this part you will configure the specifications that will be put onto the dev
 
 Visit the **[configuration page](https://develop.carl.devity.eu)**.
 
-**From here we need to include screenshots with guidence through the process. This is currently under construction until 0.5.0 is rolled out.** 
-
 ## Generate Templates
 
 ### Cloud Template
@@ -17,7 +15,7 @@ Visit the **[configuration page](https://develop.carl.devity.eu)**.
 
 Start the configuration process by creating a new Cloud template.
 It is used to tell the MQTT client the cloud endpoint it is connecting to.
-Click on the "CREATE" button in the top right corner and select "Cloud Configuration".
+Click on the "CREATE" button in the top right corner and select "Data Hub".
 
 ![Cloud Template](./assets/CloudTemplate.png)
 

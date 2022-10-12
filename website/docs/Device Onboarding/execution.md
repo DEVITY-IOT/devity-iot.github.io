@@ -17,8 +17,7 @@ The data is only used by our tools and not by the MQTT client.
 Its configuration and certificats will be obtained in the next two steps.
 Run the following commands to do so:  
 ```
-cd onboarding
-./onboarder
+./linux-client
 ```
 
 The output should end like this:
@@ -38,13 +37,14 @@ The onboarder provides initial certificates and configurations for the certifica
 Now the certificate manager generates the certificate for the MQTT client:
 Run the following command:
 ```
-cd cert-man
-./cert-man
+./cert-man/cert-man
 ```
 
 The output should end like this:
 
 ```
+...
+confd: Success
 mqtt: Success
 Init_cert: Success
 ```
@@ -57,21 +57,19 @@ The configuration manager is used to continously provide updated configurations 
 During this tutorial it will create the configuration for the MQTT client.
 Run the following command:
 ```
-cd conf-man
-source confd.conf
-./conf-man /home/pi/dty/conf-man/conf-man \
-    -backend=etcdv3 \
-    -client-ca-keys=${CLIENT_CA_KEYS} \
-    -client-cert=${CLIENT_CERT} \
-    -client-key=${CLIENT_KEY} \
-    -confdir=${CONFD_DIR} \
-    -node=${NODE}
+./conf-man/bin/confd -config-file=conf-man/confd.conf
+
 ```
 
 The output should look like:
 
 ```
-Put confd output here
+INFO Backend set to etcdv3
+INFO Starting confd
+INFO Backend source(s) set to ...
+INFO ./mqtt-client/mqtt.ini has md5sum ... should be ...
+INFO Target config ./mqtt-client/mqtt.ini out of sync
+INFO Target config ./mqtt-client/mqtt.ini has been updated
 ```
 
 Now you have generated the configuration for the MQTT client.
@@ -88,21 +86,23 @@ For authentication use this **[certificate](./assets/demo.crt.pem)** with your s
 
 With the subscriber setup you can start the MQTT client publisher:
 ```
-cd ../mqtt-client
-./demo-client config.ini --simulator
+./mqtt-client/mqtt-client mqtt-client/mqtt.ini --simulator
 ```
 You can supply a string as a command line argument to the MQTT client to change the message it sends.
 
 The output should look similar to this:
 ```
 Connecting
+waiting for connection
+Subscribing to topic ... for client ... using QoS ...
+Subscribe succeeded
 Starting transmission
-Waiting for up to 1 seconds for publication of {temperature:...}
-on topic demo_messages for client with ClientID: ...
-Message with delivery token 0 delivered
-Waiting for up to 1 seconds for publication of {temperature:...}
-on topic demo_messages for client with ClientID: ...
-Message with delivery token 1 delivered
+Send {temperature:..., timestamp:...} on topic ... for client with ClientID: ...
+Message with token value ... delivery confirmed
+Send {temperature:..., timestamp:...} on topic ... for client with ClientID: ...
+Message with token value ... delivery confirmed
+Send {temperature:..., timestamp:...} on topic ... for client with ClientID: ...
+Message with token value ... delivery confirmed
 ...
 ```
 
