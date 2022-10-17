@@ -43,3 +43,23 @@ First you start by configurating the device with the KEYNOA cloud.
 ![KEYNOA](/img/KEYNOA/TO0.png)
 
 - Your device is now ready to be onboarded. Continue with the setup in AWS.
+
+- AWS IoT Core
+
+    - Create a Thing
+    - Create Policy
+    - Attach Policy to Thing
+    - Attach device certificates to thing
+
+- AWS Sitewise
+
+    - Create asset model
+    - Create and configure asset from asset model (place mqtt topic of device/thing here)
+    - Create device fleet asset model 
+    - Create and configure device fleet asset from device fleet asset model
+    - Create AWS IoT Core rule to send data to SiteWise (MQTT topic with wild cards here)
+    - Create Portal
+    - Look at Asset
+    - Optional:
+    - Create Project
+    - Create Dashboard
