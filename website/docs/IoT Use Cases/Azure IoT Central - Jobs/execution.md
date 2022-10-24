@@ -6,7 +6,7 @@ sidebar_position: 2
 
 
 ## Initial Situation
-
+TODO: rewritte for temperature
 You are the IoT representative of the facility team of a watch manufacturer. 
 Intelligent light sensors monitor the light to create optimal production conditions for the precision mechanics. 
 The connected IoT sensors therefore continuously transmit the current light intensity (every minute) in order to adjust the light intensity if necessary. 

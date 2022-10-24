@@ -6,7 +6,7 @@ sidebar_position: 2
 
 
 ## Initial Situation
-
+You are in charge of 
 
 ## Provision the IoT Sensor with KEYNOA
 
@@ -21,8 +21,11 @@ First you start by configurating the device with the KEYNOA cloud.
 - Fill in the Key ID and the secret key. Click on "Confirm".
 ![KEYNOA](/img/KEYNOA/AWS/Data-Hub-details.png)
 
-- Select the correct CA to register at AWS and provide a identifier name. Click on "Regiser CA".
+- Fill in the RoleARN. Select the correct CA to register at AWS and provide a identifier name. Click on "Regiser CA".
 ![KEYNOA](/img/KEYNOA/AWS/Data-Hub-details-2.png)
+
+- In the KEYNOA UI create the MQTT Template.
+![KEYNOA](/img/KEYNOA/Dashboard.png)
 
 - Select your Data Hub. Click on "Next".
 ![KEYNOA](/img/KEYNOA/IoT-Central/MQTT-template-1.png)
@@ -42,24 +45,4 @@ First you start by configurating the device with the KEYNOA cloud.
 - After that go to the devives tab and wait until the TO0 Status of your device says completed.
 ![KEYNOA](/img/KEYNOA/TO0.png)
 
-- Your device is now ready to be onboarded. Continue with the setup in AWS.
-
-- AWS IoT Core
-
-    - Create a Thing
-    - Create Policy
-    - Attach Policy to Thing
-    - Attach device certificates to thing
-
-- AWS Sitewise
-
-    - Create asset model
-    - Create and configure asset from asset model (place mqtt topic of device/thing here)
-    - Create device fleet asset model 
-    - Create and configure device fleet asset from device fleet asset model
-    - Create AWS IoT Core rule to send data to SiteWise (MQTT topic with wild cards here)
-    - Create Portal
-    - Look at Asset
-    - Optional:
-    - Create Project
-    - Create Dashboard
+- Your device is now ready to be onboarded.

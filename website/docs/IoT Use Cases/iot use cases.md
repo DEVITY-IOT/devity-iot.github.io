@@ -17,7 +17,7 @@ This results in the three tutorials:
 
 - Thingsboard - Rule Engine
 - Azure IoT Hub - Telemetric Rules
-- AWS SiteWise - Windfarm 
+- AWS SiteWise
 
 You can find more details about the use cases and the requirements in the respective tutorials.
 
@@ -28,7 +28,7 @@ We recommend the sequence shown, as this will introduce you to complex use cases
 
 - Beginner: Thingsboard - Rule Engine
 - Advanced: Azure IoT Hub - Telemetric Rules
-- Professional: AWS SiteWise - Windfarm
+- Professional: AWS SiteWise
 
 In the end, you'll realise how simple cloud and IoT with KEYNOA can be
 Have fun with the first tutorial
