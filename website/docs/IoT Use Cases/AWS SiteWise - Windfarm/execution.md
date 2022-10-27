@@ -29,8 +29,11 @@ First you start by configurating the device with the KEYNOA cloud.
 
 - Select your Data Hub. Click on "Next".
 ![KEYNOA](/img/KEYNOA/IoT-Central/MQTT-template-1.png)
-
-- Fill in the device details you want your device to match against. Click on "Next".
+- Fill in the device details
+    - Device Property ("Device Model")
+    - your-device-model-number ("eval-kit")
+- This property will be matched against the information the device provides about itself during the onboarding process. When it matches the template will be selected to configure the device.
+- Click on "Next".
 ![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
 
 - Give the template an identifier. Click on "Save".
