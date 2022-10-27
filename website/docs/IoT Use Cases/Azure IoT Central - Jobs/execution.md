@@ -19,7 +19,7 @@ This should happen completely automatically.
 ## Provision the IoT Sensor with KEYNOA
 
 First you start by configurating the device with the KEYNOA cloud.
-
+### Create Data Hub
 - In the KEYNOA UI create the Data Hub you want your device to connect to.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
 
@@ -37,7 +37,7 @@ First you start by configurating the device with the KEYNOA cloud.
 
 - Select the correct CA and provide an identifier name. Click on "Create Configuration".
 ![KEYNOA](/img/KEYNOA/IoT-Central/Data-Hub-details-2.png)
-
+### Create Template
 - Create the MQTT Template that assigns your device to the Data Hub.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
 
@@ -49,7 +49,7 @@ First you start by configurating the device with the KEYNOA cloud.
 
 - Give the template an identifier. Click on "Save".
 ![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
-
+### Upload Voucher
 - You have now created the setup for your device to be onboarded. Now upload the voucher you received to KEYNOA.
 ![KEYNOA](/img/KEYNOA/upload-voucher.png)
 
@@ -61,7 +61,8 @@ First you start by configurating the device with the KEYNOA cloud.
 
 - Your device is now ready to be onboarded. Continue with the setup in IoT Central.
 
-## Create Device Template
+## Azure IoT Central setup
+### Create Device Template
 In order to access attributes and models in Azure IoT Central, device templates are used, which can be assigned to a device group. 
 This makes the administration scalable, as devices only need to be added to a group.
 
@@ -86,14 +87,14 @@ This makes the administration scalable, as devices only need to be added to a gr
 - Confirm the review screen with a click on "Publish" again.
 ![DevityHub](/img/az/8.png)
 
-## Assign Device to Device Template
+### Assign Device to Device Template
 
 - To link our IoT sensor to the template we created, navigate to the Devices section and click the name of the IoT sensor to go to the Details page. Select "Manage Templates" and "Assign Template" in the drop-down that appears. Select the template we just created and click "Assign".
 ![DevityHub](/img/az/23.png)
 
 
 
-## Create Device Group
+### Create Device Group
 - Next we can create a new device group. To do this, navigate to the "Device Groups" section and click on "New". Give the group a name and select the template we created. To test the filter click on "Run query". You should now see the IoT sensor we just assigned to the template.
 ![DevityHub](/img/az/9.png)
 
@@ -101,7 +102,7 @@ This makes the administration scalable, as devices only need to be added to a gr
 
 
 
-## Create a job to increase the sending interval
+### Create a job to increase the sending interval
 - With this preliminary work, jobs can now be created very easily. To do this, navigate to the "Jobs" section and click on "New".
 ![DevityHub](/img/az/10.png)
 
@@ -121,7 +122,7 @@ This makes the administration scalable, as devices only need to be added to a gr
 - After reviewing your job configuration you can click on "Schedule".
 ![DevityHub](/img/az/15.png)
 	
-## Create a Dashboard to test the job
+### Create a Dashboard to test the job
 - To be able to observe the result of the job, we need a representation of the Sending_interval. For this purpose, we create a dashboard that fulfils this task.
 - Navigate to the "Dashboard" section and click on "Create dashboard". If an old dashboard exists, you can also delete or edit it.
 ![DevityHub](/img/az/16.png)
@@ -144,6 +145,6 @@ This makes the administration scalable, as devices only need to be added to a gr
 - If the job is triggered when the entered time is reached, the sending_interval should be adjusted. Hint: Change the time in your job so that you do not have to wait until 6PM for the test.
 ![DevityHub](/img/az/22.png)
 
-## Reset the Sending Interval
+### Reset the Sending Interval
 - For practice: Now create another job that resets the Sending_interval to one minute the next morning. You can do this.
 	

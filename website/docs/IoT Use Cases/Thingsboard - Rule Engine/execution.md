@@ -18,7 +18,7 @@ The aim of this tutorial is to define a rule that immediately detects failures o
 ## Provision the IoT Sensor with KEYNOA
 
 First you start by configurating the device with the KEYNOA cloud.
-
+### Create Data Hub
 - In the KEYNOA UI create the Data Hub you want your device to connect to.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
 
@@ -27,7 +27,7 @@ First you start by configurating the device with the KEYNOA cloud.
 
 - Fill in the details of your Thingsboard instance. The provision key and secret can be found in the Thingsboard device profile you want your device to be assigned to. Click on "Create".
 ![KEYNOA](/img/KEYNOA/Thingsboard/Data-Hub-details.png)
-
+### Create Template
 - Create the MQTT template that assigns your device to the Data Hub.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
 
@@ -39,7 +39,7 @@ First you start by configurating the device with the KEYNOA cloud.
 
 - Give the template an identifier. Click on "Save".
 ![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
-
+### Upload Voucher
 - You have now created the setup for your device to be onboarded. Now upload the voucher you received to KEYNOA.
 ![KEYNOA](/img/KEYNOA/upload-voucher.png)
 
@@ -51,7 +51,8 @@ First you start by configurating the device with the KEYNOA cloud.
 
 - Your device is now ready to be onboarded. Continue with the setup in Thingsboard.
 
-## Adapt the Rule Chain
+## Thingsboard setup
+### Adapt the Rule Chain
 
 - In Thingsboard UI go to Rule Chains section and open Root Rule Chain.
 ![Temperature Validation Node](/img/tb/1.png)
@@ -79,7 +80,7 @@ First you start by configurating the device with the KEYNOA cloud.
 - **Very Important:** Click on the "Apply Changes" Button at the bottom right to save all changes.
 ![Temperature Validation Node](/img/tb/10.png)
 
-## Build a Dashboard
+### Build a Dashboard
 
 - After customising the rule chain, we build a dashboard to visualise the alarms. Navigate to the section "Dashboard groups" and "All". At the top right you will find the "+" to create a new dashboard. Enter name and description.
 ![Temperature Validation Node](/img/tb/11.png)
@@ -90,7 +91,7 @@ First you start by configurating the device with the KEYNOA cloud.
 - Click on the Edit icon at the bottom right to add a new widget.
 ![Temperature Validation Node](/img/tb/13.png)
 
-### Temperature Display
+#### Temperature Display
 - The first thing we want to do is create a temperature display. Select the widget type "Cards" for this.
 ![Temperature Validation Node](/img/tb/14.png)
 
@@ -108,14 +109,14 @@ Congratulations, you have created your first widget.
 Hint: If you can't find the attribute temperature, the test device hasn't sent data yet. 
 ![Temperature Validation Node](/img/tb/18.png)
 
-### Temperature Graph
+#### Temperature Graph
 - The second widget should display a graph showing the temperature curve. To do this, select "Add new widget" again via the button at the bottom right. Then select the widget type "Timeseires Line Chart".
 ![Temperature Validation Node](/img/tb/19.png)
 
 - Insert the data shown below and click "Add".
 ![Temperature Validation Node](/img/tb/20.png)
 
-### Alarms Table
+#### Alarms Table
 - The third widget should now show the incoming alarms. Therefore, add a new widget, this time with the type "Alarm Widgets".
 ![Temperature Validation Node](/img/tb/21.png)
 
@@ -128,7 +129,7 @@ Hint: If you can't find the attribute temperature, the test device hasn't sent d
 - You can adjust the sizes of the widget acording to your preferences. ***Very Important:*** Do not forget to click "Apply Changes" at the bottom right. Otherwise your Dashboard won't be saved.
 ![Temperature Validation Node](/img/tb/24.png)
 
-## Check the incoming alarms
+### Check the incoming alarms
 - If the temperature rises above 35°, a new entry should occur in the Alarm table. The rule we defined before triggers the action that creates a new alarm.
 ![Temperature Validation Node](/img/tb/25.png)
 
