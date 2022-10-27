@@ -6,8 +6,8 @@ sidebar_position: 1
 
 ## Prerequisites
 
-- You have received the DEVITY Eval Kit including the DEVITY Gateway 
-- You have received the console access to Thingsboard
+- You have received the DEVITY Eval Kit including the DEVITY Gateway hardware.
+- You have received the access to Thingsboard.
 
 ## What is the Thingsboard Rule Engine
 

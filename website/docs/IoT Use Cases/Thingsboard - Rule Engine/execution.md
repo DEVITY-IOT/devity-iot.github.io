@@ -25,10 +25,11 @@ First you start by configurating the device with the KEYNOA cloud.
 - Select the Thingsboard data hub.
 ![KEYNOA](/img/KEYNOA/Thingsboard/Data-Hub.png)
 
-- Fill in the details of your Thingsboard instance. The provision key and secret can be found in the Thingsboard device profile you want your device to be assigned to. Click on "Create".
+- Fill in the details of your Thingsboard instance. The provision key and provision secret can be found in the Thingsboard device profile you want your device to be assigned to. Click on "Create".
 ![KEYNOA](/img/KEYNOA/Thingsboard/Data-Hub-details.png)
 ### Create Template
 - Create the MQTT template that assigns your device to the Data Hub.
+Use the Create button and click on "MQTT template".
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
 
 - Select your Data Hub. Click on "Next".
