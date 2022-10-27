@@ -1,0 +1,71 @@
+---
+sidebar_position: 2
+---
+# Setup
+
+In this part, you will setup your device with our software to run the onboarding process.
+
+## Download
+
+Start with downloading the software package in the appropriate version for your machine.
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="x86" label="x86" default>
+
+Download package for **[x86 architecture](./assets/demo-kit_x86.tar.gz)**.  
+Alternatively you can use this curl command:  
+```
+curl -o devity_onboarding_package.tar.gz "https://path/to/download/package/demo-kit_x86.tar.gz"
+```
+  </TabItem>
+  <TabItem value="armv7" label="armv7">
+
+Download package for **[armv7 architecture](./assets/demo-kit_x86.tar.gz)**.  
+Alternatively you can use this curl command:  
+```
+curl -o devity_onboarding_package.tar.gz "https://path/to/download/package/demo-kit_armv7.tar.gz"
+```
+  </TabItem>
+</Tabs>
+
+## Unpack
+
+Open a terminal and unpack the download package to your desired destination.
+Make sure that your current user have the read, write and execution permission in that folder.  
+```
+tar -xvf demo-kit.tar.gz
+``` 
+  
+In the package that you just unpacked are three sperate software packages.
+The package should look like this.
+```
+.
+├── cert-man
+│   ├── creds (with certificate management server)
+│   ├── cert-man (executable)
+│   └── config (configurations for certificate management)
+├── conf-man
+│   ├── conf.d
+│   ├── conf-man
+│   └── templates
+├── mqtt-client
+│   └── mqtt-client
+├── linux-client
+├── data
+└── truststore
+
+```
+
+- Onboarding
+  - Receives initial data and configurations
+- Certificate management
+  - Generates new certificates and renews them when expiring
+- Configuration management
+  - Generates and updates configurations for other applications (e.g. certificate management)
+- truststore
+  - Stores certificate authority certificates
+
+Now proceed to configurating your devie.

@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Device onboarding',
-  tagline: 'Tutorial',
+  title: 'DEVITY Documentation',
+  tagline: 'Docs',
   url: 'https://pages.git.guuthe.de',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -22,6 +22,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
         },
         blog: false,
@@ -46,7 +47,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Device onboarding',
+            label: 'DEVITY Docs',
           },
           {
             href: 'https://devity.eu',
@@ -62,8 +63,12 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Device onboarding tutorial',
-                to: '/docs/',
+                label: 'Device Onboarding',
+                to: '/Device Onboarding/',
+              },
+              {
+                label: 'IOT Use Cases',
+                to: '/IoT Use Cases',
               },
             ],
           },
@@ -81,7 +86,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} DEVITY device onboarding, Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} DEVITY Docs, Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

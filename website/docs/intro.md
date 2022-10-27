@@ -3,18 +3,6 @@ sidebar_position: 1
 slug: /
 ---
 
-# Introduction
+# DEVITY Documentation
 
-Use your workstation as "device".
-Overall goal.
-manuell steps will be automeated in production
-For further questions and technical support contact Christoph
-
-## Getting Started
-
-What do we need?
-More tests
-
-## Whats in it?
-
-MQTT Client
+On this website we present the DEVITY documentation
