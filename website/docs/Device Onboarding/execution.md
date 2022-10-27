@@ -80,7 +80,7 @@ Also this compeltes the onboarding process and the operation of the device can c
 Now that you have completed the onboarding process you can run the MQTT client.
 
 To confirm that the connection was successfull you can use a MQTT subscribtion.
-We recommend to use the **[Paho MQTT client](github.com/eclipse/paho.mqtt.c)** CLI interface.
+We recommend to use the **[Paho MQTT client](https://github.com/eclipse/paho.mqtt.c)** CLI interface.
 Although you can use any MQTT subscriber to your liking.
 For authentication use this **[certificate](./assets/demo.crt.pem)** with your subscriber.
 
