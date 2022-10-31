@@ -25,10 +25,21 @@ First you start by configurating the device with the KEYNOA cloud.
 - Select the Thingsboard data hub.
 ![KEYNOA](/img/KEYNOA/Thingsboard/Data-Hub.png)
 
-- Fill in the details of your Thingsboard instance. The provision key and secret can be found in the Thingsboard device profile you want your device to be assigned to. Click on "Create".
+- Fill in the details of your Thingsboard instance. 
+    - Connector Name ("Thingsboard Cloud")
+    - Thingsboard Provider (select "Thingsboard Cloud Platform" from the dropdown)
+    - MQTT Broker URL (leave the default "ssl://mqtt.thingsboard.cloud:8883")
+    - Topic ("v1/devices/me/telemetry")
+    - Provision Key
+    - Provision Secret
+    - Certificate Authority (select "KEYNOA-CLOUD INT CA2 MQTT v1" from the dropdown)
 ![KEYNOA](/img/KEYNOA/Thingsboard/Data-Hub-details.png)
+- The provision key and secret can be found in the Thingsboard device profile you want your device to be assigned to.
+![KEYNOA](/img/KEYNOA/Thingsboard/Device-Credentials.png)
+- Click on "Create".
 ### Create Template
 - Create the MQTT template that assigns your device to the Data Hub.
+Use the Create button and click on "MQTT template".
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
 
 - Select your Data Hub. Click on "Next".
@@ -37,12 +48,14 @@ First you start by configurating the device with the KEYNOA cloud.
 - Fill in the device details
     - Device Property ("Device Model")
     - your-device-model-number ("eval-kit")
+![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
 - This property will be matched against the information the device provides about itself during the onboarding process. When it matches the template will be selected to configure the device.
 - Click on "Next".
-![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
 
-- Give the template an identifier. Click on "Save".
+- Give the template an identifier.
+    - Identifier Name ("Thingsboard MQTT template")
 ![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
+- Click on "Save".
 ### Upload Voucher
 - You have now created the setup for your device to be onboarded. Now upload the voucher you received to KEYNOA.
 ![KEYNOA](/img/KEYNOA/upload-voucher.png)
@@ -53,7 +66,7 @@ First you start by configurating the device with the KEYNOA cloud.
 - After that go to the devives tab and wait until the TO0 Status of your device says "completed".
 ![KEYNOA](/img/KEYNOA/TO0.png)
 
-- Your device is now ready to be onboarded. Continue with the setup in Thingsboard.
+- Your device is now ready to be onboarded. Power on the device to complete the onboaridng process. After that continue with the setup in Thingsboard.
 
 ## Thingsboard setup
 ### Adapt the Rule Chain
