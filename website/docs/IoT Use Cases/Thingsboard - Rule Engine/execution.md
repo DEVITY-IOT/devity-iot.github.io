@@ -36,6 +36,7 @@ First you start by configurating the device with the KEYNOA cloud.
 - Click on "Create".
 ### Create Template
 - Create the MQTT template that assigns your device to the Data Hub.
+Use the Create button and click on "MQTT template".
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
 
 - Select your Data Hub. Click on "Next".
