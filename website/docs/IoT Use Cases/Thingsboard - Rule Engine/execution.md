@@ -27,6 +27,9 @@ First you start by configurating the device with the KEYNOA cloud.
 
 - Fill in the details of your Thingsboard instance. 
     - Connector Name ("Thingsboard Cloud")
+    - Thingsboard Provider (select "Thingsboard Cloud Platform" from the dropdown)
+    - MQTT Broker URL (leave the default "ssl://mqtt.thingsboard.cloud:8883")
+    - Topic ("v1/devices/me/telemetry")
     - Provision Key
     - Provision Secret
     - Certificate Authority (select "KEYNOA-CLOUD INT CA2 MQTT v1" from the dropdown)

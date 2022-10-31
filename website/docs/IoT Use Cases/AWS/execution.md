@@ -31,6 +31,7 @@ First you start by configurating the device with the KEYNOA cloud.
 ![KEYNOA](/img/KEYNOA/AWS/User-Credentials-2.png)
 
 - Fill in the details.
+    - Template Body ("default")
     - RoleARN ("arn:aws:iam::****:role/JITPRole")
     - Topic ("/company/facility/42/dty-eval-kit/${serial}")
     - Certificate Authority (select "KEYNOA-CLOUD INT CA2 MQTT v1" from the dropdown)

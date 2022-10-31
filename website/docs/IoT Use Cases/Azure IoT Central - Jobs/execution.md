@@ -36,6 +36,9 @@ First you start by configurating the device with the KEYNOA cloud.
 ![KEYNOA](/img/KEYNOA/IoT-Central/Data-Hub-details.png)
 
 - Fill in the details.
+    - IoT Central Name (this should reflect your chosen Hub "devity-hub")
+    - Enrollment Group Name ("KEYNOA-EvalKit-001")
+    - IoT Location ("westeuropa")
     - Certificate Authority (select "KEYNOA-CLOUD INT CA2 MQTT v1" from the dropdown)
     - Connector Name ("IoT Central connector")
 ![KEYNOA](/img/KEYNOA/IoT-Central/Data-Hub-details-2.png)
