@@ -62,10 +62,10 @@ const config = {
           {
             title: 'Docs',
             items: [
-              {
-                label: 'Device Onboarding',
-                to: '/Device Onboarding/',
-              },
+//              {
+//                label: 'Device Onboarding',
+//                to: '/Device Onboarding/',
+//              },
               {
                 label: 'IOT Use Cases',
                 to: '/IoT Use Cases',
