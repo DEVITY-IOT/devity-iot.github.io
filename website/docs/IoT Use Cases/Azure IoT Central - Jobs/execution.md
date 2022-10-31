@@ -26,7 +26,7 @@ First you start by configurating the device with the KEYNOA cloud.
 - Select the IoT-Central data hub.
 ![KEYNOA](/img/KEYNOA/IoT-Central/Data-Hub.png)
 
-- Log in with your Microsoft account.
+- Log in with your Microsoft account. This account needs admin priviledges in both the azure portal as well as the IoT Hub.
 ![KEYNOA](/img/KEYNOA/IoT-Central/Microsoft-login.png)
 
 - Grant access to the to the application.
@@ -37,12 +37,12 @@ First you start by configurating the device with the KEYNOA cloud.
 
 - Fill in the details.
     - IoT Central Name (this should reflect your chosen Hub "devity-hub")
-    - Enrollment Group Name ("KEYNOA-EvalKit-001")
+    - Enrollment Group Name (check that this enrollment group does not already exist "KEYNOA-EvalKit-001")
     - IoT Location ("westeuropa")
     - Certificate Authority (select "KEYNOA-CLOUD INT CA2 MQTT v1" from the dropdown)
     - Connector Name ("IoT Central connector")
 ![KEYNOA](/img/KEYNOA/IoT-Central/Data-Hub-details-2.png)
-- Click on "Create Configuration".
+- You need to have admin access to the IoT Central Hub to perform this action: Click on "Create Configuration".
 ### Create Template
 - Create the MQTT Template that assigns your device to the Data Hub.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
