@@ -18,11 +18,25 @@ First you start by configurating the device with the KEYNOA cloud.
 - Select the AWS data hub.
 ![KEYNOA](/img/KEYNOA/AWS/Data-Hub.png)
  
-- Fill in the Key ID and the secret key. Click on "Confirm".
+- Fill in the details. 
+    - Access Key ID
+    - Access Secret Key
+    - Region (select "eu-central-1" from the dropdown)
 ![KEYNOA](/img/KEYNOA/AWS/Data-Hub-details.png)
+- Click on "Confirm".
+- Access Key and Secret can be created in the AWS IAM portal.
+- Select your user with Administators group access.
+![KEYNOA](/img/KEYNOA/AWS/User-Credentials.png)
+- Create a new Access Key pair
+![KEYNOA](/img/KEYNOA/AWS/User-Credentials-2.png)
 
-- Fill in the RoleARN. Select the correct CA to register at AWS and provide a identifier name. Click on "Regiser CA".
+- Fill in the details.
+    - RoleARN ("arn:aws:iam::****:role/JITPRole")
+    - Topic ("/company/facility/42/dty-eval-kit/${serial}")
+    - Certificate Authority (select "KEYNOA-CLOUD INT CA2 MQTT v1" from the dropdown)
+    - Connector Name ("AWS connector")
 ![KEYNOA](/img/KEYNOA/AWS/Data-Hub-details-2.png)
+- Click on "Regiser CA".
 ### Create Template
 - In the KEYNOA UI create the MQTT Template.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
@@ -32,12 +46,14 @@ First you start by configurating the device with the KEYNOA cloud.
 - Fill in the device details
     - Device Property ("Device Model")
     - your-device-model-number ("eval-kit")
-- This property will be matched against the information the device provides about itself during the onboarding process. When it matches the template will be selected to configure the device.
-- Click on "Next".
+This property will be matched against the information the device provides about itself during the onboarding process. When it matches the template will be selected to configure the device.
 ![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
+- Click on "Next".
 
-- Give the template an identifier. Click on "Save".
+- Fill in the details.
+    - Identifier Name ("AWS MQTT template")
 ![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
+- Click on "Save".
 ### Upload Voucher
 - You have now created the setup for your device to be onboarded. Now upload the voucher you received to KEYNOA.
 ![KEYNOA](/img/KEYNOA/upload-voucher.png)
@@ -79,8 +95,8 @@ Important: Check that the correct region is selected before you start
 - Fill out the details
     - Model: choose the one you just created ("Eval Kit Device Model")
     - Name ("Eval Kit Device 1")
-- Click on "Create Asset" on the bottom
 ![Assets](/img/AWS/SiteWise-Assets-create.png)
+- Click on "Create Asset" on the bottom
 - Select the asset and choose edit
 - Fill in Measurement
     - Temperature C ("/company/facility/42/dty-eval-kit/device-serial-number/temperature")
@@ -107,8 +123,8 @@ Important: Check that the correct region is selected before you start
 - Fill out the details
     - Model: choose the one you just created ("Eval Kit Device Fleet Model")
     - Name ("Eval Kit Device Fleet 1")
-- Click on "Create Asset" on the bottom
 ![Assets](/img/AWS/SiteWise-Assets-create.png)
+- Click on "Create Asset" on the bottom
 - Select the asset and choose edit
 - Add associated asset
     - Hierarchy ("Device")
@@ -123,11 +139,11 @@ Important: Check that the correct region is selected before you start
 - Fill out the details
     - Name ("Eval Kit Forwarding Rule")
     - Optinal: Enter a description
-- Click on "Next"
 ![Rules](/img/AWS/Core-Rules-create-1.png)
+- Click on "Next"
 - Change the SQL query to match the Eval Kits publish topic
     - SELECT * FROM '/company/facility/+/dty-eval-kit/+'
-- The "+" placeholders allow all traffic on matching topics to be forwared to SiteWise
+The "+" placeholders allow all traffic on matching topics to be forwared to SiteWise
 - Click on "Next"
 ![Rules](/img/AWS/Core-Rules-create-2.png)
 - Fill in the details
@@ -199,7 +215,7 @@ Important: Check that the correct region is selected before you start
 - Fill in the details
     - Project name ("Eval Kit Project")
     - Project description ("My Eval Kit Project")
-- Click on "Add asset to project"
+Click on "Add asset to project"
 ![Portal](/img/AWS/SiteWise-Portal-Project-create-2.png)
 - Click on "Add owners"
 ![Portal](/img/AWS/SiteWise-Portal-Project-edit.png)

@@ -35,8 +35,11 @@ First you start by configurating the device with the KEYNOA cloud.
 - Select the proper IoT Central hub. Click on the correct IoT hub on the right.
 ![KEYNOA](/img/KEYNOA/IoT-Central/Data-Hub-details.png)
 
-- Select the correct CA and provide an identifier name. Click on "Create Configuration".
+- Fill in the details.
+    - Certificate Authority (select "KEYNOA-CLOUD INT CA2 MQTT v1" from the dropdown)
+    - Connector Name ("IoT Central connector")
 ![KEYNOA](/img/KEYNOA/IoT-Central/Data-Hub-details-2.png)
+- Click on "Create Configuration".
 ### Create Template
 - Create the MQTT Template that assigns your device to the Data Hub.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
@@ -47,12 +50,14 @@ First you start by configurating the device with the KEYNOA cloud.
 - Fill in the device details
     - Device Property ("Device Model")
     - your-device-model-number ("eval-kit")
-- This property will be matched against the information the device provides about itself during the onboarding process. When it matches the template will be selected to configure the device.
+This property will be matched against the information the device provides about itself during the onboarding process. When it matches the template will be selected to configure the device.
 - Click on "Next".
 ![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
 
-- Give the template an identifier. Click on "Save".
+- Give the template an identifier.
+    - Identifier Name ("Azure IoT MQTT template")
 ![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
+- Click on "Save".
 ### Upload Voucher
 - You have now created the setup for your device to be onboarded. Now upload the voucher you received to KEYNOA.
 ![KEYNOA](/img/KEYNOA/upload-voucher.png)
@@ -63,7 +68,7 @@ First you start by configurating the device with the KEYNOA cloud.
 - After that go to the devives tab and wait until the TO0 Status of your device says completed.
 ![KEYNOA](/img/KEYNOA/TO0.png)
 
-- Your device is now ready to be onboarded. Continue with the setup in IoT Central.
+- Your device is now provisioned with KEYNOA. Continue with the setup of IoT Central.
 
 ## Azure IoT Central setup
 ### Create Device Template
@@ -151,4 +156,3 @@ This makes the administration scalable, as devices only need to be added to a gr
 
 ### Reset the Sending Interval
 - For practice: Now create another job that resets the Sending_interval to one minute the next morning. You can do this.
-	
