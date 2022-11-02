@@ -37,7 +37,9 @@ First you start by configurating the device with the KEYNOA cloud.
     - Certificate Authority (select "KEYNOA-CLOUD INT CA2 MQTT v1" from the dropdown)
     - Connector Name ("AWS connector")
 ![KEYNOA](/img/KEYNOA/AWS/Data-Hub-details-2.png)
-- Click on "Regiser CA".
+- The RoleARN can be found in the AWS IAM portal.
+![KEYNOA](/img/KEYNOA/AWS/JITPRole.png)
+- Click on "Register CA".
 ### Create Template
 - In the KEYNOA UI create the MQTT Template.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
