@@ -41,7 +41,32 @@ First you start by configurating the device with the KEYNOA cloud.
 4. The provision key and secret can be found in the Thingsboard device profile you want your device to be assigned to.
 ![KEYNOA](/img/KEYNOA/Thingsboard/Device-Credentials.png)
 
-5. Click on "Create".
+5. If you do not have a device profile yet, create one. Click on "Device profiles" and select "Create new device profile".
+![KEYNOA](/img/KEYNOA/Thingsboard/Device-profiles.png)
+
+6. Fill in the details, then click on "Next: Transport configuration".
+
+
+    Name ("Eval-Kit device profile")
+    Rule chain ("Root Rule Chain")
+
+![KEYNOA](/img/KEYNOA/Thingsboard/Device-profile-add.png)
+
+7. Select the Transport type and click on "Next: Alarm rules".
+
+
+    Transport type ("MQTT")
+
+![KEYNOA](/img/KEYNOA/Thingsboard/Device-profile-transport.png)
+
+8. Click on "Next: Device provisioning". Select the device provisioning type, then click on "Add".
+
+
+    Provisioning strategy ("Allow to create new devices")
+    
+![KEYNOA](/img/KEYNOA/Thingsboard/Device-profile-provisioning.png)
+
+9. Click on "Create".
 ### Create Template
 1. Create the MQTT template that assigns your device to the Data Hub.
 Use the Create button and click on "MQTT template".
