@@ -59,11 +59,11 @@ First you start by configurating the device with the KEYNOA cloud.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/Device-profile-transport.png)
 
-8. Click on "Next: Device provisioning". Select the device provisioning type, then click on "Add".
+8. Click on "Next: Device provisioning". Select the device provisioning type, here the device credentials are also displayed. Click on "Add".
 
 
     Provisioning strategy ("Allow to create new devices")
-    
+
 ![KEYNOA](/img/KEYNOA/Thingsboard/Device-profile-provisioning.png)
 
 9. Click on "Create".
