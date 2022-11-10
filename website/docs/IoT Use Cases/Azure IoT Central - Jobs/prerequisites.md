@@ -9,6 +9,7 @@ sidebar_position: 1
 - You have received the DEVITY Eval Kit including the DEVITY Gateway hardware.
 - You have received the DEVITY device voucher.
 - You have received the console access to the Devity-Hub, our IoT Central Instance on Azure.
+- Make sure the device has internet access.
 
 ## What is the Azure IoT Central
 

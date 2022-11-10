@@ -40,7 +40,7 @@ const config = {
         title: 'DEVITY',
         logo: {
           alt: 'DEVITY Logo',
-          src: 'img/logo.svg',
+          src: 'img/DEVITY_just Logo.png',
         },
         items: [
           {
@@ -52,6 +52,11 @@ const config = {
           {
             href: 'https://devity.eu',
             label: 'Website',
+            position: 'right',
+          },
+          {
+            href: 'mailto:support@devity.eu',
+            label: 'Contact',
             position: 'right',
           },
         ],
@@ -82,6 +87,19 @@ const config = {
               {
                 label: 'GitHub',
                 href: 'https://github.com/DEVITY-IOT',
+              },
+            ],
+          },
+          {
+            title: 'Contact',
+            items: [
+              {
+                label: 'Support',
+                href: 'mailto:support@devity.eu',
+              },
+              {
+                label: 'Tel: 05251/60-4424',
+                href: '#',
               },
             ],
           },
