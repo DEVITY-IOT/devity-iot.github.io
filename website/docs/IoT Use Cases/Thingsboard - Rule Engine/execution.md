@@ -164,7 +164,7 @@ Use the Create button and click on "MQTT template".
 
 5. Now you can choose the newly created alias as data source. Choose "temperature" as attribute. Click "Add". 
 Congratulations, you have created your first widget.
-Hint: If you can't find the attribute temperature, the test device hasn't sent data yet. 
+Hint: If you can't find the attribute temperature, the device hasn't sent data yet. 
 ![Temperature Validation Node](/img/tb/18.png)
 
 #### Temperature Graph

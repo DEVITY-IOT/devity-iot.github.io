@@ -22,3 +22,9 @@ It assembles PaaS (Platform-as-a-Service) offerings and unifies each underlying 
 - Extensibility to connect business applications and IoT data and turn insights into actions
 
 The IoT Central is build with the basic Azure IoT Components like an integrated IoT Hub
+
+## Limitations
+
+The IoT Central subscribtion used with the Eval Kit is limited in its usage.
+As this Kit is not designed to be used in productive environment we will forward excessive costs generated to you.
+To circumvent this we encurage you to not let the device run unsuperwised.
