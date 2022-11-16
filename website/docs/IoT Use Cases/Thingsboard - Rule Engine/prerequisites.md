@@ -2,21 +2,32 @@
 sidebar_position: 1
 ---
 
-# Prerequisites and information
+# Prerequisites and General Information
 
 ## Prerequisites
 
-- You have received the DEVITY Eval Kit including the DEVITY Gateway hardware.
-- You have received the DEVITY device voucher.
-- You have received the access to Thingsboard.
+- You have the DEVITY Test Kit (Janz Tec emPC-A/RPI3+ with pre-installed KEYNOA SDK) ready for operation.
+- The device has access to the internet.
+- You have access to the DEVITY device voucher.
+- You have received the access to Thingsboard (via KEYNOA Enrollment Service).
 
-## What is the Thingsboard Rule Engine
+## What is Thingsboard
 
-The Rule Engine is an easy to use framework for building event-based workflows. There are 3 main components:
+ThingsBoard is an open-source IoT platform for data collection, processing, visualization, and device management. It supports cloud and on-premises deployments, and it combines scalability, fault-tolerance and performances to nullify the chances of getting your IoT data lost.
 
-- Message - any incoming event. It can be an incoming data point from devices, device life-cycle event, REST API event, RPC request, etc.
-- Rule Node - a function that is executed on an incoming message. There are many different Node types that can filter, transform or execute some action on incoming Messages.
-- Rule Chain - nodes are connected with each other with relations, so the outbound message from rule node is sent to next connected rule nodes.
+The integration between KEYNOA and ThingsBoard is an example of an MQTT integration. ThingsBoard embeds an MQTT Broker, which is configured with the ThingsBoard Integrations functionality to subscribe or publish data.
+
+You can find more detailed information about features and the pricing model of Thingsboard [here](https://thingsboard.io/pricing/).
+
+## Thingsboard Rule Engine
+
+The Thingsboard Rule Engine is an easy to use framework for building event-based workflows. There are 3 main components:
+
+1. Message - any incoming event. It can be an incoming data point from devices, device life-cycle event, REST API event, RPC request, etc.
+2. Rule Node - a function that is executed on an incoming message. There are many different Node types that can filter, transform or execute some action on incoming Messages.
+3. Rule Chain - nodes are connected with each other with relations, so the outbound message from rule node is sent to next connected rule nodes.
+
+## Use Cases
 
 Thingsboard Rule Engine is a highly customizable framework for complex event processing. Here are some common use cases that one can configure via Thingsboard Rule Chains:
 
