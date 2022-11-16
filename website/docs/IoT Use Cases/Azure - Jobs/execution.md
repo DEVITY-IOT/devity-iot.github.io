@@ -6,33 +6,31 @@ sidebar_position: 2
 
 
 ## Initial Situation
-TODO: rewritte for temperature
-You are the IoT representative of the facility team of a watch manufacturer. 
-Intelligent light sensors monitor the light to create optimal production conditions for the precision mechanics. 
-The connected IoT sensors therefore continuously transmit the current light intensity (every minute) in order to adjust the light intensity if necessary. 
+You are the IoT representative of the facility team of a pharmaceutical manufacturer. The facility has a power plant that is operated with waste heat. Intelligent temperature sensors monitor the temperature to create optimal production conditions for the pharmaceuticals. 
+The connected IoT sensors therefore continuously transmit the current temperature (every minute) in order to adjust the plant temperature if necessary. 
 
-Since only maintenance tasks are carried out at night, the transmission interval of the light intensity can be downgraded (every 15 minutes). 
+Since only maintenance tasks are carried out at night, the transmission interval of the temperature can be downgraded (every 15 minutes). 
 This should happen completely automatically.
 
 
 
-## Provision the IoT Sensor with KEYNOA
+## Provision the IoT device with KEYNOA
 
 First you start by configurating the device with the KEYNOA cloud.
 ### Create Data Hub
-1. In the KEYNOA UI create the Data Hub you want your device to connect to.
+1. In the KEYNOA Cloud create the Data Hub you want your device to connect to.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
 
-2. Select the IoT-Central data hub.
+2. Select the Azure IoT Central data hub.
 ![KEYNOA](/img/KEYNOA/IoT-Central/Data-Hub.png)
 
-3. Log in with your Microsoft account. This account needs admin priviledges in both the azure portal as well as the IoT Hub.
+3. Log in with your Microsoft account or with the credentials you find in the KEYNOA credential manager (just click on the lock icon in the header of KEYNOA Cloud). This account needs admin priviledges in both the azure portal as well as the IoT Hub (see step 4).
 ![KEYNOA](/img/KEYNOA/IoT-Central/Microsoft-login.png)
 
 4. Grant access to the to the application.
 ![KEYNOA](/img/KEYNOA/IoT-Central/Microsoft-login-2.png)
 
-5. Select the proper IoT Central hub. Click on the correct IoT hub on the right.
+5. Select the proper IoT Central data hub. Click on the correct IoT hub on the right.
 ![KEYNOA](/img/KEYNOA/IoT-Central/Data-Hub-details.png)
 
 6. Fill in the details:
@@ -51,20 +49,20 @@ First you start by configurating the device with the KEYNOA cloud.
 1. Create the MQTT Template that assigns your device to the Data Hub.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
 
-2. Select your Data Hub. Click on "Next".
+2. Select your Data Hub ("IoT Central connector"). Click on "Next".
 ![KEYNOA](/img/KEYNOA/IoT-Central/MQTT-template-1.png)
 
-3. Fill in the device details
-
+3. Fill in the device details.
 
     Device Property ("Device Model")
     your-device-model-number ("eval-kit")
 
-This property will be matched against the information the device provides about itself during the onboarding process. When it matches the template will be selected to configure the device.
+These properties will be matched against the information the device provides about itself during the onboarding process. If it matches the template, the template will be selected to configure the device.
+
 4. Click on "Next".
 ![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
 
-5. Give the template an identifier. Click on "Save".
+5. Give the template an identifier name. Click on "Save".
 
 
     Identifier Name ("Azure IoT MQTT template")
@@ -72,13 +70,13 @@ This property will be matched against the information the device provides about 
 ![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
 
 ### Upload Voucher
-1. You have now created the setup for your device to be onboarded. Now upload the voucher you received to KEYNOA.
+1. You have now created the setup for your device to be onboarded. Now upload your received voucher to KEYNOA.
 ![KEYNOA](/img/KEYNOA/upload-voucher.png)
 
 2. Select the voucher via the file selector.
 ![KEYNOA](/img/KEYNOA/upload-voucher-2.png)
 
-3. After that go to the devives tab and wait until the TO0 Status of your device says completed.
+3. After that, go to the devives tab and wait until the TO0 Status of your device says completed.
 ![KEYNOA](/img/KEYNOA/TO0.png)
 
 4. Your device is now provisioned with KEYNOA. Continue with the setup of IoT Central.
@@ -125,6 +123,9 @@ During the onboarding process the device will be assigned to the device Group Ev
 
 7. If the job is triggered when the entered time is reached, the sending_interval should be adjusted. Hint: Change the time in your job so that you do not have to wait until 6PM for the test.
 ![DevityHub](/img/az/22.png)
+
+
+### Success! You now automatically get notifications for your facility.
 
 ### Reset the Sending Interval
 For practice: Now create another job that resets the Sending_interval to one minute the next morning. You can do this.

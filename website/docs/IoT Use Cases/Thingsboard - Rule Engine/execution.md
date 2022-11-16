@@ -9,18 +9,18 @@ sidebar_position: 2
 
 You are the IoT manager of a brewing and beverage factory. 
 Since the products should only be stored at certain temperatures, it is essential for the entire operation to detect failures of the cooling systems in a timely manner. 
-To do this, they use connected IoT sensors at all storage points. 
+To do this, you want to use sensors and IoT gateway at all storage points. 
 
 In order to detect failures directly, you now use the Thingsboard Rule Chain. 
 The aim of this tutorial is to define a rule that immediately detects failures of the cooling system. 
 
 
-## Provision the IoT Sensor with KEYNOA
+## Provision the IoT gateway with KEYNOA
 
-First you start by configurating the device with the KEYNOA cloud.
+First, you start by configuring the device with the KEYNOA cloud. Do not power on the device before you have completed the configuration process. 
 ### Create Data Hub
-1. In the KEYNOA UI create the Data Hub you want your device to connect to.
-![KEYNOA](/img/KEYNOA/Dashboard.png)
+1. In the KEYNOA Cloud create the Data Hub you want your device to connect to.
+![KEYNOA](/img/KEYNOA/Dashboard.png) 
 
 2. Select the Thingsboard data hub.
 ![KEYNOA](/img/KEYNOA/Thingsboard/Data-Hub.png)
@@ -32,13 +32,13 @@ First you start by configurating the device with the KEYNOA cloud.
     Thingsboard Provider (select "Thingsboard Cloud Platform" from the dropdown)
     MQTT Broker URL (leave the default "ssl://mqtt.thingsboard.cloud:8883")
     Topic ("v1/devices/me/telemetry")
-    Provision Key
-    Provision Secret
+    Provision Key (see step 4)
+    Provision Secret (see step 4)
     Certificate Authority (select "KEYNOA-CLOUD INT CA2 MQTT v1" from the dropdown)
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/Data-Hub-details.png)
 
-4. The provision key and secret can be found in the Thingsboard device profile you want your device to be assigned to.
+4. Log in to the [Thingsboard Cloud](https://thingsboard.cloud/login) with the credentials you find in the KEYNOA credential manager (just click on the lock icon in the header of KEYNOA Cloud). The provision key and secret can be found in the Thingsboard device profile you want your device to be assigned to.
 ![KEYNOA](/img/KEYNOA/Thingsboard/Device-Credentials.png)
 
 5. If you do not have a device profile yet, create one. Click on "Device profiles" and select "Create new device profile".
@@ -81,19 +81,21 @@ Use the Create button and click on "MQTT template".
     Device Property ("Device Model")
     your-device-model-number ("eval-kit")
 
+These properties will be matched against the information the device provides about itself during the onboarding process. If it matches the template, the template will be selected to configure the device. Click on "Next".
+
 ![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
 
-4. This property will be matched against the information the device provides about itself during the onboarding process. When it matches the template will be selected to configure the device. Click on "Next".
-5. Give the template an identifier.
+
+4. Give the template an identifier.
 
 
     Identifier Name ("Thingsboard MQTT template")
 
 ![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
 
-6. Click on "Save".
+5. Click on "Save".
 ### Upload Voucher
-1. You have now created the setup for your device to be onboarded. Now upload the voucher you received to KEYNOA.
+1. You have now created the setup for your device to be onboarded. Now upload the received voucher to KEYNOA.
 ![KEYNOA](/img/KEYNOA/upload-voucher.png)
 
 2. Select the voucher via the file selector.
@@ -106,7 +108,7 @@ Use the Create button and click on "MQTT template".
 
 ## Thingsboard setup
 ### Adapt the Rule Chain
-1. In Thingsboard UI go to Rule Chains section and open Root Rule Chain.
+1. In Thingsboard Cloud go to Rule Chains section and open Root Rule Chain.
 ![Temperature Validation Node](/img/tb/1.png)
 
 2. Familiarise yourself with the rule chain. Focus only on the red area. Incoming messages are distributed via the switch. If a message contains telemetry data, it is stored. We now want to check the stored data.
@@ -195,3 +197,5 @@ Hint: If you can't find the attribute temperature, the device hasn't sent data y
 ![Temperature Validation Node](/img/tb/26.png)
 
 3. You can adapt the Dashboard according to your wishes. Insert widgets and explore the Thingsboard functionalities. 
+
+### Success! You now have a digitalized brewing and beverage factory.
