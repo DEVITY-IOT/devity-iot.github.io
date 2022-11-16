@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# Execution
+# Thingsboard Setup
 
 
 ## Initial Situation
@@ -14,100 +14,7 @@ To do this, you want to use sensors and IoT gateway at all storage points.
 In order to detect failures directly, you now use the Thingsboard Rule Chain. 
 The aim of this tutorial is to define a rule that immediately detects failures of the cooling system. 
 
-
-## Provision the IoT gateway with KEYNOA
-
-First, you start by configuring the device with the KEYNOA cloud. Do not power on the device before you have completed the configuration process. 
-### Create Data Hub
-1. In the KEYNOA Cloud create the Data Hub you want your device to connect to.
-![KEYNOA](/img/KEYNOA/Dashboard.png) 
-
-2. Select the Thingsboard data hub.
-![KEYNOA](/img/KEYNOA/Thingsboard/Data-Hub.png)
-
-3. Fill in the details of your Thingsboard instance:
-
-
-    Connector Name ("Thingsboard Cloud")
-    Thingsboard Provider (select "Thingsboard Cloud Platform" from the dropdown)
-    MQTT Broker URL (leave the default "ssl://mqtt.thingsboard.cloud:8883")
-    Topic ("v1/devices/me/telemetry")
-    Provision Key (see step 4)
-    Provision Secret (see step 4)
-    Certificate Authority (select "KEYNOA-CLOUD INT CA2 MQTT v1" from the dropdown)
-
-![KEYNOA](/img/KEYNOA/Thingsboard/Data-Hub-details.png)
-
-4. Log in to the [Thingsboard Cloud](https://thingsboard.cloud/login) with the credentials you find in the KEYNOA credential manager (just click on the lock icon in the header of KEYNOA Cloud). The provision key and secret can be found in the Thingsboard device profile you want your device to be assigned to.
-![KEYNOA](/img/KEYNOA/Thingsboard/Device-Credentials.png)
-
-5. If you do not have a device profile yet, create one. Click on "Device profiles" and select "Create new device profile".
-![KEYNOA](/img/KEYNOA/Thingsboard/Device-profiles.png)
-
-6. Fill in the details, then click on "Next: Transport configuration".
-
-
-    Name ("Eval-Kit device profile")
-    Rule chain ("Root Rule Chain")
-
-![KEYNOA](/img/KEYNOA/Thingsboard/Device-profile-add.png)
-
-7. Select the Transport type and click on "Next: Alarm rules".
-
-
-    Transport type ("MQTT")
-
-![KEYNOA](/img/KEYNOA/Thingsboard/Device-profile-transport.png)
-
-8. Click on "Next: Device provisioning". Select the device provisioning type, here the device credentials are also displayed. Click on "Add".
-
-
-    Provisioning strategy ("Allow to create new devices")
-
-![KEYNOA](/img/KEYNOA/Thingsboard/Device-profile-provisioning.png)
-
-9. Click on "Create".
-### Create Template
-1. Create the MQTT template that assigns your device to the Data Hub.
-Use the Create button and click on "MQTT template".
-![KEYNOA](/img/KEYNOA/Dashboard.png)
-
-2. Select your Data Hub. Click on "Next".
-![KEYNOA](/img/KEYNOA/Thingsboard/MQTT-template-1.png)
-
-3. Fill in the device details:
-
-
-    Device Property ("Device Model")
-    your-device-model-number ("eval-kit")
-
-These properties will be matched against the information the device provides about itself during the onboarding process. If it matches the template, the template will be selected to configure the device. Click on "Next".
-
-![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
-
-
-4. Give the template an identifier.
-
-
-    Identifier Name ("Thingsboard MQTT template")
-
-![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
-
-5. Click on "Save".
-### Upload Voucher
-1. You have now created the setup for your device to be onboarded. Now upload the received voucher to KEYNOA.
-![KEYNOA](/img/KEYNOA/upload-voucher.png)
-
-2. Select the voucher via the file selector.
-![KEYNOA](/img/KEYNOA/upload-voucher-2.png)
-
-3. After that go to the devives tab and wait until the TO0 Status of your device says "completed".
-![KEYNOA](/img/KEYNOA/TO0.png)
-
-4. Your device is now ready to be onboarded. Power on the device to complete the onboaridng process. After that continue with the setup in Thingsboard.
-
-## Thingsboard setup
-### Adapt the Rule Chain
+## Adapt Rule Chain
 1. In Thingsboard Cloud go to Rule Chains section and open Root Rule Chain.
 ![Temperature Validation Node](/img/tb/1.png)
 
@@ -139,7 +46,7 @@ These properties will be matched against the information the device provides abo
 8. **Very Important:** Click on the "Apply Changes" Button at the bottom right to save all changes.
 ![Temperature Validation Node](/img/tb/10.png)
 
-### Build a Dashboard
+## Build Dashboard
 
 1. After customising the rule chain, we build a dashboard to visualise the alarms. Navigate to the section "Dashboard groups" and "All". At the top right you will find the "+" to create a new dashboard. Enter name and description.
 ![Temperature Validation Node](/img/tb/11.png)
@@ -151,7 +58,7 @@ These properties will be matched against the information the device provides abo
 ![Temperature Validation Node](/img/tb/13.png)
 
 
-#### Temperature Display
+### Temperature Display
 1. The first thing we want to do is create a temperature display. Select the widget type "Cards" for this.
 ![Temperature Validation Node](/img/tb/14.png)
 
@@ -169,14 +76,14 @@ Congratulations, you have created your first widget.
 Hint: If you can't find the attribute temperature, the device hasn't sent data yet. 
 ![Temperature Validation Node](/img/tb/18.png)
 
-#### Temperature Graph
+### Temperature Graph
 1. The second widget should display a graph showing the temperature curve. To do this, select "Add new widget" again via the button at the bottom right. Then select the widget type "Timeseires Line Chart".
 ![Temperature Validation Node](/img/tb/19.png)
 
 2. Insert the data shown below and click "Add".
 ![Temperature Validation Node](/img/tb/20.png)
 
-#### Alarms Table
+### Alarms Table
 1. The third widget should now show the incoming alarms. Therefore, add a new widget, this time with the type "Alarm Widgets".
 ![Temperature Validation Node](/img/tb/21.png)
 
@@ -189,7 +96,7 @@ Hint: If you can't find the attribute temperature, the device hasn't sent data y
 4. You can adjust the sizes of the widget acording to your preferences. ***Very Important:*** Do not forget to click "Apply Changes" at the bottom right. Otherwise your Dashboard won't be saved.
 ![Temperature Validation Node](/img/tb/24.png)
 
-### Check the incoming alarms
+## Check incoming alarms
 1. If the temperature rises above 35°, a new entry should occur in the Alarm table. The rule we defined before triggers the action that creates a new alarm.
 ![Temperature Validation Node](/img/tb/25.png)
 
@@ -198,4 +105,4 @@ Hint: If you can't find the attribute temperature, the device hasn't sent data y
 
 3. You can adapt the Dashboard according to your wishes. Insert widgets and explore the Thingsboard functionalities. 
 
-### Success! You now have a digitalized brewing and beverage factory.
+Success! You now have a digitalized brewing and beverage factory.
