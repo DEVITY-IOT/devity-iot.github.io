@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Execution
@@ -91,7 +91,7 @@ Follow these steps to create a SiteWise Portal:
 
 Important: Check that the correct region is selected before you start
 
-### Create asset model
+## Create asset model
 1. In AWS SiteWise console choose "Models". Click on "Create model".
 ![Models](/img/AWS/SiteWise-Models.png)
 
@@ -134,7 +134,7 @@ Important: Check that the correct region is selected before you start
 
 5. Click on "Save asset" on the bottom
 
-### Create device fleet asset model
+## Create device fleet asset model
 1. In AWS SiteWise console choose "Models". Click on "Create model".
 ![Models](/img/AWS/SiteWise-Models.png)
 
@@ -177,7 +177,7 @@ Important: Check that the correct region is selected before you start
 
 5. Click on "Save asset" on the bottom.
 
-### Create AWS IoT Core rule to send data to SiteWise 
+## Create AWS IoT Core rule to send data to SiteWise 
 1. In AWS IoT Core console choose "Message Routing/Rules". Click on "Create Rule".
 ![Rules](/img/AWS/Core-Rules.png)
 
