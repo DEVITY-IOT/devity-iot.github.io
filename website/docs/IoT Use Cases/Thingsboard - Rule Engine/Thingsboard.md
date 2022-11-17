@@ -46,6 +46,14 @@ The aim of this tutorial is to define a rule that immediately detects failures o
 8. **Very Important:** Click on the "Apply Changes" Button at the bottom right to save all changes.
 ![Temperature Validation Node](/img/tb/10.png)
 
+## Add Shared Attribute
+
+1. Go to "All" in "Device Groups" and click on your device. Select the "Attributes" tab and choose "Shared Attributes". To create a new shared attribute click "+".
+![Add Attribute](/img/tb/shared-attribute.png)
+
+2. Fill in the details as shown. Make sure that the Key value is "sending_interval".
+![Add Attribute](/img/tb/add-attribute.png)
+
 ## Build Dashboard
 
 1. After customising the rule chain, we build a dashboard to visualise the alarms. Navigate to the section "Dashboard groups" and "All". At the top right you will find the "+" to create a new dashboard. Enter name and description.
@@ -84,7 +92,7 @@ Hint: If you can't find the attribute temperature, the device hasn't sent data y
 ![Temperature Validation Node](/img/tb/20.png)
 
 ### Alarms Table
-1. The third widget should now show the incoming alarms. Therefore, add a new widget, this time with the type "Alarm Widgets".
+1. The third widget should now show the incoming alarms. Therefore, add a new widget, this time with the type "Alarm widgets".
 ![Temperature Validation Node](/img/tb/21.png)
 
 2. Choose "Alarms table".
@@ -93,16 +101,35 @@ Hint: If you can't find the attribute temperature, the device hasn't sent data y
 3. Enter the two fields marked below. Select the "Active" and "Cleared" state as well as your Entity alias.
 ![Temperature Validation Node](/img/tb/23.png)
 
-4. You can adjust the sizes of the widget acording to your preferences. ***Very Important:*** Do not forget to click "Apply Changes" at the bottom right. Otherwise your Dashboard won't be saved.
+### Set Sending Interval
+
+1. The fourth widget should enable you to adjust the sending interval of the device. Add a new widge with the type "Input widgets".
 ![Temperature Validation Node](/img/tb/24.png)
+
+2. Choose "Update shared integer attribute".
+![Temperature Validation Node](/img/tb/25.png)
+
+3. Insert the details as shown and click on "Settings".
+![Temperature Validation Node](/img/tb/26.png)
+
+4. Adjust the titel as shown an click on "Add".
+![Temperature Validation Node](/img/tb/27.png)
+
+5. You can adjust the sizes of the widget acording to your preferences. 
+***Very Important:*** Do not forget to click "Apply Changes" at the bottom right. Otherwise your Dashboard won't be saved.
+![Apply Changes](/img/tb/28.png)
 
 ## Check incoming alarms
 1. If the temperature rises above 35°, a new entry should occur in the Alarm table. The rule we defined before triggers the action that creates a new alarm.
-![Temperature Validation Node](/img/tb/25.png)
+![Temperature Validation Node](/img/tb/29.png)
 
 2. If the temperature falls below 35°, the state of the alarm will change to "cleared".
-![Temperature Validation Node](/img/tb/26.png)
+![Temperature Validation Node](/img/tb/30.png)
 
 3. You can adapt the Dashboard according to your wishes. Insert widgets and explore the Thingsboard functionalities. 
+
+## Adjust Sending Interval
+1. You can adjust the device sending interval by typing in the widget and confiming with the checkmark. Soon you can recognice that the interval between messages has changed.
+![Adjust Sending Interval](/img/tb/set-sending-interval.png)
 
 Success! You now have a digitalized brewing and beverage factory.
