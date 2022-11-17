@@ -12,7 +12,7 @@ You are in charge of
 
 First you start by configurating the device with the KEYNOA cloud.
 ### Create Data Hub
-1. In the KEYNOA UI create the Data Hub you want your device to connect to.
+1. In the KEYNOA Cloud create the Data Hub you want your device to connect to.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
 
 2. Select the AWS data hub.
@@ -57,12 +57,10 @@ First you start by configurating the device with the KEYNOA cloud.
 
 3. Fill in the device details. Click on "Next".
 
-
     Device Property ("Device Model")
     your-device-model-number ("eval-kit")
 
 This property will be matched against the information the device provides about itself during the onboarding process. When it matches the template will be selected to configure the device.
-![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
 
 4. Fill in the details. CLick on "Save".
 
