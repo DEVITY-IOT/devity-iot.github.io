@@ -26,15 +26,15 @@ KEYNOA empowers you to:
 
 You will find more information about KEYNOA on our [website](https://devity.eu/keynoa/).
 
-# KEYNOA Test-Kit 
+# KEYNOA Eval Kit 
 
-The KEYNOA Test-Kit is desgined for users that want to get a first idea on how to use IoT clouds to process data. It gives you the opportunity to get a feeling of how easy it is to onboard a device to three different clouds and building your own IoT use cases from scratch by sending real-time data. You will learn how to use AWS, Azure and Thingsboard clouds to visualize data and defining rules for your own IoT application. Moreover, you gain an impression of how you can use KEYNOA to build your own scalable IoT product or provide your customers the flexible and secure connection technology they need. You can also setup your own MQTT Broker and receieve or send data to devices.
+The KEYNOA Eval Kit is desgined for users that want to get a first idea on how to use IoT clouds to process data. It gives you the opportunity to get a feeling of how easy it is to onboard a device to three different clouds and building your own IoT use cases from scratch by sending real-time data. You will learn how to use AWS, Azure and Thingsboard clouds to visualize data and defining rules for your own IoT application. Moreover, you gain an impression of how you can use KEYNOA to build your own scalable IoT product or provide your customers the flexible and secure connection technology they need. You can also setup your own MQTT Broker and receieve or send data to devices.
 
-The KEYNOA Test-Kit consists of an Industrial Embedded Controller (based on Raspberry Pi 3+) from our partner [Janz Tec](https://www.janztec.com/en/) with a pre-installed KEYNOA SDK. [Here](https://www.janztec.com/sicherheit-im-maschinenbau/) you can order a Test Kit.  
+The KEYNOA Eval Kit consists of an Industrial Embedded Controller (based on Raspberry Pi 3+) from our partner [Janz Tec](https://www.janztec.com/en/) with a pre-installed KEYNOA SDK. [Here](https://www.janztec.com/sicherheit-im-maschinenbau/) you can order a Eval Kit.  
 
-The documentation guides you step-by-step through the whole process from device preparation to cloud connection till data visulization. You can start the tutorials with our KEYNOA Test-Kit here (//Link einfügen).
+The documentation guides you step-by-step through the whole process from device preparation to cloud connection till data visulization. You can start the tutorials with our KEYNOA Eval Kit here (//Link einfügen).
 
-### How to get a KEYNOA Test-Kit
+### How to get a KEYNOA Eval Kit
 If you haven not tried KEYNOA yet, you can order a device from our partner JanzTec and test KEYNOA for 30 days [here](https://www.janztec.com/sicherheit-im-maschinenbau/).
 
 # About DEVITY
