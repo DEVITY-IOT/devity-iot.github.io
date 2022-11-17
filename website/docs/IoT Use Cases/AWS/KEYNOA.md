@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # KEYNOA Setup
 
-First you start by configurating the device with the KEYNOA cloud.
+First you start by configuring the device with the KEYNOA.
 
 ## Create Data Hub
 1. In the KEYNOA UI create the Data Hub you want your device to connect to.

@@ -8,7 +8,10 @@ The following prerequisites are needed to start the tutorial series:
 - You have received the device voucher.
 
 ## Subscription Limits 
-Please note that there is a subscription limit for Azure IoT Central and AWS IoT Core. We provide you with a 5€ limited subscrition, where access to the device will be cut if the limit is exceeded. Do not worry to much about that here is an example calculation that show letting the Eval Kit run for the full month with default settings, of one message every 10 seconds, does not come close to that limit.
+Please note that there is a subscription limit for Azure IoT Central and AWS IoT Core. We provide you with a 5€ limited subscrition for free, where access to the device will be cut if the limit is exceeded. Do not worry to much about that here is an example calculation (see below) that show letting the Eval Kit run for the full month with default settings, of one message every 10 seconds, does not come close to that limit.
+
+### Thingsboard
+For the Eval Kit you have unlimited data usage in Thingsboard. [Here](https://thingsboard.io/pricing/) you can learn more about the pricing models of Thingsboard.
 
 ### Azure
     You have 1 device that is free with the subscribtion sending one message every 10 seconds.
@@ -37,21 +40,22 @@ The pricing models for Azure can be found [here](https://azure.microsoft.com/de-
 
 The pricing model for AWS can be found [here](https://aws.amazon.com/iot-core/pricing/).
 
-### Thingsboard
-Thingsboard has unlimited data usage.
-
-## Access to KEYNOA Cloud
-You will get your access to your own KEYNOA Cloud via email. Please use the link 
+## Access to KEYNOA
+You will get the access to your own KEYNOA Tenant via email. Please use the link to set a new password and login to KEYNOA.
 
 ## Access to Thingsboard, Azure, and AWS
-Your access to Thingsboard, Azure, and AWS will be provided by the KEYNOA Credential Manager in your KEYNOA Cloud.
-Just click on the lock icon in the header and the KEYNOA Credential Manager will show you all information needed. 
+DEVITY has prepared accounts for Thingsboard, Azure, and AWS to make the start as easy as possible for you. Your access to will be provided by the KEYNOA Credential Manager in your KEYNOA Cloud.
+1. Just click on the lock icon in the header. 
+
 ![Prerequisite](/img/Prerequisite/Credential-Manager-1.png)
 
+2. The KEYNOA Credential Manager will show you all information needed.
 Please use the following links to get to the login website of the respective cloud:
 - [Thingsboard Login](https://thingsboard.cloud/login)
 - [Azure IoT Central Login](https://apps.azureiotcentral.com/home)
 - [AWS IoT Core Login](https://aws.amazon.com/de/iot-core/)
 
+![Prerequisite](/img/Prerequisite/Credential-Manager-2.png)
+
 ## Device Voucher
-You have received the device voucher via e-mail from DEVITY. With this voucher you can register the device to the KEYNOA enrollment service and start configuring the device. 
+You will receive the device voucher via e-mail from DEVITY. With this voucher you can register the device to the KEYNOA enrollment service and start configuring the device. Please store the file securely and do not share it with anyone. 
