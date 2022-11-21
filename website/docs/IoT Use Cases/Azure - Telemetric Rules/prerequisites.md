@@ -24,5 +24,5 @@ Azure IoT Central is build with basic Azure IoT components such as IoT Hub. You 
 
 ## Subscribtion Limitations
 
-The Azure IoT Central subscribtion used with the KEYNOA Test Kit is limited in its usage. As this Test Kit is not designed to be used in productive environment we will forward excessive costs generated to you.
+The Azure IoT Central subscribtion used with the KEYNOA Test Kit is limited in its usage (5 €). As this Test Kit is not designed to be used in productive environment we will forward excessive costs generated to you.
 To circumvent this, we encourage you to not let the device run unsuperwised.
