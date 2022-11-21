@@ -4,7 +4,8 @@ sidebar_position: 2
 
 # KEYNOA Setup
 
-First you start by configurating the device with the KEYNOA cloud.
+First you start by configurating the device with the KEYNOA cloud. If you already used the device before make sure to [reset the device](../../Eval%20Kit/Prerequsites%20and%20General%20Information#reset-device).
+
 ## Create Data Hub
 1. In the KEYNOA Cloud create the Data Hub you want your device to connect to.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
