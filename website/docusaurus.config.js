@@ -104,7 +104,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} DEVITY Docs, Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} DEVITY Docs`,
       },
       prism: {
         theme: lightCodeTheme,
