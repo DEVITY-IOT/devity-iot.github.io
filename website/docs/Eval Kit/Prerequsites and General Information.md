@@ -62,7 +62,7 @@ You will receive the device voucher via e-mail from DEVITY. With this voucher yo
 
 ## Reset device
 
-For resetting the device we provide a script on the device. This is useful when you want to test out different data platforms with the same device. To reset the device connect the device to a keyboard and a monitor. Open the terminal with Strg+Alt+F1 and type in 
+For resetting the device we provide a script on the device. This is useful when you want to test out different data platforms with the same device. To reset the device connect the device to a keyboard and a monitor. Open the terminal with Ctrl/Strg+Alt+F1 and type in 
     
     ./reset.sh
 
