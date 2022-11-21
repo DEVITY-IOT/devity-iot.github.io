@@ -54,4 +54,12 @@ Please use the following links to get to the login website of the respective clo
 - [AWS IoT Core Login](https://aws.amazon.com/de/iot-core/)
 
 ## Device Voucher
-You have received the device voucher via e-mail from DEVITY. With this voucher you can register the device to the KEYNOA enrollment service and start configuring the device. 
+You have received the device voucher via e-mail from DEVITY. With this voucher you can register the device to the KEYNOA enrollment service and start configuring the device.
+
+## Reset device
+
+For resetting the device we provide a script on the device. This is useful when you want to test out different data platforms with the same device. To reset the device connect the device to a keyboard and a monitor. Open the terminal with Strg+Alt+F1 and type in 
+    
+    ./reset.sh
+
+After that the device reboots and the new onboarding process starts.
