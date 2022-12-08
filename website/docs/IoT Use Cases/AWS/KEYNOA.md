@@ -54,7 +54,7 @@ First you start by configurating the device with KEYNOA. If you already used the
 
 
     Device Property ("Device Model")
-    your-device-model-number ("eval-kit")
+    your-device-model-number ("sy-epc-rpi30")
 
 This property will be matched against the information the device provides about itself during the onboarding process. When it matches the template will be selected to configure the device.
 ![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
