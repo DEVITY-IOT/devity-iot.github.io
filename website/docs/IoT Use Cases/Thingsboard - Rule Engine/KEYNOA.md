@@ -67,7 +67,7 @@ Use the Create button and click on "MQTT template".
 
 
     Device Property ("Device Model")
-    your-device-model-number ("eval-kit")
+    your-device-model-number ("sy-epc-rpi30")
 
 These properties will be matched against the information the device provides about itself during the onboarding process. If it matches the template, the template will be selected to configure the device. Click on "Next".
 
