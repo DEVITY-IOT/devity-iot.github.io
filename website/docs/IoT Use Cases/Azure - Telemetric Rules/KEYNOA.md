@@ -69,6 +69,6 @@ These properties will be matched against the information the device provides abo
 3. After that, go to the devives tab and wait until the TO0 Status of your device says completed.
 ![KEYNOA](/img/KEYNOA/TO0.png)
 
-4. Power on your device and connect it to the internet via an ethernet cable.
+4. Power up your device and connect it to the internet via an ethernet cable.
 
 5. Your device is now provisioned with KEYNOA. Continue with the setup of IoT Central.
