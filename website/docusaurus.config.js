@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'DEVITY Documentation',
   tagline: 'Docs',
-  url: 'https://pages.git.guuthe.de',
+  url: 'https://devity-iot.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -47,7 +47,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'DEVITY Docs',
+            label: 'Documentation',
           },
           {
             href: 'https://devity.eu',
@@ -94,17 +94,17 @@ const config = {
             title: 'Contact',
             items: [
               {
-                label: 'Support',
-                href: 'mailto:support@devity.eu',
+                label: 'mail: support@devity.eu',
+                to: 'mailto:support@devity.eu',
               },
               {
-                label: 'Tel: 05251/60-4424',
-                href: '#',
+                label: 'tel: 05251/60-4424',
+                to: 'tel:+495251604424',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} DEVITY Docs`,
+        copyright: `Copyright © ${new Date().getFullYear()} DEVITY`,
       },
       prism: {
         theme: lightCodeTheme,
