@@ -3,9 +3,9 @@ sidebar_position: 1
 ---
 The following prerequisites are needed to start the tutorial series:
 - KEYNOA Eval Kit device is ready for operation and has access to the internet (see device details (//link einfügen)).
-- Access to KEYNOA Cloud (see instructions (//link einfügen)).
-- Access to Thingsboard, Azure, and AWS (see instructions (//link einfügen)).
-- You have received the device voucher.
+- Access to KEYNOA Cloud (see [instructions](#access-to-keynoa) ).
+- Access to Thingsboard, Azure, and AWS (see [instructions](#access-to-thingsboard-azure-and-aws)).
+- You have received a device voucher.
 
 ## Subscription Limits 
 Please note that there is a subscription limit for Azure IoT Central and AWS IoT Core. We provide you with a 5€ limited subscrition for free, where access to the device will be cut if the limit is exceeded. Do not worry to much about that here is an example calculation (see below) that show letting the Eval Kit run for the full month with default settings, of one message every 10 seconds, does not come close to that limit.
