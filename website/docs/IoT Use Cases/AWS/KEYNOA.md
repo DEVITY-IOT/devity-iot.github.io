@@ -4,7 +4,14 @@ sidebar_position: 2
 
 # KEYNOA Setup
 
-First you start by configurating the device with KEYNOA. If you already used the device before make sure to [reset the device](../../Eval%20Kit/Prerequsites%20and%20General%20Information#reset-device).
+First you start by configurating the device within KEYNOA.
+If you already used the device before make sure to [reset the device](../../Eval%20Kit/Prerequsites%20and%20General%20Information#reset-device).
+Also power down your device.
+
+:::info
+In the following steps the device configuration is applied to KEYNOA and not to the device. Hence, the device can stay powered off until everything is ready.
+We will turn the device in the end of this guide.
+:::
 
 ## Create Data Hub
 1. In the KEYNOA UI create the Data Hub you want your device to connect to.
@@ -73,7 +80,29 @@ This property will be matched against the information the device provides about 
 2. Select the voucher via the file selector.
 ![KEYNOA](/img/KEYNOA/upload-voucher-2.png)
 
-3. After that go to the devives tab and wait until the TO0 Status of your device says completed.
+3. Afterwards go to the devices tab and wait until the Device Status of your device says **waiting**.
+
+:::info
+
+The processing of new voucher in KEYNOA should not take longer than 5 minutes!
+
+:::
+
 ![KEYNOA](/img/KEYNOA/TO0.png)
 
-Your device is now ready to be onboarded. And you can see newly created thing in AWS IoT Core.
+4. Your device is now ready to be onboarded.
+Power up your device and connect it to the internet via an ethernet cable.
+
+:::info
+KEYNOA and aws are now fully configured and you can switch the device on.
+:::
+
+:::info
+After a successful onboarding, the device status in KEYNOA switches to **active**.
+This should not take longer than 2 minutes.
+:::
+
+:::info
+Checkout the Things section of your AWS IoT Core to see the new device.
+:::
+
