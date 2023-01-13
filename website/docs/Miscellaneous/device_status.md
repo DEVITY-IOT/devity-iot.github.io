@@ -20,7 +20,7 @@ When the device onbording protocol was executed the device is either ("actively"
 | active			| The device has connected to KEYNOA and has been successfully onboarded. |
 | error				| An error occured while processing the voucher or onboarding the device. |
 
-In a successful run, the device passes the device status in the following order:
+In a successful run, the device passes the device statuses in the following order:
 1. new
 2. waiting
 3. active
@@ -37,7 +37,7 @@ While KEYNOA is preparing for the first request of a device, the To0 protocol is
 | completed         | The endpoint is setup  |
 | error				| An error occured while processing the voucher or seting up the receiving endpoint. |
 
-In a successful run, the device passes the To0 states in the following order:
+In a successful run, the device passes the To0 statuses in the following order:
 1. waiting
 2. started
 3. completed
