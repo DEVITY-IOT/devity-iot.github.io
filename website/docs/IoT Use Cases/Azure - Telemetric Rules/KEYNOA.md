@@ -3,14 +3,21 @@ sidebar_position: 2
 ---
 
 # KEYNOA Setup
+In this step you will start by configurating the KEYNOA such that your device will be onboarded to your Thingsboard account.
 
-First you start by configurating the device within KEYNOA.
-If you already used the device before make sure to [reset the device](../../Eval%20Kit/Prerequsites%20and%20General%20Information#reset-device).
-Also power down your device.
+## Before you start
 
-:::info
-In the following steps the device configuration is applied to KEYNOA and not to the device. Hence, the device can stay powered off until everything is ready.
-We will turn the device in the end of this guide.
+Before you start, make sure that you fulfill all [prerequisites](/Eval%20Kit/Prerequsites).
+
+If you already used the device before make sure to [reset the device](/Eval%20Kit/Prerequsites#reset-device) and [remove any MQTT templates](/Eval%20Kit/Prerequsites#remove-mqtt-templates) from the list.
+
+In the following steps the device configuration is applied to KEYNOA and not to the device.
+Hence, the **device is powered off** until KEYNOA is ready.
+The device will be turned on in the end of this guide.
+
+:::caution
+For a specific application like MQTT only a single template can be applied.
+If multiple MQTT Templates exist the newer template will be ignored. Hence your new template referring to a new data hub will not be used because another template is already applied.
 :::
 
 ## Create Data Hub
@@ -42,6 +49,7 @@ We will turn the device in the end of this guide.
 ![KEYNOA](/img/KEYNOA/IoT-Central/Data-Hub-details-2.png)
 
 7. You need to have admin access to the IoT Central Hub to perform this action: Click on "Create Configuration".
+
 ## Create Template
 1. Create the MQTT Template that assigns your device to the Data Hub.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
@@ -59,45 +67,31 @@ These properties will be matched against the information the device provides abo
 4. Click on "Next".
 ![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
 
-5. Give the template an identifier name. Click on "Save".
+5. Give the template an identifier name. Click on "Save". You have now created the setup for your device to be onboarded.
 
 
     Identifier Name ("Azure IoT MQTT template")
 
 ![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
 
-## Upload Voucher
-1. You have now created the setup for your device to be onboarded. Now upload your received voucher to KEYNOA.
-![KEYNOA](/img/KEYNOA/upload-voucher.png)
 
-2. Select the voucher via the file selector.
-![KEYNOA](/img/KEYNOA/upload-voucher-2.png)
-
-3. Afterwards go to the devices tab and wait until the Device Status of your device says **waiting**.
+6. You have now created the setup for your device to be onboarded.
+KEYNOA and IoT Central are now fully configured and your device is now ready to be onboarded.
 
 :::info
-
-The processing of new voucher in KEYNOA should not take longer than 5 minutes!
-
-:::
-
-![KEYNOA](/img/KEYNOA/TO0.png)
-
-4. Your device is now ready to be onboarded.
 Power up your device and connect it to the internet via an ethernet cable.
-
-:::info
-KEYNOA and IoT Central are now fully configured and you can switch the device on.
 :::
 
-:::info
+7. Wait until your device status in KEYNOA switches to **active** by pressing the little refresh button in the to right.
 After a successful onboarding, the device status in KEYNOA switches to **active**.
-This should not take longer than 2 minutes.
+:::info
+The onboarding including the boot process should not take longer than 2 minutes.
 :::
+
+![KEYNOA](/img/KEYNOA/devices_list_refresh.png)
+
+8. Your device is now provisioned with KEYNOA. Continue with the setup of IoT Central.
 
 :::info
 Checkout the devices section of your IoT Central to see the new device.
 :::
-
-
-5. Your device is now provisioned with KEYNOA. Continue with the setup of IoT Central.

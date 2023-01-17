@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+sidebar_label: "Cloud Subscription Limits"
+title: Cloud Subscription Limits
 ---
 
 ## Subscription Limits 
