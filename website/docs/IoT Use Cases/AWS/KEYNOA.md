@@ -23,36 +23,25 @@ The device will be turned on in the end of this guide.
 2. Select the AWS data hub.
 ![KEYNOA](/img/KEYNOA/AWS/Data-Hub.png)
  
-3. Fill in the details adn click on "Confirm".
+3. Fill in the details and click on "Confirm".
 
 
-    Access Key ID
-    Access Secret Key
+    Access Key ID (copy from KEYNOA Credential Manager)
+    Access Secret Key (copy from KEYNOA Credential Manager)
     Region (select "eu-central-1" from the dropdown)
 
 ![KEYNOA](/img/KEYNOA/AWS/Data-Hub-details.png)
 
-4. Access Key and Secret can be created in the AWS IAM portal. Select your user with Administators group access.
-![KEYNOA](/img/KEYNOA/AWS/User-Credentials.png)
-
-5. Create a new Access Key pair
-![KEYNOA](/img/KEYNOA/AWS/User-Credentials-2.png)
-
-6. Fill in the details.
+4. Fill in the details and click on "Register CA".
 
 
     Template Body ("default")
-    RoleARN ("arn:aws:iam::****:role/JITPRole")
+    RoleARN (copy from KEYNOA Credential Manager)
     Topic ("/company/facility/42/dty-eval-kit/$(serial)")
     Certificate Authority (select "KEYNOA-CLOUD INT CA2 MQTT v1" from the dropdown)
     Connector Name ("AWS connector")
 
 ![KEYNOA](/img/KEYNOA/AWS/Data-Hub-details-2.png)
-
-7. The RoleARN can be found in the AWS IAM portal.
-![KEYNOA](/img/KEYNOA/AWS/JITPRole.png)
-
-8. Click on "Register CA".
 
 ## Create Template
 1. In the KEYNOA UI create the MQTT Template.

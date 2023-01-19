@@ -14,18 +14,16 @@ AWS IoT SiteWise is another service provided by AWS that enables you to visualuz
 The following steps are for professional users.
 Alternitively DEVITY can provide you with a complete solution.
 With AWS IoT SiteWise you can visualize the data collected by AWS IoT Core.
-Follow these steps to create a SiteWise Portal:
-
-Important: Check that the correct region is selected before you start
-
-## Test
+Follow these steps to create a SiteWise Portal Dashboard:
 
 ## Create Dashboard
-1. 
+1. On the landing page of the portal start by clicking on "Create Dashboard".
 ![SiteWise](/img/AWS/landing.png)
 
-## Config Dashboard
-1.
+2. Configure the dashboard via drag and drop on the available properties. Also give the dashboard an appropiate name.
 ![SiteWise](/img/AWS/create-dashboard.png)
-2.
+
+3. Once you are done with the layout out the dashboard, click on "Save Dashboard".
 ![SiteWise](/img/AWS/complete-dashboard.png)
+
+4. Now you and your other users can see arriving telemetry of the device.
