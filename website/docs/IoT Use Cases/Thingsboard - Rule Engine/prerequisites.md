@@ -1,15 +1,10 @@
 ---
 sidebar_position: 1
+sidebar_label: "About Thingsboard"
+title: About Thingsboard
 ---
 
-# Prerequisites and General Information
-
-## Prerequisites
-
-- You have the DEVITY Test Kit (Janz Tec emPC-A/RPI3+ with pre-installed KEYNOA SDK) ready for operation.
-- The device has access to the internet.
-- You have access to the DEVITY device voucher.
-- You have received the access to Thingsboard (via KEYNOA Enrollment Service).
+# About Thingsboard
 
 ## What is Thingsboard
 
