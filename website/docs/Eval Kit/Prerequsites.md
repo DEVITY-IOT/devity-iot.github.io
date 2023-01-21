@@ -89,7 +89,16 @@ Make sure to setup KEYNOA right especially the templates before restarting the d
 
 ## MQTT Templates
 
-TODO:
+An MQTT Template links a DataHub to a device. The Data Hub specifies how the MQTT Client on the device needs to be configured to connect to the respective mqtt broker.
+The MQTT Template consists of property selectors. These selectors must match the device's properties to apply the data hub.
+For example, we can define that devices of the model type `sy-epc-rpi30` (which is the device model of the EvalKit) should connect to our Data Hub "IoT Central connector" by selecting `Device Model` as property and setting `sy-epc-rpi30` in the input box on the right.
+If we want all device models to connect to a Data Hub, we can use the wildcard symbol `*`.
+Hence, we set the device property `Device Model` to be `*` and the selected data hub will be applied to all our devices.
+
+![remove-mqtt-template](/img/KEYNOA/MQTT-template-device-model.png)
 
 ## Remove MQTT Templates
-You can delete a template with the 
+You can delete a template by clicking the burger menu in the right of the template's row and select ("Delete").
+
+
+![remove-mqtt-template](/img/KEYNOA/MQTT-template-delete.png)
