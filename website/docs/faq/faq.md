@@ -1,5 +1,5 @@
 ---
-slug: /
+slug: /faq
 sidebar_position: 1
 sidebar_label: "Device Properties"
 title: Device Properties
