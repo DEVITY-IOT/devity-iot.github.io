@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# IoT Use Cases
+# Tutorial
 
 ## Goal
 

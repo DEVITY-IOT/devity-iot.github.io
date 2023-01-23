@@ -15,6 +15,11 @@ In the following steps the device configuration is applied to KEYNOA and not to 
 Hence, the **device is powered off** until KEYNOA is ready.
 The device will be turned on in the end of this guide.
 
+:::caution
+For a specific application like MQTT only a single template can be applied.
+If multiple MQTT Templates exist the newer template will be ignored. Hence your new template referring to a new data hub will not be used because another template is already applied.
+:::
+
 
 ## Create Data Hub
 1. In the KEYNOA UI create the Data Hub you want your device to connect to.
