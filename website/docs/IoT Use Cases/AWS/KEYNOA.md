@@ -25,21 +25,19 @@ The device will be turned on in the end of this guide.
  
 3. Fill in the details and click on "Confirm".
 
-
-    Access Key ID (copy from KEYNOA Credential Manager)
-    Access Secret Key (copy from KEYNOA Credential Manager)
-    Region (select "eu-central-1" from the dropdown)
+- Access Key ID: copy from KEYNOA Credential Manager
+- Access Secret Key: copy from KEYNOA Credential Manager
+- Region: select `eu-central-1` from the dropdown
 
 ![KEYNOA](/img/KEYNOA/AWS/Data-Hub-details.png)
 
 4. Fill in the details and click on "Register CA".
 
-
-    Template Body ("default")
-    RoleARN (copy from KEYNOA Credential Manager)
-    Topic ("/company/facility/42/dty-eval-kit/$(serial)")
-    Certificate Authority (select "KEYNOA-CLOUD INT CA2 MQTT v1" from the dropdown)
-    Connector Name ("AWS connector")
+- Template Body: `default`
+- RoleARN: copy from KEYNOA Credential Manager
+- Topic: `/company/facility/42/dty-eval-kit/$(serial)`
+- Certificate Authority: select `KEYNOA-CLOUD INT CA2 MQTT v1` from the dropdown
+- Connector Name: `AWS connector`
 
 ![KEYNOA](/img/KEYNOA/AWS/Data-Hub-details-2.png)
 
@@ -52,17 +50,15 @@ The device will be turned on in the end of this guide.
 
 3. Fill in the device details. Click on "Next".
 
-
-    Device Property ("Device Model")
-    your-device-model-number ("sy-epc-rpi30")
+- Device Property: `Device Model`
+- your-device-model-number: `sy-epc-rpi30`
 
 This property will be matched against the information the device provides about itself during the onboarding process. When it matches the template will be selected to configure the device.
 ![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
 
 4. Fill in the details. CLick on "Save". You have now created the setup for your device to be onboarded.
 
-
-    Identifier Name ("AWS MQTT template")
+- Identifier Name: `AWS MQTT template`
 
 ![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
 

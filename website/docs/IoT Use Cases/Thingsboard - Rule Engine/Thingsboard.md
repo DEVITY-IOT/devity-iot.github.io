@@ -27,7 +27,7 @@ The aim of this tutorial is to define a rule that immediately detects failures o
 
 	return msg.temperature < 35;
 	
-4. Connect the "Save Timeseries" module with our script. You can connect the modules by dragging and dropping. Select the label "Success" and click on "Add".
+4. Connect the "Save Timeseries" module with our script. You can connect the modules by dragging and dropping. Select the label `Success` and click on "Add".
 ![Temperature Validation Node](/img/tb/4.png)
 
 ![Temperature Validation Node](/img/tb/5.png)
@@ -40,7 +40,7 @@ The aim of this tutorial is to define a rule that immediately detects failures o
 6. Create a "Clear Alarm" block that resolves the alarm. Enter a name. The default code does not need to be changed.
 ![Temperature Validation Node](/img/tb/8.png)
 
-7. Connect the new alarm modules to the Temperature Check. To do this, create two connections via drag and drop, as you have already done. Make sure that the conditions "False" and "True" are set as shown in the screenshot.
+7. Connect the new alarm modules to the Temperature Check. To do this, create two connections via drag and drop, as you have already done. Make sure that the conditions `False` and `True` are set as shown in the screenshot.
 ![Temperature Validation Node](/img/tb/9.png)
 
 8. **Very Important:** Click on the "Apply Changes" Button at the bottom right to save all changes.

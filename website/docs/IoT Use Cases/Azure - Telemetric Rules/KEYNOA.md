@@ -38,13 +38,12 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 
 6. Fill in the details:
 
-
-    IoT Central Name (this should reflect your chosen Hub "devity-hub")
-    Enrollment Group Name (check that this enrollment group does not already exist "KEYNOA-EvalKit-001")
-    IoT Location ("westeuropa")
-    Device Template ("Eval Kit")
-    Certificate Authority (select "KEYNOA-CLOUD INT CA2 MQTT v1" from the dropdown)
-    Connector Name ("IoT Central connector")
+- IoT Central Name: this should reflect your chosen Hub `devity-hub`
+- Enrollment Group Name: check that this enrollment group does not already exist `KEYNOA-EvalKit-001`
+- IoT Location: `westeuropa`
+- Device Template: `Eval Kit`
+- Certificate Authority: select: `KEYNOA-CLOUD INT CA2 MQTT v1` from the dropdown
+- Connector Name: `IoT Central connector`
 
 ![KEYNOA](/img/KEYNOA/IoT-Central/Data-Hub-details-2.png)
 
@@ -59,8 +58,8 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 
 3. Fill in the device details.
 
-    Device Property ("Device Model")
-    your-device-model-number ("sy-epc-rpi30")
+- Device Property: `Device Model`
+- your-device-model-number: `sy-epc-rpi30`
 
 These properties will be matched against the information the device provides about itself during the onboarding process. If it matches the template, the template will be selected to configure the device.
 
@@ -69,8 +68,7 @@ These properties will be matched against the information the device provides abo
 
 5. Give the template an identifier name. Click on "Save". You have now created the setup for your device to be onboarded.
 
-
-    Identifier Name ("Azure IoT MQTT template")
+- Identifier Name: `Azure IoT MQTT template`
 
 ![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
 

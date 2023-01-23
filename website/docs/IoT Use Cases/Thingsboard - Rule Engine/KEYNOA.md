@@ -30,14 +30,13 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 
 3. Fill in the details of your Thingsboard instance:
 
-
-    Connector Name ("your_thingsboard") 
-    Thingsboard Provider (select "Custom Provider" from the dropdown)
-    MQTT Broker URL (leave the default "ssl://thingsboard.devity.eu:8883")
-    Topic ("v1/devices/me/telemetry")
-    Provision Key (see step 4)
-    Provision Secret (see step 4)
-    Certificate Authority (select "KEYNOA-CLOUD INT CA2 MQTT v1" from the dropdown)
+- Connector Name: `your_thingsboard`
+- Thingsboard Provider: select `Custom Provider` from the dropdown
+- MQTT Broker URL: leave the default `ssl://thingsboard.devity.eu:8883`
+- Topic: `v1/devices/me/telemetry`
+- Provision Key: see step 4
+- Provision Secret: see step 4
+- Certificate Authority: select `KEYNOA-CLOUD INT CA2 MQTT v1` from the dropdown
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/Data-Hub-details.png)
 
@@ -49,23 +48,20 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 
 6. Fill in the details, then click on "Next: Transport configuration".
 
-
-    Name ("Eval-Kit device profile")
-    Rule chain ("Root Rule Chain")
+- Name: `Eval-Kit device profile`
+- Rule chain: `Root Rule Chain`
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/Device-profile-add.png)
 
 7. Select the Transport type and click on "Next: Alarm rules".
 
-
-    Transport type ("MQTT")
+- Transport type: `MQTT`
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/Device-profile-transport.png)
 
 8. Click on "Next: Device provisioning". Select the device provisioning type, here the device credentials are also displayed. Click on "Add".
 
-
-    Provisioning strategy ("Allow to create new devices")
+- Provisioning strategy: `Allow to create new devices`
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/Device-profile-provisioning.png)
 
@@ -81,9 +77,8 @@ Use the Create button and click on "MQTT template".
 
 3. Fill in the device details:
 
-
-    Device Property ("Device Model")
-    your-device-model-number ("sy-epc-rpi30")
+- Device Property: `Device Model`
+- your-device-model-number: `sy-epc-rpi30`
 
 These properties will be matched against the information the device provides about itself during the onboarding process. If it matches the template, the template will be selected to configure the device. Click on "Next".
 
@@ -92,8 +87,7 @@ These properties will be matched against the information the device provides abo
 
 4. Give the template an identifier.
 
-
-    Identifier Name ("Thingsboard MQTT template")
+- Identifier Name: `Thingsboard MQTT template`
 
 ![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
 
