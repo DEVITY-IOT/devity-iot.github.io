@@ -40,7 +40,7 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/Data-Hub-details.png)
 
-4. Log in to the [Thingsboard Cloud](https://thingsboard.cloud/login) with the credentials you find in the KEYNOA credential manager (just click on the lock icon in the header of KEYNOA Cloud). The provision key and secret can be found in the Thingsboard device profile you want your device to be assigned to.
+4. Log in to the [ThingsBoard](https://thingsboard.devity.eu/login) with the credentials you find in the KEYNOA credential manager (just click on the lock icon in the header of KEYNOA Cloud). The provision key and secret can be found in the Thingsboard device profile you want your device to be assigned to.
 ![KEYNOA](/img/KEYNOA/Thingsboard/Device-Credentials.png)
 
 5. If you do not have a device profile yet, create one. Click on "Device profiles" and select "Create new device profile".
