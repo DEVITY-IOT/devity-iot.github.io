@@ -63,6 +63,10 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 
 These properties will be matched against the information the device provides about itself during the onboarding process. If it matches the template, the template will be selected to configure the device.
 
+:::info
+For more information about the template concept see the [MQTT Templates Section](/Eval%20Kit/Prerequsites#mqtt-templates)
+:::
+
 4. Click on "Next".
 ![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
 
