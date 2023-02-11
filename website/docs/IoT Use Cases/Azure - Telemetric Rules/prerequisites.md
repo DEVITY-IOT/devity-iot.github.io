@@ -23,4 +23,4 @@ You can find more detailed information about features and the pricing model of A
 
 The Azure IoT Central subscription used with the KEYNOA Test Kit is limited in its usage to 5 €. As this Test Kit is not designed to be used in productive environment we will forward excessive costs generated to you.
 To circumvent this, we encourage you to not let the device run unsupervised or for more than an hour.
-Find the subscription limitations and a cost table in [Cloud Subscription Limits section.](/Eval%20Kit#subscription%20limits)
+Find the subscription limitations and a cost table in [Cloud Subscription Limits section.](/subscription%20limits#aws)
