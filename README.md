@@ -2,9 +2,12 @@
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
+Most of the documentation is written is markdown. See the [documentation on markdown](https://docusaurus.io/docs/markdown-features) in the docusaurus wiki.
+
 ### Local Development
 
 ```
+$ cd website
 $ npx docusaurus start
 ```
 
