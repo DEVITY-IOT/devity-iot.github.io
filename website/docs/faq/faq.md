@@ -1,8 +1,8 @@
 ---
 slug: /faq
-sidebar_position: 1
-sidebar_label: "Device Properties"
-title: Device Properties
+sidebar_position: 5
+sidebar_label: "Troubleshoot"
+title: Troubleshoot
 ---
 
 ## The device does not connect to the intended data hub. 
