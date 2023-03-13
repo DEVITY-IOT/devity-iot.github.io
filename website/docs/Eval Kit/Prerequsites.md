@@ -9,7 +9,7 @@ The following prerequisites are needed to start the tutorial series:
 
 - You have the EvalKit Device (Janz Tec emPC-A/RPI3+ with pre-installed KEYNOA SDK) ready for operation.
     - You have prepared a 24 V power supply for the device.
-    - You have prepared an ethernet cable to connect the device to the internet. The network should provide DHCP and DNS service.
+    - You have prepared an Ethernet cable to connect the device to the internet. The network should provide DHCP and DNS service.
 - You have access to your KEYNOA Cloud tenant (see [Access to KEYNOA](#access-to-keynoa) section).
 - In your KEYNOA Cloud tenant there are NO MQTT templates defined (see [Remove MQTT Templates](#remove-mqtt-templates)).
 - You have access to Thingsboard, Azure, and AWS (see [Access to Thingsboard, Azure, and AWS](#access-to-thingsboard-azure-and-aws) section).
@@ -22,12 +22,8 @@ You will get the access to your own KEYNOA Tenant via email. Please use the link
 ## Device Voucher
 You will receive the device voucher via e-mail from DEVITY.
 This file proves that your are the authorized owner of the device you received.
-The voucher enables KEYNOA to connect securely to the device and therefor to provision your device automatically.
+The voucher enables KEYNOA to connect securely to the device and therefore to provision your device automatically.
 See the next section how to upload the voucher to your KEYNOA tenant.
-
-:::info
-To find out more about the device status go to the [Device Status](/Miscellaneous/device-status#device-status) section.
-::: 
 
 ## Upload Voucher
 With a voucher you can register a device in the KEYNOA enrollment service.
@@ -93,11 +89,29 @@ Make sure to setup KEYNOA right especially the templates before restarting the d
 
 ## MQTT Templates
 
-An MQTT Template links a DataHub to a device. The Data Hub specifies how the MQTT Client on the device needs to be configured to connect to the respective mqtt broker.
-The MQTT Template consists of property selectors. These selectors must match the device's properties to apply the data hub.
-For example, we can define that devices of the model type `sy-epc-rpi30` (which is the device model of the EvalKit) should connect to our Data Hub "IoT Central connector" by selecting `Device Model` as property and setting `sy-epc-rpi30` in the input box on the right.
+An MQTT Template links a DataHub to a device.
+The Data Hub specifies how the MQTT Client on the device needs to be configured to connect to the respective MQTT broker.
+The MQTT Template consists of multiple selectors for a specific property.
+These selectors will be matched against the information the device provides about itself during the onboarding process. 
+If all properties match the specified selectors, the device is assign to the data hub.
+
+:::note Example
+As an *Example* we assume that we only want the device from DEVITY's Eval kit to connect to our Evaluation IoT Central.
+
+So we only want to connect device whose model type is `sy-epc-rpi30` (the device model of the EvalKit).
+To specify this in KEYNOA, we create an MQTT template and select the Data Hub which is linked to our Evaluation IoT Central.
+Then we select `Device Model` as a selector property and input `sy-epc-rpi30` in the box to the right.
+:::
+
+![mqtt-template-example](/img/KEYNOA/mqtt-template-concept.png)
+
+### Wildcard character `*`
 If we want all device models to connect to a Data Hub, we can use the wildcard symbol `*`.
 Hence, we set the device property `Device Model` to be `*` and the selected data hub will be applied to all our devices.
+
+To match devices of a group of device models we can also define somethings like `sy-epc-rpi*`.
+Here we replaced 30 with the wildcard character `*`.
+This would match then not only the current RaspberryPi 3 based EvalKit but also the new RaspberryPi 4 devices.
 
 ![remove-mqtt-template](/img/KEYNOA/MQTT-template-device-model.png)
 

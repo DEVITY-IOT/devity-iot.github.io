@@ -27,7 +27,14 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 2. Select the Azure IoT Central data hub.
 ![KEYNOA](/img/KEYNOA/IoT-Central/Data-Hub.png)
 
-3. Log in with your Microsoft account or with the credentials you find in the KEYNOA credential manager (just click on the lock icon in the header of KEYNOA Cloud). This account needs admin priviledges in both the azure portal as well as the IoT Hub (see step 4).
+3. Log in with your Microsoft account or with the credentials you find in the KEYNOA credential manager (just click on the lock icon in the header of KEYNOA Cloud). This account needs admin privileges in both the azure portal as well as the IoT Hub (see step 4).
+:::caution
+When you log in the first time you will are asked to change your password.
+In addition Azure requires to set up two factor authentication to secure the account.
+This is a common and reasonable security measurement.
+To do so, we recommend to install the [Microsoft Authenticator](https://www.microsoft.com/en-us/security/mobile-authenticator-app) App on your smartphone. 
+:::
+
 ![KEYNOA](/img/KEYNOA/IoT-Central/Microsoft-login.png)
 
 4. Grant access to the to the application.
@@ -62,6 +69,10 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 - your-device-model-number: `sy-epc-rpi30`
 
 These properties will be matched against the information the device provides about itself during the onboarding process. If it matches the template, the template will be selected to configure the device.
+
+:::info
+For more information about the template concept see the [MQTT Templates Section](/Eval%20Kit/Prerequsites#mqtt-templates)
+:::
 
 4. Click on "Next".
 ![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
