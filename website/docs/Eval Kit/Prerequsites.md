@@ -55,19 +55,29 @@ To find out more about the device status go to the [Device Status](/Miscellaneou
 
 
 ## Access to Thingsboard, Azure, and AWS
-DEVITY has prepared accounts for Thingsboard, Azure, and AWS to make the start as easy as possible for you. Your access to will be provided by the KEYNOA Credential Manager in your KEYNOA Cloud.
-1. Just click on the lock icon in the header. 
+DEVITY has prepared accounts for Thingsboard, Azure, and AWS to make the start as easy as possible for you.
+Your access to the respective applications will be provided by the KEYNOA Credential Manager in your KEYNOA Cloud.
+If the access to one of the clouds gets lost, please do not hesitate to reach out to us. We provide you a new password.
+[support@devity.eu](mailto:support@devity.eu)
+
+1. Find the KEYNOA Credential Manager by clicking on the lock icon in the header.
 
 ![Prerequisite](/img/Prerequisite/Credential-Manager-1.png)
 
 2. The KEYNOA Credential Manager will show you all information needed.
-The Credential Manager also provide a link to the login of the respective cloud:
+The Credential Manager also provides a link to the login of the respective cloud:
+
+:::caution
+The passwords in the Credential Manager are intended as one-time passwords and should be changed after the first use.
+We recommend to store the new passwords in a password manager like [Bitwarden](https://bitwarden.com), [1Password](https://1password.com) or [KeyPassXC](https://keepassxc.org/).
+:::
 
 :::info
 Since the applications are created just for you and your Eval Kit, we cannot provide general login links here.
 :::
 
 ![Prerequisite](/img/Prerequisite/Credential-Manager-2.png)
+
 
 ## Reset device
 

@@ -50,13 +50,13 @@ const config = {
             label: 'Documentation',
           },
           {
-            href: 'https://devity.eu',
-            label: 'Website',
+            href: 'mailto:support@devity.eu',
+            label: 'support@devity.eu',
             position: 'right',
           },
           {
-            href: 'mailto:support@devity.eu',
-            label: 'Contact',
+            href: 'https://devity.eu',
+            label: 'devity.eu',
             position: 'right',
           },
         ],
