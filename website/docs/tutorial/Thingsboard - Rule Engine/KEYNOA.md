@@ -34,8 +34,8 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 - Thingsboard Provider: select `Custom Provider` from the dropdown
 - MQTT Broker URL: leave the default `ssl://thingsboard.devity.eu:8883`
 - Topic: `v1/devices/me/telemetry`
-- Provision Key: see step 4
-- Provision Secret: see step 4
+- Provision Key: To get the Provisioning Key you need to continue the tutorial and execute steps 4-8.
+- Provision Secret: To get the Provisioning Secret you need to continue the tutorial and execute steps 4-8.
 - Certificate Authority: select `KEYNOA-CLOUD INT CA2 MQTT v1` from the dropdown
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/Data-Hub-details.png)
@@ -59,7 +59,7 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/Device-profile-transport.png)
 
-8. Click on "Next: Device provisioning". Select the device provisioning type, here the device credentials are also displayed. Click on "Add".
+8. Configuring "Alarm rules" can be skipped. Click on "Next: Device provisioning". Select the device provisioning type. Here the device credentials are also displayed. Click on "Add".
 
 - Provisioning strategy: `Allow to create new devices`
 
@@ -68,6 +68,14 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 9. Click on "Create".
 
 ## Create Template
+:::info
+If you have not uploaded your voucher yet and therefore the list of all devices is empty, then [upload the voucher](/tutorial/Prerequsites#upload-voucher).
+:::
+:::caution
+If there are already MQTT templates, make sure they do not match your device. If you are unsure how to do this, you can also remove them:
+You can delete a template by clicking the burger menu in the right of the template's row and select ("Delete").
+:::
+
 1. Create the MQTT template that assigns your device to the Data Hub.
 Use the Create button and click on "MQTT template".
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
@@ -80,25 +88,30 @@ Use the Create button and click on "MQTT template".
 - Device Property: `Device Model`
 - your-device-model-number: `sy-epc-rpi30`
 
-These properties will be matched against the information the device provides about itself during the onboarding process. If it matches the template, the template will be selected to configure the device. Click on "Next".
+These properties will be matched against the information which the device provides about itself during the onboarding process. If it matches the template, the template will be used to configure the device.
 
+:::info
+For more information about the template concept see the [MQTT Templates Section](/Eval%20Kit/Prerequsites#mqtt-templates)
+:::
+
+4. Click on "Next".
 ![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
 
 
-4. Give the template an identifier.
+5. Give the template an identifier and click on "Save".
 
 - Identifier Name: `Thingsboard MQTT template`
 
 ![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
 
-5. Click on "Save". You have now created the setup for your device to be onboarded.
+6. You have now created the setup instruction for your device to be onboarded.
+KEYNOA and IoT Central are now fully configured and your device is now ready to be onboarded.
 
-6. KEYNOA and Thingsboard are now fully configured and your device is now ready to be onboarded.
 :::info
 Power up your device and connect it to the internet via an ethernet cable.
 :::
 
-7. Wait until your device status in KEYNOA switches to **active** by pressing the little refresh button in the to right.
+7. Wait until your device status in KEYNOA switches to **active** by pressing the little refresh button in the top right.
 After a successful onboarding, the device status in KEYNOA switches to **active**.
 :::info
 The onboarding including the boot process should not take longer than 2 minutes.

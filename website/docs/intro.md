@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
+sidebar_label: "KEYNOA"
+title: KEYNOA
 slug: /
 ---
 
-# KEYNOA
-
+## Overview
 KEYNOA is a software to securely connect smart devices to any cloud or on-premises data platform on massive scale in industrial use cases. 
 
 It consists of two components: KEYONA SDK and KEYNOA Enrollment Service.
@@ -26,7 +27,7 @@ KEYNOA empowers you to:
 
 You will find more information about KEYNOA on our [website](https://devity.eu/keynoa/).
 
-# KEYNOA Eval Kit 
+## KEYNOA Eval Kit 
 
 The KEYNOA Eval Kit is desgined for users that want to get a first idea on how to use IoT clouds to process data. It gives you the opportunity to get a feeling of how easy it is to onboard a device to three different clouds and building your own IoT use cases from scratch by sending real-time data. You will learn how to use AWS, Azure and Thingsboard clouds to visualize data and defining rules for your own IoT application. Moreover, you gain an impression of how you can use KEYNOA to build your own scalable IoT product or provide your customers the flexible and secure connection technology they need. You can also setup your own MQTT Broker and receieve or send data to devices.
 
@@ -37,7 +38,7 @@ The documentation guides you step-by-step through the whole process from device 
 ### How to get a KEYNOA Eval Kit
 If you haven not tried KEYNOA yet, you can order a device from our partner JanzTec and test KEYNOA for 30 days [here](https://www.janztec.com/sicherheit-im-maschinenbau/).
 
-# About DEVITY
+## About DEVITY
 
 Making IT security easy to use for every user of the Industrial IoT - that's what drives us.
 
@@ -45,7 +46,7 @@ We want industrial companies to be able to use the latest technologies without h
 
 To learn more about DEVITY please visit our [website](https://devity.eu). To be always up-to-date follow us on [LinkedIn](https://de.linkedin.com/company/devity) or subscribe to our newsletter.
 
-# Support
+## Support
 
 We just launched this documentation site recently. Updates will come fast and furious.
 

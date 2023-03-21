@@ -1,5 +1,6 @@
 ---
-sidebar_position: 2
+slug: /keynoa-eval-kit
+sidebar_position: 1
 ---
 The KEYNOA Eval Kit is a unique opportunity to boost your knowledge about how to build up flexible, scalable, and secure IoT use cases.
 

@@ -57,6 +57,13 @@ To do so, we recommend to install the [Microsoft Authenticator](https://www.micr
 7. You need to have admin access to the IoT Central Hub to perform this action: Click on "Create Configuration".
 
 ## Create Template
+:::info
+If you have not uploaded your voucher yet and therefore the list of all devices is empty, then [upload the voucher](/tutorial/Prerequsites#upload-voucher).
+:::
+:::caution
+If there are already MQTT templates, make sure they do not match your device. If you are unsure how to do this, you can also remove them:
+You can delete a template by clicking the burger menu in the right of the template's row and select ("Delete").
+:::
 1. Create the MQTT Template that assigns your device to the Data Hub.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
 
@@ -68,7 +75,7 @@ To do so, we recommend to install the [Microsoft Authenticator](https://www.micr
 - Device Property: `Device Model`
 - your-device-model-number: `sy-epc-rpi30`
 
-These properties will be matched against the information the device provides about itself during the onboarding process. If it matches the template, the template will be selected to configure the device.
+These properties will be matched against the information which the device provides about itself during the onboarding process. If it matches the template, the template will be used to configure the device.
 
 :::info
 For more information about the template concept see the [MQTT Templates Section](/Eval%20Kit/Prerequsites#mqtt-templates)
@@ -77,21 +84,21 @@ For more information about the template concept see the [MQTT Templates Section]
 4. Click on "Next".
 ![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
 
-5. Give the template an identifier name. Click on "Save". You have now created the setup for your device to be onboarded.
+
+5. Give the template an identifier and click on "Save".
 
 - Identifier Name: `Azure IoT MQTT template`
 
 ![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
 
-
-6. You have now created the setup for your device to be onboarded.
+6. You have now created the setup instruction for your device to be onboarded.
 KEYNOA and IoT Central are now fully configured and your device is now ready to be onboarded.
 
 :::info
 Power up your device and connect it to the internet via an ethernet cable.
 :::
 
-7. Wait until your device status in KEYNOA switches to **active** by pressing the little refresh button in the to right.
+7. Wait until your device status in KEYNOA switches to **active** by pressing the little refresh button in the top right.
 After a successful onboarding, the device status in KEYNOA switches to **active**.
 :::info
 The onboarding including the boot process should not take longer than 2 minutes.
