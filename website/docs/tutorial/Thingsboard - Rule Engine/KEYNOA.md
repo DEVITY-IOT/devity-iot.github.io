@@ -7,9 +7,9 @@ In this step you will start by configurating the KEYNOA such that your device wi
 
 ## Before you start
 
-Before you start, make sure that you fulfill all [prerequisites](/Eval%20Kit/Prerequsites).
+Before you start, make sure that you fulfill all [prerequisites](/tutorial/Prerequsites).
 
-If you already used the device before make sure to [reset the device](/Eval%20Kit/Prerequsites#reset-device) and [remove any MQTT templates](/Eval%20Kit/Prerequsites#remove-mqtt-templates) from the list.
+If you already used the device before make sure to [reset the device](/reference/reset-device) and [remove any MQTT templates](/reference/mqtt-template#remove-mqtt-template) from the list.
 
 In the following steps the device configuration is applied to KEYNOA and not to the device.
 Hence, the **device is powered off** until KEYNOA is ready.
@@ -91,7 +91,7 @@ Use the Create button and click on "MQTT template".
 These properties will be matched against the information which the device provides about itself during the onboarding process. If it matches the template, the template will be used to configure the device.
 
 :::info
-For more information about the template concept see the [MQTT Templates Section](/Eval%20Kit/Prerequsites#mqtt-templates)
+For more information about the template concept see the [MQTT Templates Section](/reference/mqtt-template)
 :::
 
 4. Click on "Next".
