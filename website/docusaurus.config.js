@@ -69,8 +69,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'IOT Use Cases',
-                to: '/IoT Use Cases',
+                label: 'Tutorial',
+                to: '/Tutorial',
               },
               {
                 label: 'FAQ',
