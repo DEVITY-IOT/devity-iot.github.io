@@ -7,9 +7,9 @@ In this step you will start by configurating the KEYNOA such that your device wi
 
 ## Before you start
 
-Before you start, make sure that you fulfill all [prerequisites](/Eval%20Kit/Prerequsites).
+Before you start, make sure that you fulfill all [prerequisites](/tutorial/Prerequsites).
 
-If you already used the device before make sure to [reset the device](/Eval%20Kit/Prerequsites#reset-device) and [remove any MQTT templates](/Eval%20Kit/Prerequsites#remove-mqtt-templates) from the list.
+If you already used the device before make sure to [reset the device](/reference/reset-device) and [remove any MQTT templates](/reference/mqtt-template#remove-mqtt-template) from the list.
 
 In the following steps the device configuration is applied to KEYNOA and not to the device.
 Hence, the **device is powered off** until KEYNOA is ready.
@@ -47,6 +47,13 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 ![KEYNOA](/img/KEYNOA/AWS/Data-Hub-details-2.png)
 
 ## Create Template
+:::info
+If you have not uploaded your voucher yet and therefore the list of all devices is empty, then [upload the voucher](/tutorial/Prerequsites#upload-voucher).
+:::
+:::caution
+If there are already MQTT templates, make sure they do not match your device. If you are unsure how to do this, you can also remove them:
+You can delete a template by clicking the burger menu in the right of the template's row and select ("Delete").
+:::
 1. In the KEYNOA UI create the MQTT Template.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
 
@@ -58,22 +65,30 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 - Device Property: `Device Model`
 - your-device-model-number: `sy-epc-rpi30`
 
-This property will be matched against the information the device provides about itself during the onboarding process. When it matches the template will be selected to configure the device.
+These properties will be matched against the information which the device provides about itself during the onboarding process. If it matches the template, the template will be used to configure the device.
+
+:::info
+For more information about the template concept see the [MQTT Templates Section](/reference/mqtt-template)
+:::
+
+4. Click on "Next".
 ![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
 
-4. Fill in the details. CLick on "Save". You have now created the setup for your device to be onboarded.
+
+5. Give the template an identifier and click on "Save".
 
 - Identifier Name: `AWS MQTT template`
 
 ![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
 
+6. You have now created the setup instruction for your device to be onboarded.
+KEYNOA and IoT Central are now fully configured and your device is now ready to be onboarded.
 
-5. KEYNOA and aws are now fully configured and your device is now ready to be onboarded.
 :::info
 Power up your device and connect it to the internet via an ethernet cable.
 :::
 
-6. Wait until your device status in KEYNOA switches to **active** by pressing the little refresh button in the to right.
+7. Wait until your device status in KEYNOA switches to **active** by pressing the little refresh button in the top right.
 After a successful onboarding, the device status in KEYNOA switches to **active**.
 :::info
 The onboarding including the boot process should not take longer than 2 minutes.
@@ -83,7 +98,7 @@ The onboarding including the boot process should not take longer than 2 minutes.
 
 The voucher enables KEYNOA to connect securely to the device and therefor to provision your device automatically.
 
-7. Your device is now provisioned to AWs IoT Core. Continue with the setup of IoT Central.
+8. Your device is now provisioned to AWs IoT Core. Continue with the setup of IoT Central.
 
 :::info
 Checkout the Things section of your AWS IoT Core to see the new device.

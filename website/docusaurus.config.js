@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const fs = require('fs');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -50,13 +51,13 @@ const config = {
             label: 'Documentation',
           },
           {
-            href: 'https://devity.eu',
-            label: 'Website',
+            href: 'mailto:support@devity.eu',
+            label: 'support@devity.eu',
             position: 'right',
           },
           {
-            href: 'mailto:support@devity.eu',
-            label: 'Contact',
+            href: 'https://devity.eu',
+            label: 'devity.eu',
             position: 'right',
           },
         ],
@@ -67,13 +68,13 @@ const config = {
           {
             title: 'Docs',
             items: [
-//              {
-//                label: 'Device Onboarding',
-//                to: '/Device Onboarding/',
-//              },
               {
-                label: 'IOT Use Cases',
-                to: '/IoT Use Cases',
+                label: 'Tutorial',
+                to: '/Tutorial',
+              },
+              {
+                label: 'FAQ',
+                to: '/faq',
               },
             ],
           },
@@ -104,7 +105,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} DEVITY`,
+        copyright: `Copyright © ${new Date().getFullYear()} DEVITY, Version: ${fs.readFileSync('./VERSION', {encoding:'utf8', flag:'r'})}`,
       },
       prism: {
         theme: lightCodeTheme,

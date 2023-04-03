@@ -1,5 +1,4 @@
 ---
-sidebar_position: 2
 sidebar_label: "Device Properties"
 title: Device Properties
 ---
