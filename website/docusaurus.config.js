@@ -51,13 +51,13 @@ const config = {
             label: 'Documentation',
           },
           {
-            href: 'https://devity.eu',
-            label: 'Website',
+            href: 'mailto:support@devity.eu',
+            label: 'support@devity.eu',
             position: 'right',
           },
           {
-            href: 'mailto:support@devity.eu',
-            label: 'Contact',
+            href: 'https://devity.eu',
+            label: 'devity.eu',
             position: 'right',
           },
         ],
@@ -69,8 +69,12 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'IOT Use Cases',
-                to: '/IoT Use Cases',
+                label: 'Tutorial',
+                to: '/Tutorial',
+              },
+              {
+                label: 'FAQ',
+                to: '/faq',
               },
               {
                 label: 'FAQ',
