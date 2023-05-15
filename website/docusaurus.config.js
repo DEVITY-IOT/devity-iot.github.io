@@ -76,10 +76,6 @@ const config = {
                 label: 'FAQ',
                 to: '/faq',
               },
-              {
-                label: 'FAQ',
-                to: '/faq',
-              },
             ],
           },
           {
