@@ -19,4 +19,6 @@ Make sure to power down the device before it boots up again to prevent that the 
 :::caution
 After the reboot, the onboarding starts immediately.
 Make sure to setup KEYNOA right especially the templates before restarting the device.
+
+When onboarding to Thingsboard again with the same device make sure that the device in Thingsboard is deleted as well.
 :::
