@@ -90,7 +90,7 @@ Use the Create button and click on "MQTT template".
 2. Select your Data Hub. Click on "Next".
 ![KEYNOA](/img/KEYNOA/Thingsboard/MQTT-template-1.png)
 
-3. Fill in the device details:
+3. Fill in the device details as below and click on "Next".
 
 - Device Property: `Device Model`
 - your-device-model-number: `sy-epc-rpi30`
@@ -100,33 +100,33 @@ These properties will be matched against the information which the device provid
 :::info
 For more information about the template concept see the [MQTT Templates Section](/reference/mqtt-template)
 :::
-
-4. Click on "Next".
+ 
 ![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
 
 
-5. Give the template an identifier and click on "Save".
+4. Give the template an identifier and click on "Save".
 
 - Identifier Name: `Thingsboard MQTT template`
 
 ![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
 
-6. You have now created the setup instruction for your device to be onboarded.
+5. You have now created the setup instruction for your device to be onboarded.
 KEYNOA and IoT Central are now fully configured and your device is now ready to be onboarded.
 
 :::info
 Power up your device and connect it to the internet via an ethernet cable.
 :::
 
-7. Wait until your device status in KEYNOA switches to **provisioned** by pressing the little refresh button in the top right.
+6. Wait until your device status in KEYNOA switches to **provisioned** by pressing the little refresh button in the top right.
 After a successful onboarding, the device status in KEYNOA switches to **provisioned**.
+
 :::info
 The onboarding including the boot process should not take longer than 2 minutes.
 :::
 
 ![KEYNOA](/img/KEYNOA/devices_list_refresh.png)
 
-8. Your device is now provisioned to Thingsboard. Continue with the setup of Thingsboard.
+7. Your device is now provisioned to Thingsboard. Continue with the setup of Thingsboard.
 
 :::info
 Checkout the devices section of your Thingsboard to see the new device.
