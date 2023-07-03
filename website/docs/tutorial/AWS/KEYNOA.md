@@ -58,7 +58,7 @@ You can delete a template by clicking the burger menu in the right of the templa
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
 
 2. Select your Data Hub. Click on "Next".
-![KEYNOA](/img/KEYNOA/IoT-Central/MQTT-template-1.png)
+![KEYNOA](/img/KEYNOA/AWS/MQTT-template-1.png)
 
 3. Fill in the device details. Click on "Next".
 
