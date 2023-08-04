@@ -53,13 +53,16 @@ The aim of this tutorial is to define a rule that immediately detects failures o
 
 ## Build Dashboard
 
-1. After customising the rule chain, we build a dashboard to visualise the alarms. Navigate to the section "Dashboards". At the top right you will find the "+" to create a new dashboard. Enter name and description.
+1. After customising the rule chain, we build a dashboard to visualise the alarms. Navigate to the section "Dashboards". At the top right you will find the "+" to create a new dashboard. Enter Title and Description and hit "Add".
 ![Temperature Validation Node](/img/tb/dashboard.png)
 
 2. Open the newly created dashboard.
 ![Temperature Validation Node](/img/tb/dashboard-open.png)
 
 3. Click on the Edit icon at the bottom right to add a new widget.
+![Temperature Validation Node](/img/tb/dashboard-edit.png)
+
+4. Click on "Add new Widget" to create a new widget.
 ![Temperature Validation Node](/img/tb/dashboard-empty.png)
 
 
@@ -70,10 +73,10 @@ The aim of this tutorial is to define a rule that immediately detects failures o
 2. Choose Simple Card.
 ![Temperature Validation Node](/img/tb/dashboard-cards-simple.png)
 
-3. Thingsboard uses aliases as data source. Therefore, for the first widget we need to create an alias. To do this, click on "Create a new one!".
+3. Thingsboard uses aliases as data source. Therefore, for the first widget we need to create an alias. To do this, select on "Create a new one!" from the drop-down menu.
 ![Temperature Validation Node](/img/tb/dashboard-create-data-source.png)
 
-4. Enter the alias information shown in the screenshot below. For the device select your device.
+4. Enter the alias information shown in the screenshot below. For the device select your device and click on "Add"
 ![Temperature Validation Node](/img/tb/dashboard-create-data-source-2.png)
 
 5. Now you can choose the newly created alias as data source. Choose "temperature" as attribute. Click "Add". 
