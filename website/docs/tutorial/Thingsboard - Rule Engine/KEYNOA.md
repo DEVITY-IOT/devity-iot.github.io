@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 
 # KEYNOA Setup
-In this step you will start by configurating the KEYNOA such that your device will be onboarded to your Thingsboard account.
+In this step you will start by configurating KEYNOA so that your device will be onboarded onto your Thingsboard account.
 
 ## Before you start
 
@@ -81,7 +81,7 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 If you have not uploaded your voucher yet and therefore the list of all devices is empty, then [upload the voucher](/tutorial/Prerequsites#upload-voucher).
 :::
 :::caution
-If there are already MQTT templates, make sure they do not match your device. If you are unsure how to do this, you can also remove them:
+If there are already MQTT templates, delete them. If you are unsure how to do this, you can also remove them:
 You can delete a template by clicking the burger menu in the right of the template's row and select ("Delete").
 :::
 
@@ -119,7 +119,7 @@ KEYNOA and IoT Central are now fully configured and your device is now ready to 
 Power up your device and connect it to the internet via an ethernet cable.
 :::
 
-6. Wait until your device status in KEYNOA switches to **provisioned**; you may have to refresh your view by pressing the little refresh button in the top right of the page.
+6. Wait until your device status in KEYNOA switches to **provisioned**; you might have to refresh your view by pressing the little refresh button in the top right of the page.
 After a successful onboarding, the device status in KEYNOA switches to **provisioned**.
 
 :::info
