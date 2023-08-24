@@ -4,8 +4,8 @@ sidebar_position: 3
 
 # IoT Central Setup
 
-
 ## Initial Situation
+
 You are the IoT representative of the facility team of a pharmaceutical manufacturer. The facility has a power plant that is operated with waste heat. Intelligent temperature sensors monitor the temperature to create optimal production conditions for the pharmaceuticals. 
 The connected IoT sensors therefore continuously transmit the current temperature (every minute) in order to adjust the plant temperature if necessary. 
 
@@ -15,6 +15,7 @@ This should happen completely automatically.
 During the onboarding process the device will be assigned to the device Group Eval Kit Gateways.
 
 ## Create a job to increase the sending interval
+
 1. Jobs can now be created very easily. To do this, navigate to the "Jobs" section and click on "New".
 ![DevityHub](/img/az/jobs_dashboard.png)
 
@@ -32,8 +33,9 @@ During the onboarding process the device will be assigned to the device Group Ev
 
 6. After reviewing your job configuration you can click on "Schedule".
 ![DevityHub](/img/az/jobs_review.png)
-	
+
 ## Create a Dashboard to test the job
+
 1. To be able to observe the result of the job, we need a representation of the Sending_interval. For this purpose, we create a dashboard that fulfils this task. Navigate to the "Dashboard" section and click on "Create dashboard". If an old dashboard exists, you can also delete or edit it.
 ![DevityHub](/img/az/16.png)
 
@@ -58,4 +60,5 @@ During the onboarding process the device will be assigned to the device Group Ev
 Success! You now automatically get notifications for your facility.
 
 ## Reset the Sending Interval
+
 For practice: Now create another job that resets the Sending_interval to one minute the next morning. You can do this.
