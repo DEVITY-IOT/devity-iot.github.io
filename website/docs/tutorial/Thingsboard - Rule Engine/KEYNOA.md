@@ -48,10 +48,12 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/Device-Credentials.png)
 
-6. If your device profile does not exist, you should create one. Click on "Device profiles" on the left menu and select "Create new device profile".
+6. If your device profile does not yet exist, you should create one by following steps 7-11. Otherwise continue with section [Create Template](https://devity-iot.github.io/tutorial/Thingsboard%20-%20Rule%20Engine/KEYNOA#create-template) 
+
+7. Click on "Device profiles" on the left menu and select "Create new device profile".
 ![KEYNOA](/img/KEYNOA/Thingsboard/Device-profiles.png)
 
-7. Fill in the details, then click on "Next: Transport configuration".
+8. Fill in the details, then click on "Next: Transport configuration".
 
 - Name: `Eval-Kit device profile`
 - Rule chain: `Root Rule Chain`
@@ -59,16 +61,16 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/Device-profile-add.png)
 
-8. Select the Transport type and click on "Next: Alarm rules". Leave default values for "MQTT device topic filters".
+9. Select the Transport type and click on "Next: Alarm rules". Leave default values for "MQTT device topic filters".
 - Transport type: `MQTT`
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/Device-profile-transport.png)
 
-9. Configuring "Alarm rules" can be skipped. Click on "Next: Device provisioning".
+10. Configuring "Alarm rules" can be skipped. Click on "Next: Device provisioning".
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/Add-alarm-rule.png)
 
-10. Set the Provision strategy. The credentials `Provision device key` and `Provision device secret` shown here are used in Step-3 to create a new Thingsboard Data Hub. Click on "Add".
+11. Set the Provision strategy. The credentials `Provision device key` and `Provision device secret` shown here are used in Step-3 to create a new Thingsboard Data Hub. Click on "Add".
 
 - Provision strategy: `Allow to create new devices`
 
@@ -117,7 +119,7 @@ KEYNOA and IoT Central are now fully configured and your device is now ready to 
 Power up your device and connect it to the internet via an ethernet cable.
 :::
 
-6. Wait until your device status in KEYNOA switches to **provisioned** by pressing the little refresh button in the top right.
+6. Wait until your device status in KEYNOA switches to **provisioned**; you may have to refresh your view by pressing the little refresh button in the top right of the page.
 After a successful onboarding, the device status in KEYNOA switches to **provisioned**.
 
 :::info
