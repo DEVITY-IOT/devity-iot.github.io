@@ -19,7 +19,7 @@ During the onboarding process the device will be assigned to the device Group Ev
 1. Jobs can now be created very easily. To do this, navigate to the "Jobs" section and click on "New".
 ![DevityHub](/img/az/jobs_dashboard.png)
 
-2. Name the job and specify the device group on which the job should be executed.
+2. Name the job `Increase Sending Interval` and specify the device group on which the job should be executed.
 ![DevityHub](/img/az/jobs_configure_1.png)
 
 3. Scroll down to Job Properties. Select "Property" as the job type. Select the "sending interval" as the property and set the new value to `15`. Click "Next".
@@ -39,7 +39,7 @@ During the onboarding process the device will be assigned to the device Group Ev
 1. To be able to observe the result of the job, we need a representation of the Sending_interval. For this purpose, we create a dashboard that fulfils this task. Navigate to the "Dashboard" section and click on "Create dashboard". If an old dashboard exists, you can also delete or edit it.
 ![DevityHub](/img/az/16.png)
 
-2. Name the Dashboard an select the Dashboard type "Personal". Click on "Create".
+2. Name the Dashboard `Dashboard Eval Kits` and select the Dashboard type "Personal". Click on "Create".
 ![DevityHub](/img/az/17.png)
 
 3. To add a widget, click on "Edit dashboard" first.

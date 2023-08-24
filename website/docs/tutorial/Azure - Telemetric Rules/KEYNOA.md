@@ -98,8 +98,8 @@ KEYNOA and IoT Central are now fully configured and your device is now ready to 
 Power up your device and connect it to the internet via an ethernet cable.
 :::
 
-7. Wait until your device status in KEYNOA switches to **active** by pressing the little refresh button in the top right.
-After a successful onboarding, the device status in KEYNOA switches to **active**.
+7. Wait until your device status in KEYNOA switches to **provisioned** by pressing the little refresh button in the top right.
+After a successful onboarding, the device status in KEYNOA switches to **provisioned**.
 :::info
 The onboarding including the boot process should not take longer than 2 minutes.
 :::
