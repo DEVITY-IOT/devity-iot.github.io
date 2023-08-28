@@ -37,4 +37,4 @@ Thingsboard Rule Engine is a highly customizable framework for complex event pro
 - Make RPC calls based on defined condition.
 - Integrate with external pipelines like Kafka, Spark, AWS services, etc.
 
-Proceed with the execution to start the tutorial.
+Proceed with [KEYNOA Setup](https://devity-iot.github.io/tutorial/Thingsboard%20-%20Rule%20Engine/KEYNOA) to start the tutorial.

@@ -9,7 +9,7 @@ sidebar_position: 3
 
 You are the IoT manager of a brewing and beverage factory. 
 Since the products should only be stored at certain temperatures, it is essential for the entire operation to detect failures of the cooling systems in a timely manner. 
-To do this, you want to use sensors and IoT gateway at all storage points. 
+To do this, you want to use sensors and IoT gateways at all storage points. 
 
 In order to detect failures directly, you now use the Thingsboard Rule Chain. 
 The aim of this tutorial is to define a rule that immediately detects failures of the cooling system. 
