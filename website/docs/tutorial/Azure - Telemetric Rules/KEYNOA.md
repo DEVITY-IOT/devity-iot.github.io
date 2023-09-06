@@ -46,7 +46,7 @@ To do so, we recommend to install the [Microsoft Authenticator](https://www.micr
 6. Fill in the details:
 
 - IoT Central Name: this should reflect your chosen Hub `devity-hub`
-- Enrollment Group Name: check that this enrollment group does not already exist `KEYNOA-EvalKit-001`
+- Enrollment Group Name: `KEYNOA-EvalKit-001`
 - IoT Location: `westeuropa`
 - Device Template: `Eval Kit`
 - Certificate Authority: select: `KEYNOA-CLOUD INT CA2 MQTT v1` from the dropdown
