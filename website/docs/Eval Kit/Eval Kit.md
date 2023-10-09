@@ -10,9 +10,9 @@ The KEYNOA Eval Kit is a unique opportunity to boost your knowledge about how to
 - Differences in pricing models and feature sets of the provided clouds.
 
 ## Tutorial structure
-- First you define the respective cloud in KEYNOA.
-- Then your specify that your Eval Kit device should be onboarded the previously defined cloud.
-- When you power the device on KEYNOA will connect your device to Thingsboard, Azure IoT Central or AWS IoT Core.
+- First, you link KEYNOA to a data plattform or cloud.
+- Then, you define how and which devices will establish a secure connection via MQTT or OPC UA.
+- When you power on the device, KEYNOA will onboard your device to ThingsBoard, Azure IoT Central or AWS IoT Core.
 - After that, your device will send telemetry data to the cloud.
 - The last step in each tutorial is to define your own rules and create your own dashboard to visualize the data in the cloud.
 

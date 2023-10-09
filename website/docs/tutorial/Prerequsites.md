@@ -4,29 +4,32 @@ sidebar_label: "Prerequisites"
 title: Prerequisites
 ---
 
-To start one of the tutorial Use Cases you need to fulfill the following prerequisites:
+Please use the following check list to make sure to fullfill all prerequisites for starting the Eval Kit. As this check list also serves as overview, see further explanation to the prerequisites later this page.
 
-- You have the EvalKit Device (Janz Tec emPC-A/RPI3+ with pre-installed KEYNOA SDK) ready for operation.
-    - You have prepared a 24 V power supply for the device.
-    - You have prepared an Ethernet cable to connect the device to the internet. The network should provide DHCP and DNS service.
-- You have access to your KEYNOA Cloud tenant (see [Access to KEYNOA](#access-to-keynoa) section).
-    - You can access your tenant at [some-tenant.keynoa.cloud](#)
-- You have received a device voucher.
-- You have uploaded the device voucher to KEYNOA Cloud (see [Upload Voucher](#upload-voucher) section)
-- You have made sure that in your KEYNOA Cloud tenant there are **no** MQTT templates defined. See [Remove MQTT Templates](/Reference/mqtt-template#remove-mqtt-template) on how to remove MQTT templates.
-- You have access to Thingsboard, Azure, and AWS. See [Access to Thingsboard, Azure, and AWS](#access-to-thingsboard-azure-and-aws) section to to find out about how to access the Services.
+- You have the Eval Kit Device (Janz Tec emPC-A/RPI3+ with pre-installed KEYNOA Engine) ready for operation.
+    - You have attached a 24 V power supply to the device.
+    - You have prepared an ethernet cable to connect the device to the internet. The network should provide DHCP and DNS service.
+- You have access to your KEYNOA tenant (see [Access to KEYNOA](#access-to-keynoa) section).
+- You have received a device voucher via e-mail (see [Device Voucher](#device-voucher) section).
+- You have uploaded the device voucher to KEYNOA (see [Upload Voucher](#upload-voucher) section)
+- You have checked that in your KEYNOA tenant there are **no** MQTT templates defined. See [Remove MQTT Templates](/Reference/mqtt-template#remove-mqtt-template) on how to remove MQTT templates.
+- You have access to ThingsBoard, Azure, and AWS. See [Access to ThingsBoard, Azure, and AWS](#access-to-thingsboard-azure-and-aws) section to find out about how to access these clouds.
 
 ### Access to KEYNOA
-You will get the access to your own KEYNOA Tenant via email. Please use the link from the e-mail to create a new password for your KEYNOA account.
+You will get the access to your own KEYNOA tenant via email. Please use the link from the e-mail to create a new password for your KEYNOA account.
+
+:::info
+Your e-mail address is your user name.
+:::
 
 ### Device Voucher
 You will receive the device voucher via e-mail from DEVITY.
 This file proves that your are the authorized owner of the device you received.
 The voucher enables KEYNOA to connect securely to the device and therefore to provision your device automatically.
-See the next section how to upload the voucher to your KEYNOA tenant.
+See the next section to learn how to upload the voucher to your KEYNOA tenant.
 
 ### Upload Voucher
-With a voucher you can register a device in the KEYNOA enrollment service.
+With a voucher you can register a device in KEYNOA.
 1. To upload a voucher just click on "upload voucher" in the header.
 
 ![KEYNOA](/img/KEYNOA/upload-voucher.png)
@@ -38,15 +41,15 @@ With a voucher you can register a device in the KEYNOA enrollment service.
 Afterwards you will see a success message telling you that the voucher was uploaded and a new device was assigned to your tenant.
 
 :::info
-The device's serial number is not part of the vouchers due to privacy concerns.
+The serial number of the device is not part of the voucher to protect your privacy.
 :::
 
 ![KEYNOA](/img/KEYNOA/upload-voucher-3.png)
 
-3. Finally, go to the devices tab and wait until the Device Status of your device says **waiting**.
+3. Finally, go to the tab "Devices" and wait until the Device Status **waiting** is displayed.
 
 :::caution
-The processing of new voucher in KEYNOA should not take longer than 5 minutes!
+The processing of a new voucher in KEYNOA should not take longer than 5 minutes!
 :::
 
 :::info
@@ -54,26 +57,26 @@ To find out more about the device status go to the [Device Status](/reference/de
 :::
 
 
-### Access to Thingsboard, Azure, and AWS
-DEVITY has prepared accounts for Thingsboard, Azure, and AWS to make the start as easy as possible for you.
-Your access to the respective applications will be provided by the KEYNOA Credential Manager in your KEYNOA Cloud.
+### Access to ThingsBoard, Azure, and AWS
+DEVITY has prepared accounts for ThingsBoard, Azure, and AWS to make the start as easy as possible for you.
+Your access will be provided in your KEYNOA account.
 If the access to one of the clouds gets lost, please do not hesitate to reach out to us. We provide you a new password.
 [support@devity.eu](mailto:support@devity.eu)
 
-1. Find the KEYNOA Credential Manager by clicking on the lock icon in the header.
+1. Find your credentials by clicking on the lock icon in the header.
 
 ![Prerequisite](/img/Prerequisite/Credential-Manager-1.png)
 
-2. The KEYNOA Credential Manager will show you all information needed.
-The Credential Manager also provides a link to the login of the respective cloud:
+2. All needed information will appear.
+KEYNOA also provides a link to the login of the respective cloud:
 
 :::caution
-The passwords in the Credential Manager are intended as one-time passwords and should be changed after the first use.
+The passwords are intended as one-time passwords and should be changed after the first use.
 We recommend to store the new passwords in a password manager like [Bitwarden](https://bitwarden.com), [1Password](https://1password.com) or [KeyPassXC](https://keepassxc.org/).
 :::
 
 :::info
-Since the applications are created just for you and your Eval Kit, we cannot provide general login links here.
+Since the clouds and their respective services are for the purposes of the Eval Kit, we cannot provide general login links here.
 :::
 
 ![Prerequisite](/img/Prerequisite/Credential-Manager-2.png)

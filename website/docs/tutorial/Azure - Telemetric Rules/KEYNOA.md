@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 
 # KEYNOA Setup
-In this step you will start by configurating the KEYNOA such that your device will be onboarded to your Thingsboard account.
+In this step, you will configure KEYNOA to connect your device to your Azure account.
 
 ## Before you start
 
@@ -32,7 +32,11 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 When you log in the first time you will are asked to change your password.
 In addition Azure requires to set up two factor authentication to secure the account.
 This is a common and reasonable security measurement.
-To do so, we recommend to install the [Microsoft Authenticator](https://www.microsoft.com/en-us/security/mobile-authenticator-app) App on your smartphone. 
+To do so, we recommend to install the [Microsoft Authenticator](https://www.microsoft.com/en-us/security/mobile-authenticator-app) App on your smartphone. [Here](https://support.microsoft.com/de-de/account-billing/einrichten-einer-authentator-app-als-%C3%BCberpr%C3%BCfungsmethode-in-zwei-schritten-2db39828-15e1-4614-b825-6e2b524e7c95) you can learn how to use the Microsoft Authenticator. 
+:::
+
+:::info
+Please note that Microsoft Azure uses Single-Sign-On (SSO) functionalities. Signing in or out may impacts other running applications in your browser.
 :::
 
 ![KEYNOA](/img/KEYNOA/IoT-Central/Microsoft-login.png)
