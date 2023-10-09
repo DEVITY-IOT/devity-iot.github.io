@@ -19,13 +19,13 @@ During the onboarding process the device will be assigned to the device Group Ev
 1. Jobs can now be created very easily. To do this, navigate to the "Jobs" section and click on "New".
 ![DevityHub](/img/az/jobs_dashboard.png)
 
-2. Name the job `Increase Sending Interval` and specify the device group on which the job should be executed.
+2. Name the job (e.g`Increase Sending Interval`) and specify the device group on which the job should be executed.
 ![DevityHub](/img/az/jobs_configure_1.png)
 
 3. Scroll down to Job Properties. Select "Property" as the job type. Select the "sending interval" as the property and set the new value to `15`. Click "Next".
 ![DevityHub](/img/az/jobs_configure_2.png)
 
-4. For the moment, we do not need to set anything in the Delivery Options. Click on "Next".
+4. For now, we do not need to set anything in the Delivery options. Click on "Next".
 ![DevityHub](/img/az/jobs_delivery.png)
 
 5. Enable the schedule. Set the recurrence to "Daily". Enter 6 o'clock in the evening as the time. Click "Next".
@@ -51,7 +51,7 @@ During the onboarding process the device will be assigned to the device Group Ev
 5. Scroll down to the Cloud Property field and select the Sending_interval. Click on "Add tile" to create the tile. IMPORTANT: Save your entries by clicking on "Save", otherwise the dashboard will be reset.
 ![DevityHub](/img/az/20.png)
 
-6. The rudimentary dashboard now looks like this. Your IoT sensor may already be sending data, in which case you already have a Sending_Interval value.
+6. The rudimentary dashboard now looks like this. Your IoT sensor may already sends data. In this case you already have a Sending_Interval value.
 ![DevityHub](/img/az/21.png)
 
 7. If the job is triggered when the entered time is reached, the sending_interval should be adjusted. Hint: Change the time in your job so that you do not have to wait until 6PM for the test.
@@ -61,4 +61,4 @@ Success! You now automatically get notifications for your facility.
 
 ## Reset the Sending Interval
 
-For practice: Now create another job that resets the Sending_interval to one minute the next morning. You can do this.
+For practice: Now create another job that resets the Sending_interval to one minute the next morning.

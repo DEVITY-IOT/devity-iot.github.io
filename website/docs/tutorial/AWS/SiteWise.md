@@ -20,7 +20,7 @@ Follow these steps to create a SiteWise Portal Dashboard:
 1. On the landing page of the portal start by clicking on "Create Dashboard".
 ![SiteWise](/img/AWS/landing.png)
 
-2. Configure the dashboard via drag and drop on the available properties. Also give the dashboard an appropiate name.
+2. Give the dashboard an appropiate name. Additionally, create two tiles for the given properties by dragging them from the right column to the dashboard.
 ![SiteWise](/img/AWS/create-dashboard.png)
 
 3. Once you are done with the layout out the dashboard, click on "Save Dashboard".

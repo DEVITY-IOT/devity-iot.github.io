@@ -22,24 +22,24 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 
 
 ## Create Data Hub
-1. In the KEYNOA UI create the Data Hub you want your device to connect to.
+1. In KEYNOA create the Data Hub you want your device to connect to.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
 
-2. Select the AWS data hub.
+2. Select the AWS Data Hub.
 ![KEYNOA](/img/KEYNOA/AWS/Data-Hub.png)
  
-3. Fill in the details and click on "Confirm".
+3. Fill in the Access Key ID and the Access Secret Key. You can find this information in KEYNOA by clicking on the lock icon in the header and scrolling to the section "AWS". Proceed by clicking on "Confirm".
 
-- Access Key ID: copy from KEYNOA Credential Manager
-- Access Secret Key: copy from KEYNOA Credential Manager
+- Access Key ID: copy from KEYNOA "Credentials" section
+- Access Secret Key: copy from KEYNOA "Credentials" section
 - Region: select `eu-central-1` from the dropdown
 
 ![KEYNOA](/img/KEYNOA/AWS/Data-Hub-details.png)
 
-4. Fill in the details and click on "Register CA".
+4. Fill in the details (copy and paste) and click on "Register CA".
 
 - Template Body: `default`
-- RoleARN: copy from KEYNOA Credential Manager
+- RoleARN: copy from KEYNOA "Credentials" section (click on the lock icon in the KEYNOA header and scroll to the section "AWS")
 - Topic: `/company/facility/42/dty-eval-kit/$(serial)`
 - Certificate Authority: select `KEYNOA-CLOUD INT CA2 MQTT v1` from the dropdown
 - Connector Name: `AWS connector`
@@ -48,22 +48,21 @@ If multiple MQTT Templates exist the newer template will be ignored. Hence your 
 
 ## Create Template
 :::info
-If you have not uploaded your voucher yet and therefore the list of all devices is empty, then [upload the voucher](/tutorial/Prerequsites#upload-voucher).
+If you have not uploaded your voucher yet and therefore the list of all devices is empty, then [upload the voucher](/tutorial/Prerequsites#upload-voucher) now.
 :::
 :::caution
-If there are already MQTT templates, make sure they do not match your device. If you are unsure how to do this, you can also remove them:
-You can delete a template by clicking the burger menu in the right of the template's row and select ("Delete").
+If MQTT templates already exist, please delete them by clicking on the burger menu in column "Action" and selecting "Delete".
 :::
-1. In the KEYNOA UI create the MQTT Template.
+1. Create the MQTT Template in KEYNOA.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
 
 2. Select your Data Hub. Click on "Next".
 ![KEYNOA](/img/KEYNOA/AWS/MQTT-template-1.png)
 
-3. Fill in the device details. Click on "Next".
+3. Use the same device details as shown below and click on "Next".
 
-- Device Property: `Device Model`
-- your-device-model-number: `sy-epc-rpi30`
+- Choose Device Property: `Device Model`
+- Type in the following Device Model for your Janz Tec Eval Kit Device: `sy-epc-rpi30`
 
 These properties will be matched against the information which the device provides about itself during the onboarding process. If it matches the template, the template will be used to configure the device.
 
@@ -75,30 +74,29 @@ For more information about the template concept see the [MQTT Templates Section]
 ![KEYNOA](/img/KEYNOA/MQTT-template-2.png)
 
 
-5. Give the template an identifier and click on "Save".
+5. Give the template an Identifier Name and click on "Save".
 
 - Identifier Name: `AWS MQTT template`
 
 ![KEYNOA](/img/KEYNOA/MQTT-template-3.png)
 
-6. You have now created the setup instruction for your device to be onboarded.
-KEYNOA and IoT Central are now fully configured and your device is now ready to be onboarded.
+6. KEYNOA and ThingsBoard are now set up and your device is now ready for the onboarding process.
 
 :::info
-Power up your device and connect it to the internet via an ethernet cable.
+Connect your device to the internet via an ethernet cable and power it up.
 :::
 
-7. Wait until your device status in KEYNOA switches to **provisioned** by pressing the little refresh button in the top right.
-After a successful onboarding, the device status in KEYNOA switches to **provisioned**.
+7. The onboarding is completed, when the device status in KEYNOA switches to **provisioned**. You can refresh the table by clicking the refresh button in the top right corner.
+
 :::info
-The onboarding including the boot process should not take longer than 2 minutes.
+The onboarding including the boot process should not take longer than two minutes.
 :::
 
 ![KEYNOA](/img/KEYNOA/devices_list_refresh.png)
 
-The voucher enables KEYNOA to connect securely to the device and therefor to provision your device automatically.
+The voucher enables KEYNOA to connect securely to the device and therefore to provision your device automatically.
 
-8. Your device is now provisioned to AWs IoT Core. Continue with the setup of IoT Central.
+8. Your device is now provisioned to AWS IoT Core. Continue with the setup of AWS IoT Core.
 
 :::info
 Checkout the Things section of your AWS IoT Core to see the new device.
