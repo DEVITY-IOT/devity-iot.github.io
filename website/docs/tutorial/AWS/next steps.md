@@ -6,9 +6,9 @@ sidebar_position: 4
 
 ## Bulk onboarding
 You can onboard bulks of devices at once with AWS.
-Together with KEYNOA, AWS enables you to setup entire new facilities and departments quickly.
+Together with KEYNOA, AWS enables you to setup entire new facilities quickly.
 
 
-## Explore Portal
+## Explore portal
 Look further through the portal and explore dashboards, alarms and notifications.
-Set up alarms to get notifications when your machines diverge from ormal opperation parameters.
+Set up alarms to get notifications when your machines diverge from normal opperation parameters.
