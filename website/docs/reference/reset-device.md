@@ -7,7 +7,7 @@ title: Reset device
 
 For resetting the device we provide a script on the device. This is useful when you want to test out different data platforms with the same device. To reset the device connect the device to a keyboard and a monitor. Open the terminal with Ctrl/Strg+Alt+F1 and type in 
     
-    ./reset.sh
+    /etc/keynoa-engine/reset.sh
 
 :::note
 This reset is not reflected in the KEYNOA Device Status bar.
