@@ -22,7 +22,7 @@ If multiple MQTT Templates exist, the newer template will be ignored. Hence your
 
 
 ## Create Data Hub
-1. In the KEYNOA Cloud "Create" the Data Hub you want your device to connect to.
+1. In KEYNOA "Create" the Data Hub you want your device to connect to.
 ![KEYNOA](/img/KEYNOA/Dashboard.png) 
 
 
@@ -38,11 +38,11 @@ If multiple MQTT Templates exist, the newer template will be ignored. Hence your
 - Provision Key: To get the Provisioning Key you need to continue the tutorial and execute step 4.
 - Provision Secret: To get the Provisioning Secret you need to continue the tutorial and execute step 4.
 - Certificate Authority: Select `KEYNOA-CLOUD INT CA2 MQTT v1` from the dropdown or follow step 5 to create a new CA.
-- Trust Anchor: Select the trust Anchor that will issue TLS certificate for DataHub website. Follow step 5 to create a new Trust Anchor.
+- Trust Anchor: Select the trust Anchor that will issue TLS certificate for Data Hub website. Follow step 5 to create a new Trust Anchor.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/DatahubProvisionKey.png)
 
-4. Log in to the [ThingsBoard](https://thingsboard.devity.eu/login) with the credentials you find in KEYNOA (just click on the lock icon in the header of KEYNOA). The Provision Key and Secret can be found in ThingsBoard in an already existing device profile (see step 4a). Otherwise you first need to create a device profile (see 4b) 
+4. Log in to [ThingsBoard](https://thingsboard.devity.eu/login) with the credentials you find in KEYNOA (just click on the lock icon in the header of KEYNOA). The Provision Key and Secret can be found in ThingsBoard in an already existing device profile (see step 4a). Otherwise you first need to create a device profile (see 4b). 
 <!--- ![KEYNOA](/img/KEYNOA/Thingsboard/Device-Credentials.png) --->
 ![KEYNOA](/img/KEYNOA/Thingsboard/Keynoa_Credential_manager.png)
 
@@ -102,7 +102,7 @@ Click on "Submit" to create a new CA.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/CACreated.png)
 
-5a-6. The newly created CA is listed under `Certificate Authorities`. This can be now used to create the Datahub. Now the Datahub can be created by choosing the newly created CA. 
+5a-6. The newly created CA is listed under `Certificate Authorities`. This can be now used to create the Data Hub. Now the Data Hub can be created by choosing the newly created CA. 
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/NewCAListed.png)
 
@@ -128,7 +128,7 @@ Use the "Create" button and click on "MQTT template".
 3. Populate the "Policy Configurations" which will be used to create MQTT application certificate. 
 The Policy Configurations are partially auto filled, while all the fields can be modified. 
 
-\*Hover over the `i` circles for more information of each field to know more. 
+\*Hover over the `i` circles for more information about each configuration. 
 
 ![KEYNOA](/img/KEYNOA/MQTT2PolicyConfigurations.png)
 
