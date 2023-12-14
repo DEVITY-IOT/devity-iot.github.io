@@ -84,7 +84,7 @@ If multiple MQTT Templates exist, the newer template will be ignored. Hence your
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/LevelOfExperience.png)
 
-5a-2. Choose "CA Type" and "CA Name". CA name could be any text to identify the correct CA.
+5a-2. Choose "CA Type" `Internal CA` and provide a "CA Name". CA name could be any text to identify the correct CA.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/ChooseCAName.png)
 
@@ -92,8 +92,10 @@ If multiple MQTT Templates exist, the newer template will be ignored. Hence your
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/CABasicDetails.png)
 
-5a-4. Fill "Issuer Details". Fields are auto-filled with relevant values, and these can be modified. 
-The `Serial Number` and `Common Name` are auto filled with values from voucher, and these can be modified.
+5a-4. The values in "Issuer Details" determine the device's certificate content when a device is provisioned later.
+Select MQTT in the dropdown `Load default values for` to load the default issuer configuration for an MQTT use case.
+Fields are autofilled with relevant values, but can be modified.
+The content `$(serial)`in the field `Serial Number` and `Common Name` states that the Common Name field in the certificate will contain the serial number of the respective device.
 Click on "Submit" to create a new CA.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/IssuerDetails.png)
@@ -102,13 +104,10 @@ Click on "Submit" to create a new CA.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/CACreated.png)
 
-5a-6. The newly created CA is listed under `Certificate Authorities`. This can be now used to create the Data Hub. Now the Data Hub can be created by choosing the newly created CA. 
+5a-6. The newly created CA is listed under `Certificate Authorities`. This can be now used to create the Data Hub. Now the Data Hub can be created by choosing the newly created CA.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/NewCAListed.png)
 
-5b-1. To create a new "Trust  Anchor" click on `Add Trust Anchor` and follow the steps in 5a-1 to 5a-6.
-
-![KEYNOA](/img/KEYNOA/Thingsboard/AddTrustAnchor.png)
 
 ## Create Template
 :::info
@@ -126,7 +125,7 @@ Use the "Create" button and click on "MQTT template".
 ![KEYNOA](/img/KEYNOA/MQTT1SelectDataHub.png)
 
 3. Populate the "Policy Configurations" which will be used to create MQTT application certificate. 
-The Policy Configurations are partially auto filled, while all the fields can be modified. 
+The Policy Configurations are autofilled from the values we put in while creating the CA.
 
 \*Hover over the `i` circles for more information about each configuration. 
 
