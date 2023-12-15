@@ -38,7 +38,7 @@ If multiple MQTT Templates exist, the newer template will be ignored. Hence your
 - Provision Key: To get the Provisioning Key you need to continue the tutorial and execute step 4.
 - Provision Secret: To get the Provisioning Secret you need to continue the tutorial and execute step 4.
 - Certificate Authority: Select `KEYNOA-CLOUD INT CA2 MQTT v1` from the dropdown or follow step 5 to create a new CA.
-- Trust Anchor: Select the trust Anchor that will issue TLS certificate for Data Hub website. Follow step 5 to create a new Trust Anchor.
+- Trust Anchor: Select the `KEYNOA CLOUD ROOT v1` which issues the TLS server certificate for `thingsboard.devity.eu:8883` Data Hub.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/DatahubProvisionKey.png)
 
