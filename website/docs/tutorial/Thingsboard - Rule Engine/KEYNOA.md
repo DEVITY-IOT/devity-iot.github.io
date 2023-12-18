@@ -35,10 +35,10 @@ If multiple MQTT Templates exist, the newer template will be ignored. Hence your
 - ThingsBoard Provider: Select `Custom Provider` from the dropdown to define your own ThingsBoard instance.
 - MQTT Broker URL: Copy the following URL `ssl://thingsboard.devity.eu:8883` and paste it in the respective field.
 - Topic: Use the default `v1/devices/me/telemetry`
-- Provision Key: To get the Provisioning Key you need to continue the tutorial and execute step 4.
-- Provision Secret: To get the Provisioning Secret you need to continue the tutorial and execute step 4.
+- Provision Key: To get the Provisioning Key you need to continue the tutorial and execute step 4 (4a and 4b).
+- Provision Secret: To get the Provisioning Secret you need to continue the tutorial and execute step 4 (4a and 4b).
 - Certificate Authority: Select `KEYNOA-CLOUD INT CA2 MQTT v1` from the dropdown or follow step 5 to create a new CA.
-- Trust Anchor: Select the `KEYNOA CLOUD ROOT v1` which issues the TLS server certificate for `thingsboard.devity.eu:8883` Data Hub.
+- Trust Anchor: Select the `KEYNOA CLOUD ROOT v1` which issues the TLS server certificate for `thingsboard.devity.eu:8883` Data Hub. To add a new Trust Anchor, follow step 6.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/DatahubProvisionKey.png)
 
@@ -80,6 +80,10 @@ If multiple MQTT Templates exist, the newer template will be ignored. Hence your
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/AddCert.png)
 
+You can also add a new CA from "Create" button on top right corner.
+
+![KEYNOA](/img/KEYNOA/Thingsboard/Thingsboard_AddNewCA)
+
 5a-1. Choose your level of expertise to create a new CA.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/LevelOfExperience.png)
@@ -107,6 +111,18 @@ Click on "Submit" to create a new CA.
 5a-6. The newly created CA is listed under `Certificate Authorities`. This can be now used to create the Data Hub. Now the Data Hub can be created by choosing the newly created CA.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/NewCAListed.png)
+
+6. To add a new "Trust Anchor", click on "Create" and choose "Trust Anchor".
+
+![KEYNOA](/img/KEYNOA/Thingsboard/CreateNewTrustAnchor.png)
+
+6a-1. Upload the Trust Anchor certificate by clicking on "Choose File".
+
+![KEYNOA](/img/KEYNOA/Thingsboard/AddTrustAnchor.png)
+
+6a-2. Once upload is successfull, it is listed under "Trust Anchor" side menu. This can be selected to create the Data Hub.
+
+![KEYNOA](/img/KEYNOA/Thingsboard/TrustAnchorUploadProgress.png)
 
 
 ## Create Template
