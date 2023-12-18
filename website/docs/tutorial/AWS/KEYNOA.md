@@ -3,26 +3,26 @@ sidebar_position: 2
 ---
 
 # KEYNOA Setup
-In this step you will start by configurating the KEYNOA such that your device will be onboarded to your Thingsboard account.
+In this step, you will configure KEYNOA to connect your device to your AWS account.
 
 ## Before you start
 
 Before you start, make sure that you fulfill all [prerequisites](/tutorial/Prerequsites).
 
-If you already used the device before make sure to [reset the device](/reference/reset-device) and [remove any MQTT templates](/reference/mqtt-template#remove-mqtt-template) from the list.
+If you already used the device before, make sure to [reset the device](/reference/reset-device) and [remove any MQTT templates](/reference/mqtt-template#remove-mqtt-template) from the list.
 
-In the following steps the device configuration is applied to KEYNOA and not to the device.
+In the following steps, the device configuration is applied to KEYNOA and not to the device.
 Hence, the **device is powered off** until KEYNOA is ready.
 The device will be turned on in the end of this guide.
 
 :::caution
-For a specific application like MQTT only a single template can be applied.
-If multiple MQTT Templates exist the newer template will be ignored. Hence your new template referring to a new data hub will not be used because another template is already applied.
+For a specific application like MQTT, only a single template can be applied.
+If multiple MQTT Templates exist, the newer template will be ignored. Hence, your new template referring to a new data hub will not be used because another template is already applied.
 :::
 
 
 ## Create Data Hub
-1. In KEYNOA create the Data Hub you want your device to connect to.
+1. In KEYNOA, create the Data Hub you want your device to connect to.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
 
 2. Select the AWS Data Hub.
@@ -63,7 +63,7 @@ You can also add a new CA from "Create" button on top right corner.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/ChooseCAName.png)
 
-5a-3. Basic details of CA are auto loaded. The fields can be modified to suit the CA. 
+5a-3. Basic details of CA are automatically loaded. The fields can be modified to suit the CA. 
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/CABasicDetails.png)
 
