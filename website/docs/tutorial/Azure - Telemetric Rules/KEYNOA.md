@@ -9,29 +9,29 @@ In this step, you will configure KEYNOA to connect your device to your Azure acc
 
 Before you start, make sure that you fulfill all [prerequisites](/tutorial/Prerequsites).
 
-If you already used the device before make sure to [reset the device](/reference/reset-device) and [remove any MQTT templates](/reference/mqtt-template#remove-mqtt-template) from the list.
+If you already used the device before, make sure to [reset the device](/reference/reset-device) and [remove any MQTT templates](/reference/mqtt-template#remove-mqtt-template) from the list.
 
-In the following steps the device configuration is applied to KEYNOA and not to the device.
+In the following steps, the device configuration is applied to KEYNOA and not to the device.
 Hence, the **device is powered off** until KEYNOA is ready.
 The device will be turned on in the end of this guide.
 
 :::caution
-For a specific application like MQTT only a single template can be applied.
-If multiple MQTT Templates exist the newer template will be ignored. Hence your new template referring to a new data hub will not be used because another template is already applied.
+For a specific application like MQTT, only a single template can be applied.
+If multiple MQTT Templates exist, the newer template will be ignored. Hence, your new template referring to a new data hub will not be used because another template is already applied.
 :::
 
 ## Create Data Hub
-1. In the KEYNOA Cloud create the Data Hub you want your device to connect to.
+1. In KEYNOA, create the Data Hub you want your device to connect to.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
 
-2. Select the Azure IoT Central data hub.
+2. Select the Azure IoT Central Data Hub.
 ![KEYNOA](/img/KEYNOA/IoT-Central/Azure_SelectCloudService.png)
 
-3. Log in with your Microsoft account or with the credentials you find in the KEYNOA credential manager (just click on the lock icon in the header of KEYNOA Cloud). This account needs admin privileges in both the azure portal as well as the IoT Hub (see step 4).
+3. Log in with your Microsoft account or with the credentials you find in the KEYNOA "Credentials" section (just click on the lock icon in the header of KEYNOA). This account needs admin privileges in both the Azure portal as well as the IoT Hub (see step 4).
 :::caution
-When you log in the first time you will are asked to change your password.
-In addition Azure requires to set up two factor authentication to secure the account.
-This is a common and reasonable security measurement.
+When you log in the first time, you will be asked to change your password.
+In addition, Azure requires to set up two factor authentication to secure the account.
+This is a common and reasonable security practice.
 To do so, we recommend to install the [Microsoft Authenticator](https://www.microsoft.com/en-us/security/mobile-authenticator-app) App on your smartphone. [Here](https://support.microsoft.com/de-de/account-billing/einrichten-einer-authentator-app-als-%C3%BCberpr%C3%BCfungsmethode-in-zwei-schritten-2db39828-15e1-4614-b825-6e2b524e7c95) you can learn how to use the Microsoft Authenticator. 
 :::
 
@@ -53,7 +53,7 @@ Please note that Microsoft Azure uses Single-Sign-On (SSO) functionalities. Sign
 - Enrollment Group Name: `KEYNOA-EvalKit-001`
 - IoT Location: `westeuropa`
 - Device Template: `Eval Kit`
-- Certificate Authority: select: `KEYNOA-CLOUD INT CA2 MQTT v1` from the dropdown. Add new CA by following step 8.
+- Certificate Authority: select: `KEYNOA-CLOUD INT CA2 MQTT v1` from the dropdown. Add a new CA by following step 8.
 - Connector Name: `IoT Central connector`
 
 ![KEYNOA](/img/KEYNOA/IoT-Central/Data-Hub-details-2.png)
@@ -72,14 +72,14 @@ Please note that Microsoft Azure uses Single-Sign-On (SSO) functionalities. Sign
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/ChooseCAName.png)
 
-8a-3. Basic details of CA are auto loaded. The fields can be modified to suit the CA. 
+8a-3. Basic details of CA are automatically loaded. The fields can be modified to suit the CA. 
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/CABasicDetails.png)
 
 8a-4. The values in "Issuer Details" determine the device's certificate content when a device is provisioned later.
 Select MQTT in the dropdown `Load default values for` to load the default issuer configuration for an MQTT use case.
 Fields are autofilled with relevant values, but can be modified.
-The content `$(serial)`in the field `Serial Number` and `Common Name` states that the Common Name field in the certificate will contain the serial number of the respective device.
+The content `$(serial)`in the fields `Serial Number` and `Common Name` states that the Common Name field in the certificate will contain the serial number of the respective device.
 Click on "Submit" to create a new CA.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/IssuerDetails.png)
