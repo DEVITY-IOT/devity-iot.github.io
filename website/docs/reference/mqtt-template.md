@@ -1,14 +1,12 @@
 ---
-sidebar_label: "MQTT Template"
-title: MQTT Template
+sidebar_label: "Template"
+title: Template
 ---
 
 
-## MQTT Template
-
-An MQTT Template links a DataHub to a device.
+A Template links a DataHub to a device.
 The Data Hub specifies how the MQTT Client on the device needs to be configured to connect to the respective MQTT broker.
-The MQTT Template consists of multiple selectors for a specific property.
+The Template consists of multiple selectors for a specific property.
 These selectors will be matched against the information the device provides about itself during the onboarding process. 
 If all properties match the specified selectors, the device is assign to the data hub.
 
