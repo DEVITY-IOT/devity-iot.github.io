@@ -31,4 +31,4 @@ We recommend the sequence shown, as this will introduce you to complex use cases
 
 ## Further questions
 
-In case of any questions with this tutorial or general questions contact us (support@devity.eu).
+In case of any questions with this tutorial or general questions contact us [support@devity.eu](mailto:support@devity.eu).
