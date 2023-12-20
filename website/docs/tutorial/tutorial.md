@@ -20,14 +20,14 @@ The tutorial is divided in the following three use cases:
 We recommend the sequence shown, as this will introduce you to complex use cases via an increasing level of difficulty. You can find more details about the use cases and the requirements in the respective tutorials.
 
 
-## Scope of time
+### Scope of time
+    Approximate time you might spend onboarding your device(s), considering it is your first time.
+    
+    Setup KEYNOA with your device(s): 30-60 min
+    ThingsBoard: 45-75 mins
+    Azure IoT Central: 45-75 mins
+    AWS IoT Hub: 30-60 mins
 
-Considering you are new to KEYNOA and the cloud platforms, we have estimated the approximate time you might spend onboarding your device(s).
-
-- Setup KEYNOA with your device(s): 30-60 min
-- ThingsBoard: 45-75 min
-- Azure IoT Central: 45-75 min
-- AWS IoT Hub: 30-60 min
 
 ## Further questions
 
