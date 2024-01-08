@@ -3,13 +3,15 @@ sidebar_position: 2
 ---
 
 # KEYNOA Setup
-In this step, you will configure KEYNOA to connect your device to your ThingsBoard account.
+In this step, you will configure KEYNOA to onboard your device and to connect to your ThingsBoard account.
 
 ## Before you start
 
 Before you start, make sure that you fulfill all [prerequisites](/tutorial/Prerequsites).
 
-If you already used the device before, make sure to [reset the device](/reference/reset-device) and [remove any MQTT templates](/reference/mqtt-template#remove-mqtt-template) from the list.
+If you already used the device before, make sure to 
+- [reset the device](/reference/reset-device).
+- [remove any MQTT templates](/reference/mqtt-template#remove-mqtt-template) from the list.
 
 In the following steps the device configuration is applied to KEYNOA and not to the device.
 Hence, the **device is powered off** until KEYNOA is ready.
@@ -22,6 +24,9 @@ If multiple MQTT Templates exist, the newer template will be ignored. Hence your
 
 
 ## Create Data Hub
+
+Refer [Data Hub](/reference/data-hub) to know more. Follow the steps to create a new Data Hub on your KEYNOA tenant.
+
 1. In KEYNOA "Create" the Data Hub you want your device to connect to.
 ![KEYNOA](/img/KEYNOA/Dashboard.png) 
 
