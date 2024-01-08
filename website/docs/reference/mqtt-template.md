@@ -1,6 +1,6 @@
 ---
-sidebar_label: "Template"
-title: Template
+sidebar_label: "Templates"
+title: Templates    
 ---
 
 A template is created to serve three main purposes.
