@@ -1,6 +1,7 @@
 ---
-sidebar_label: "Template"
-title: Template
+sidebar_position: 5
+sidebar_label: "MQTT Template"
+title: MQTT Template
 ---
 
 
