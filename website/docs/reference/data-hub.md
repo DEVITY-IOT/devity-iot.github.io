@@ -45,6 +45,8 @@ Having a Trust Anchor (Private CA) allows you to protect and manage the resource
 
 When creating a Data Hub, providing a **Trust Anchor** certificate enables the device to access the specifics of your Private CA. This certificate serves the purpose of authenticating cloud platform certificates, establishing a secure connection between the device and the cloud platform.
 
+You want to switch your device between cloud services? It is possible! Check how it works [here.](docs/reference/change-datahub.md)
+
 To dive deeper into understanding the CA and Trust Anchor, please refer to [Certificate Authority] and [Trust Anchor] for detailed information.
 
 [Deep Dive MQTT](https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.pdf)
