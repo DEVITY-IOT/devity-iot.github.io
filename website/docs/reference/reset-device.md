@@ -13,8 +13,12 @@ For resetting the device we provide a script on the device. This is useful when 
 This reset is not reflected in the KEYNOA Device Status bar.
 :::
 
-After that the device reboots and the new onboarding process starts.
-Make sure to power down the device before it boots up again to prevent that the device will be onboarded to the old configuration again.
+:::note
+After reset the device reboots and the new onboarding process starts.
+
+Make sure to power off the device before it boots up, to prevent the device onboarding to old configurations again.
+:::
+
 
 :::caution
 After the reboot, the onboarding starts immediately.

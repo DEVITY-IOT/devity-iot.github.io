@@ -7,6 +7,7 @@ website/build
 # Generated files
 website/.docusaurus
 .cache-loader
+.vscode
 
 # Misc
 .DS_Store
