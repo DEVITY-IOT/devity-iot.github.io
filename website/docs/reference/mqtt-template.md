@@ -1,6 +1,7 @@
 ---
-sidebar_label: "Templates"
-title: Templates    
+sidebar_position: 5
+sidebar_label: "MQTT Template"
+title: MQTT Template
 ---
 
 A template is created to serve three main purposes.

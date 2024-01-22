@@ -1,4 +1,5 @@
 ---
+sidebar_position: 7
 sidebar_label: "Update KEYNOA.engine"
 title: Update KEYNOA.engine
 ---
