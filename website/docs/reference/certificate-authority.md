@@ -35,13 +35,13 @@ Choose appropriate Internal or External CA while creating a DataHub. When this D
 
 ## Internal CA
 
-This CA is local to KEYNOA cloud. It verifies the identities of device applications and issues them valid certificates. You have complete control over the CA policies and certificates, when you create a new Internal CA. Follow the steps to create an [Internal](#create-internal-ca) CA. 
+This CA is local to KEYNOA cloud. It verifies the identities of device applications and issues them valid certificates. You have complete control over the CA policies and certificates, when you create a new Internal CA. Follow the steps to [Create an Internal CA](#create-an-internal-ca) CA. 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/Internal-CA.png)
 
 ## External CA
 
-An external CA operates independently from the KEYNOA cloud environment. This external CA may be a Private CA exclusive to a particular organization. To facilitate the issuance of application certificates by this external CA, it is required to create an Intermediate CA. The newly created intermediate CA is signed by the External CA. Subsequently, this Intermediate CA is set up as a local CA within the KEYNOA cloud. Follow the steps to create an [External](#create-external-ca) CA signed Intermediate CA.
+An external CA operates independently from the KEYNOA cloud environment. This external CA may be a Private CA exclusive to a particular organization. To facilitate the issuance of application certificates by this external CA, it is required to create an Intermediate CA. The newly created intermediate CA is signed by the External CA. Subsequently, this Intermediate CA is set up as a local CA within the KEYNOA cloud. Follow the steps to [Create an External CA](#create-an-external-ca) signed Intermediate CA.
 
 <!-- To create an Intermediate CA, follow the steps below.  -->
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/External-CA-concept.png)
