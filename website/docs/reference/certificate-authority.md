@@ -9,11 +9,12 @@ A Certificate Authority (CA) attests the identity of an entity, and binds it to 
 ## Why a CA is Necessary?
 
 Every IoT device powered by the KEYNOA client SDK can host multiple applications.
-An application needs to connect securely to a service to exchange data. This can be an IoT Cloud Like Azure or an SCADA System.
+An application needs to connect **securely** to a service to exchange the data. A service can be an IoT Cloud Like Azure or a SCADA System.
+    
 The security aspect is ensured by the PKI certificates.
 It is thus crucial that the device applications use certificates that are issued by a reliable, and trustworthy Certificate Authority.
 These certificates are enrolled within the onboarding phase and are managed along the lifecycle of the device by KEYNOA.
-Since, these certificates are used by the application to authenticate, we call them App(lication) Certificates.
+Since these certificates are used by the application to authenticate, we call them App(lication) Certificates.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/CA-1.png)
 
