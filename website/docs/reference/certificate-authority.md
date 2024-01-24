@@ -68,7 +68,7 @@ Follow the steps below to create an Internal CA.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/3-KEYNOA-CA-Choose-CA-Type.png)
 
-3. Internal CA properties can be set here. The 'Root  CA TTL' and 'Intermediate CA TTL' determine the validity time of the CA, which can be adapted to the use case. The chosen 'Algorithm' determines the cryptographic algorithm of the key pair used to sign the application certificates. Click 'Next'.
+3. Internal CA properties can be set here. The 'Root CA TTL', 'Intermediate CA TTL' based on the usecase. The chosen 'Algorithm' is used to generate the key pair used to sign the application certificates.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/4-KEYNOA-CA-Set-CA-Properties.png)
 
