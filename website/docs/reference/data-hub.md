@@ -1,4 +1,5 @@
 ---
+sidebar_position: 3
 sidebar_label: "Data Hub"
 title: Data Hub
 ---
@@ -43,6 +44,8 @@ By selecting the **Certificate Authority**, you can choose which CA can issue a 
 Having a Trust Anchor (Private CA) allows you to protect and manage the resources in-house. For instance, utilizing an AWS Private CA offers protection for resources such as servers and applications. However, it is crucial to share CA details with the device.
 
 When creating a Data Hub, providing a **Trust Anchor** certificate enables the device to access the specifics of your Private CA. This certificate serves the purpose of authenticating cloud platform certificates, establishing a secure connection between the device and the cloud platform.
+
+You want to switch your device between cloud services? It is possible! Check how it works [here.](docs/reference/change-datahub.md)
 
 To dive deeper into understanding the CA and Trust Anchor, please refer to [Certificate Authority] and [Trust Anchor] for detailed information.
 
