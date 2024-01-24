@@ -18,7 +18,7 @@ Since these certificates are used by the application to authenticate, we call th
 
 ## Role of CA in KEYNOA Cloud
 
-CA in KEYNOA cloud is responsible to issue application certificates to all KEYNOA Client applications on the device as shown in the figure below. 
+CA in KEYNOA cloud is responsible to issue App Certificates to all KEYNOA Client applications on the device as shown in the figure below. 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/CA-1.png)
 
@@ -31,7 +31,7 @@ A maximum of five new CAs can be created.
 
 ## Role of DataHub and Template
 
-Alternatively, for the device to recognize certificates issued by CA, it is necessary for the device to know and accept these CAs. The only way of conveying CA information to the device is by via a DataHub (for MQTT as the messaging protocol) and/or a Template (for OPCUA as the messaging protocol). Therefore, careful consideration is essential in selecting the appropriate CA when configuring the DataHub and Template.
+Alternatively, for the device to recognize certificates issued by CA, it is necessary for the device to know and accept these CAs. The only way of conveying CA information to the device is via a DataHub and/or a Template. Therefore, careful consideration is essential in selecting the appropriate CA when configuring the DataHub and Template.
 
 After choosing the suitable CA, the details entered into DataHub and Template are transmitted to the device.
 
@@ -41,13 +41,13 @@ Choose appropriate Internal or External CA while creating a DataHub. When this D
 
 ## Internal CA
 
-This CA is local to KEYNOA cloud. It verifies the identities of device applications and issues them valid certificates. You have complete control over the CA policies and certificates, when you create a new Internal CA. Follow the steps to [Create an Internal CA](#create-an-internal-ca) CA. 
+This CA is local to KEYNOA cloud. It verifies the identities of device applications and issues them valid certificates. You have complete control over the CA policies and certificates, when you create a new Internal CA. Follow the steps to [Create an Internal CA](#create-an-internal-ca). 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/Internal-CA.png)
 
 ## External CA
 
-An external CA operates independently from the KEYNOA cloud environment. This external CA may be a Private CA exclusive to a particular organization. To facilitate the issuance of application certificates by this external CA, it is required to create an Intermediate CA. The newly created intermediate CA is signed by the External CA. Subsequently, this Intermediate CA is set up as a local CA within the KEYNOA cloud. Follow the steps to [Create an External CA](#create-an-external-ca) signed Intermediate CA.
+An external CA operates independently from the KEYNOA cloud environment. This could be a Private CA exclusive to a particular Enterprise. To facilitate the issuance of application certificates by this external CA, it is required to create an Intermediate CA. The newly created intermediate CA is signed by the External CA. Subsequently, the Intermediate CA is set up as a local CA within the KEYNOA cloud. Follow the steps to create an [External CA](#create-an-external-ca) signed Intermediate CA.
 
 <!-- To create an Intermediate CA, follow the steps below.  -->
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/External-CA-concept.png)
@@ -113,7 +113,7 @@ Follow the steps below to create an Intermediate CA, signed by an External Root 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/1-create-Ext-CA.png)
 
 
-2. A certificate template for applications, either MQTT or OPCUA, is configured here. The fileds are auto-populated with suggested values. However, each field can be modified with values suitable for your required security level. Configure all the filed values and click 'Submit'.
+2. A certificate template for applications, either MQTT or OPCUA, is configured here. The fileds are auto-populated with suggested values. However, each field can be modified with values suitable for your required security level. Configure all the fields and click 'Submit'.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/3-Cert-Template.png)
 
@@ -125,19 +125,25 @@ Follow the steps below to create an Intermediate CA, signed by an External Root 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/5-Download-CSR.png)
 
-5. Send the downloaded CSR to the External Root CA, which is external to KEYNOA cloud. Receive an Intermediate CA certificate from the External Root CA. Keep it ready in your disk, to be uploaded in the next prompt. This step is carried out outside of KEYNOA cloud. 
+5. Send the downloaded CSR to the External Root CA, to request an Intermediate CA certificate. Save this CA certificate on your disk and keep it ready to be uploaded in the next prompt. 
+
+    :::info
+    Step 5 is executed outside of KEYNOA cloud environment. 
+    :::
 
 6. Browse the Intermediate Certificate you saved on your disk in previous step. Upload it, and click on 'Next'.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/6-Upload-Int-CA-Cert.png)
 
-7. The Intermediate CA, signed by the External Root CA, has been successfully uploaded to the KEYNOA cloud. This implies that the application certificates issued by the Intermediate CA are trusted by the External Root CA. Consequently, all device application certificates are now indirectly issued by the External Root CA.
+7. The Intermediate CA, signed by the External Root CA, has been successfully uploaded to the KEYNOA cloud. This implies that the application certificates issued by the Intermediate CA are trusted by the External Root CA. Consequently, all device App Certificates are (indirectly) issued by the External Root CA.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/7-Upload-Successful.png)
 
-8. The newly created Intermediate CA will be listed as CAs. This will also show up in the 'Certificate Authority' drop-down menu, while creating an OPCUA Template or a MQTT DataHub. 
+8. The newly created Intermediate CA will be listed as CAs. 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/8-IntCA-Listed.png)
+
+9. This will show up in the 'Certificate Authority' drop-down menu, while creating an OPCUA Template or a MQTT DataHub.
 
 
 
