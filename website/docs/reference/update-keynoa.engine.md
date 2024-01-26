@@ -20,7 +20,10 @@ If you have added own files in there, they will be lost.
 ```sh
 sudo apt update
 sudo apt upgrade
-# To update only keynoa engine
+```
+#### To update only keynoa engine
+
+```sh
 sudo apt update
 sudo apt install --only-upgrade keynoa-engine
 ```
