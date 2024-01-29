@@ -68,7 +68,7 @@ Follow the steps below to create an Internal CA.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/3-KEYNOA-CA-Choose-CA-Type.png)
 
-3. Internal CA properties can be set here. The 'Root CA TTL', 'Intermediate CA TTL' based on the usecase. The chosen 'Algorithm' is used to generate the key pair used to sign the application certificates.
+3. Internal CA properties can be set here. The 'Root  CA TTL' and 'Intermediate CA TTL' determine the validity time of the CA, which can be adapted to the use case. The chosen 'Algorithm' determines the cryptographic algorithm of the key pair used to sign the application certificates. Click 'Next'.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/4-KEYNOA-CA-Set-CA-Properties.png)
 
@@ -121,17 +121,17 @@ Follow the steps below to create an Intermediate CA, signed by an External Root 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/4-Send-CSR.png)
 
-4. Click on the 'Download Generated CSR' to download the CSR file. This is the request to be sent to the External Root CA. Click on 'Next'.
+4. Click on the 'Download Generated CSR' to download the CSR file. This is the request to be sent to an External Root CA. Click on 'Next'.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/5-Download-CSR.png)
 
-5. Send the downloaded CSR to the External Root CA, to request an Intermediate CA certificate. Save this CA certificate on your disk and keep it ready to be uploaded in the next prompt. 
+5. Submit the downloaded Certificate Signing Request (CSR) to the External Root CA for obtaining an Intermediate CA certificate. Save this intermediate CA certificate on your computer and have it prepared for uploading in the upcoming prompt.
 
     :::info
     Step 5 is executed outside of KEYNOA cloud environment. 
     :::
 
-6. Browse the Intermediate Certificate you saved on your disk in previous step. Upload it, and click on 'Next'.
+6. Browse the Intermediate CA Certificate you saved on your disk in previous step. Upload it, and then click on 'Next'.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/6-Upload-Int-CA-Cert.png)
 
@@ -139,11 +139,11 @@ Follow the steps below to create an Intermediate CA, signed by an External Root 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/7-Upload-Successful.png)
 
-8. The newly created Intermediate CA will be listed as CAs. 
+8. The newly created Intermediate CA will be listed as one of the Certificate Authority. 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/8-IntCA-Listed.png)
 
-9. This will show up in the 'Certificate Authority' drop-down menu, while creating an OPCUA Template or a MQTT DataHub.
+9. The newly created CA will also show up in the 'Certificate Authority' drop-down menu, while creating the OPCUA Template or the MQTT Data Hub. If it is selected, this CA issues the application certificate for either an OPC UA or an MQTT application respectively.
 
 
 
