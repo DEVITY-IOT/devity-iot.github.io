@@ -12,6 +12,8 @@ It consists of two components: KEYONA Engine and KEYNOA.
 - KEYNOA Eval Kit is a software client for device manufacturer. It is responsible for issuing a unique identity to every device produced.
 - KEYNOA is responsible for transferring device identities, configuring and onboarding groups of devices and managing devices during the life cycle. It consists of a web application, backend software, enrollment service, middleware, and API.
 
+![KEYNOA](/img/KEYNOA/Overview.png)
+
 KEYNOA empowers you to:
 
 - Centrally, configure and manage all devices before physical installation everywhere in the world. You can decide very late - just until the physical installation - which operation purpose the devices should have.
