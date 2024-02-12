@@ -22,14 +22,19 @@ To create a new Trust Anchor, follow the steps below.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Trust-anchor/1-Start-Creating-TA.png)
 
-2. The Trust Anchor Certificate should be saved on your computer disk before you begin with this step. Choose an appropriate Trust Anchor Certificate from your disk (usually a .pem file) and click on 'Upload'.
+2. The Trust Anchor certificate (or, a chain of certifiates) should be saved on your computer disk before you begin with this step. Choose an appropriate Trust Anchor certificate from your disk (usually a .pem file) and click on 'Upload'.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Trust-anchor/2-Choose-Upload-TA.png)
 
-3. When the certificate is successfully uploaded, a message is displayed. This indicates that the Trust Anchor is now available while creating the Data Hub and/or Template. 
+3. When the certificate (or, a chain of certificates) is successfully uploaded, a message (as highlighted in Green in the picture below) is displayed. This indicates that the Trust Anchor is now available while creating the Data Hub and/or Template. 
+
+:::note
+If you wish to upload a chain of certificates, a single chain can serve as the Trust Anchor.
+:::
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Trust-anchor/3-Upload-Successful.png)
 
 :::info
-Trust Anchor details for the Azure IoT Central and AWS cloud services is pre-configured in the KEYNOA, and it is automatically accessed while creating the respective Data hub. 
+Trust Anchor details for the Azure IoT Central and AWS cloud services are pre-configured in the KEYNOA, and they are automatically accessed while creating the respective Data hub. 
 :::
+
