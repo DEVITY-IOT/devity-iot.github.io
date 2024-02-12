@@ -4,7 +4,9 @@ sidebar_label: "Custom DataHub"
 title: Custom DataHub
 ---
 
-A Custom Data Hub functions similarly to the familiar Data Hub you have seen before. Instead of relying on a well-known cloud service, like AWS or Azure, it allows you to link the IoT device to your designated cloud service. Subsequently, the IoT device can transmit MQTT data to this private cloud service, featuring its own MQTT Broker URL and Trust Anchor.
+A Custom Data Hub functions similarly to the familiar Data Hub you have seen before. Rather than connecting to a well-known cloud service, like AWS or Azure, it allows you to connect the IoT device to your (private or)designated cloud service, which comes with its dedicated MQTT Broker URL and Trust Anchor.
+
+The MQTT app on the device will receive an App Certificate, which it will utilize to authenticate with the designated cloud service. Following this authentication, the IoT device gains the capability to send MQTT data to the cloud service.
 
 To create a Custome Data Hub, follow the steps.
 
