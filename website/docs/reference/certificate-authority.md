@@ -23,8 +23,8 @@ CA in KEYNOA cloud is responsible to issue App Certificates to all KEYNOA Client
 ![KEYNOA](/img/KEYNOA/reference-doc/CA-1.png)
 
 It is possible to create a new CA specific to your security requirements. You could create
-- An [Internal CA](#internal-ca) local to KEYNOA cloud.
-- An Intermediate CA signed by your  [External CA](#external-ca)
+- A [KEYNOA CA](#keynoa-ca) local to KEYNOA cloud.
+- An Intermediate CA signed by your  [Enterprise CA](#enterprise-ca)
 - Or, employ one recommended by DEVITY as the default option.
 
 A maximum of five new CAs can be created.
@@ -36,25 +36,25 @@ Alternatively, for the device to recognize certificates issued by CA, it is nece
 After choosing the suitable CA, the details entered into DataHub and Template are transmitted to the device.
 
 :::info 
-Choose appropriate Internal or External CA while creating a DataHub. When this DataHub is selected while creating a Template, all Certificate Policy Configurations (Step 3 of [Create Template](/tutorial/Thingsboard%20-%20Rule%20Engine/KEYNOA#create-template)) are auto populated. 
+Choose appropriate KEYNOA or Enterprise CA while creating a DataHub. When this DataHub is selected while creating a Template, all Certificate Policy Configurations (Step 3 of [Create Template](/tutorial/Thingsboard%20-%20Rule%20Engine/KEYNOA#create-template)) are auto populated. 
 :::
 
-## Internal CA
+## KEYNOA CA
 
-This CA is local to KEYNOA cloud. It verifies the identities of device applications and issues them valid certificates. You have complete control over the CA policies and certificates, when you create a new Internal CA. Follow the steps to [Create an Internal CA](#create-an-internal-ca). 
+This CA is local to KEYNOA cloud. It verifies the identities of device applications and issues them valid certificates. You have complete control over the CA policies and certificates, when you create a new KEYNOA CA. Follow the steps to [Create a KEYNOA CA](#create-a-keynoa-ca). 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/Internal-CA.png)
 
-## External CA
+## Enterprise CA
 
-An external CA operates independently from the KEYNOA cloud environment. This could be a Private CA exclusive to a particular Enterprise. To facilitate the issuance of application certificates by this external CA, it is required to create an Intermediate CA. The newly created intermediate CA is signed by the External CA. Subsequently, the Intermediate CA is set up as a local CA within the KEYNOA cloud. Follow the steps to create an [External CA](#create-an-external-ca) signed Intermediate CA.
+An Enterprise CA operates independently from the KEYNOA cloud environment. This could be a Private CA exclusive to a particular Enterprise. To facilitate the issuance of application certificates by this Enterprise CA, it is required to create an Intermediate CA. The newly created intermediate CA is signed by the Enterprise CA. Subsequently, the Intermediate CA is set up as a local CA within the KEYNOA cloud. Follow the steps to create an [Enterprise CA](#create-an-enterprise-ca) signed Intermediate CA.
 
 <!-- To create an Intermediate CA, follow the steps below.  -->
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/External-CA-concept.png)
 
-## Create an Internal CA
+## Create a KEYNOA CA
 
-Follow the steps below to create an Internal CA.
+Follow the steps below to create an KEYNOA CA.
 
 1. Click on 'Create' button and select 'Certificate Authority' to begin.
 
@@ -64,11 +64,11 @@ Follow the steps below to create an Internal CA.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/2-KEYNOA-CA-Expertise-Level.png) -->
 
-2. Choose 'Internal CA'. Give a unique CA name to identify it later. Click 'Next'.
+2. Choose 'KEYNOA CA'. Give a unique CA name to identify it later. Click 'Next'.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/3-KEYNOA-CA-Choose-CA-Type.png)
 
-3. Internal CA properties can be set here. The 'Root  CA TTL' and 'Intermediate CA TTL' determine the validity time of the CA, which can be adapted to the use case. The chosen 'Algorithm' determines the cryptographic algorithm of the key pair used to sign the application certificates. Click 'Next'.
+3. KEYNOA CA properties can be set here. The 'Root  CA TTL' and 'Intermediate CA TTL' determine the validity time of the CA, which can be adapted to the use case. The chosen 'Algorithm' determines the cryptographic algorithm of the key pair used to sign the application certificates. Click 'Next'.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/4-KEYNOA-CA-Set-CA-Properties.png)
 
@@ -85,11 +85,11 @@ A suitable application, MQTT or OPCUA, could also be chosen from the drop down m
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/4-Choose-Application.png)
 
 
-5. The Internal CA is created successfully. It can be downloaded for any other purpose. 
+5. The KEYNOA CA is created successfully. It can be downloaded for any other purpose. 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/6-KEYNOA-CA-KEYNOA-CA-Finish.png)
 
-6. The newly created Internal CA is now listed as a valid 'Certificate Authority'. Click on the hamburger menu, to manage this CA. 
+6. The newly created KEYNOA CA is now listed as a valid 'Certificate Authority'. Click on the hamburger menu, to manage this CA. 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/7-KEYNOA-CA-New-CA-Listed.png)
 
@@ -104,11 +104,11 @@ A suitable application, MQTT or OPCUA, could also be chosen from the drop down m
 
 <!-- [Go to Top](#why-a-ca-is-necessary) -->
 
-## Create an External CA
+## Create an Enterprise CA
 
-Follow the steps below to create an Intermediate CA, signed by an External Root CA.
+Follow the steps below to create an Intermediate CA, signed by an Enterprise Root CA.
 
-1. Choose 'External CA'. Give a unique CA name to identify it later. Click 'Next'.
+1. Choose 'Enterprise CA'. Give a unique CA name to identify it later. Click 'Next'.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/1-create-Ext-CA.png)
 
@@ -121,11 +121,11 @@ Follow the steps below to create an Intermediate CA, signed by an External Root 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/4-Send-CSR.png)
 
-4. Click on the 'Download Generated CSR' to download the CSR file. This is the request to be sent to an External Root CA. Click on 'Next'.
+4. Click on the 'Download Generated CSR' to download the CSR file. This is the request to be sent to an Enterprise Root CA. Click on 'Next'.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/5-Download-CSR.png)
 
-5. Submit the downloaded Certificate Signing Request (CSR) to the External Root CA for obtaining an Intermediate CA certificate. Save this intermediate CA certificate on your computer and have it prepared for uploading in the upcoming prompt.
+5. Submit the downloaded Certificate Signing Request (CSR) to the Enterprise Root CA for obtaining an Intermediate CA certificate. Save this intermediate CA certificate on your computer and have it prepared for uploading in the upcoming prompt.
 
     :::info
     Step 5 is executed outside of KEYNOA cloud environment. 
@@ -135,7 +135,7 @@ Follow the steps below to create an Intermediate CA, signed by an External Root 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/6-Upload-Int-CA-Cert.png)
 
-7. The Intermediate CA, signed by the External Root CA, has been successfully uploaded to the KEYNOA cloud. This implies that the application certificates issued by the Intermediate CA are trusted by the External Root CA. Consequently, all device App Certificates are (indirectly) issued by the External Root CA.
+7. The Intermediate CA, signed by the Enterprise Root CA, has been successfully uploaded to the KEYNOA cloud. This implies that the application certificates issued by the Intermediate CA are trusted by the Enterprise Root CA. Consequently, all device App Certificates are (indirectly) issued by the Enterprise Root CA.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/7-Upload-Successful.png)
 
