@@ -21,6 +21,7 @@ If you have added own files in there, they will be lost.
 sudo apt update
 sudo apt upgrade
 ```
+
 #### To update only keynoa engine
 
 ```sh
