@@ -59,7 +59,7 @@ You can also add a new CA from "Create" button on top right corner.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/LevelOfExperience.png)
 
-5a-2. Choose "CA Type" `Internal CA` and provide a "CA Name". CA name could be any text to identify the correct CA.
+5a-2. Choose "CA Type" `KEYNOA CA` and provide a "CA Name". CA name could be any text to identify the correct CA.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/ChooseCAName.png)
 

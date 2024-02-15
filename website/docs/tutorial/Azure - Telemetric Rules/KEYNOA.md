@@ -68,7 +68,7 @@ Please note that Microsoft Azure uses Single-Sign-On (SSO) functionalities. Sign
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/LevelOfExperience.png)
 
-8a-2. Choose "CA Type" `Internal CA` and provide a "CA Name". CA name could be any text to identify the correct CA.
+8a-2. Choose "CA Type" `KEYNOA CA` and provide a "CA Name". CA name could be any text to identify the correct CA.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/ChooseCAName.png)
 
