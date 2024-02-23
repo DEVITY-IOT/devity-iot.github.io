@@ -6,7 +6,7 @@ title: Change Data Hub
 
 It is possible to hot swap the Data hub on a fully provisioned device. To do so, follow the below steps. 
 
-1. Create a new Data Hub for required cloud service.
+1. Create a new Data Hub for the required cloud service.
 
     <!-- Create a [Thingsboard](docs/tutorial/Thingsboard%20-%20Rule%20Engine/KEYNOA.md) Data Hub by following these steps.
 
@@ -22,7 +22,7 @@ It is possible to hot swap the Data hub on a fully provisioned device. To do so,
 
 ![KEYNOA](/img/KEYNOA/AWS/Data-Hub-details-2.png) -->
 
-2. Login to KEYNOA cloud. Choose the device for which the Data Hub needs to be changed. Click on the device settings.
+2. Login to KEYNOA. Choose the device for which the Data Hub needs to be changed. Click on the device settings.
 
 ![KEYNOA](/img/KEYNOA/change-datahub-device-settings.png)
 
