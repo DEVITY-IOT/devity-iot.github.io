@@ -8,17 +8,17 @@ A Certificate Authority (CA) attests the identity of an entity, and binds it to 
 
 ## Why a CA is Necessary?
 
-Every IoT device powered by the KEYNOA client SDK can host multiple applications.
-An application needs to connect **securely** to a service to exchange the data. A service can be an IoT Cloud Like Azure or a SCADA System.
+Every device powered by the KEYNOA Engine can host multiple applications.
+An application needs to connect **securely** to a service to exchange information. A service can be an IoT Cloud Like Azure or a SCADA System.
     
-The security aspect is ensured by the PKI certificates.
-It is thus crucial that the device applications use certificates that are issued by a reliable, and trustworthy Certificate Authority.
-These certificates are enrolled within the onboarding phase and are managed along the lifecycle of the device by KEYNOA.
+The security is ensured by X.509 certificates.
+Thus, it is crucial that the device applications use certificates that are issued by a reliable, and trustworthy Certificate Authority.
+These certificates are enrolled within the onboarding phase and are managed along the life cycle of the device by KEYNOA.
 Since these certificates are used by the application to authenticate, we call them App(lication) Certificates.
 
-## Role of CA in KEYNOA Cloud
+## Role of CA in KEYNOA
 
-CA in KEYNOA cloud is responsible to issue App Certificates to all KEYNOA Client applications on the device as shown in the figure below. 
+A CA in KEYNOA is responsible to issue App Certificates to all KEYNOA Engine applications on the device as shown in the figure below. 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/CA-1.png)
 
@@ -29,14 +29,14 @@ It is possible to create a new CA specific to your security requirements. You co
 
 A maximum of five new CAs can be created.
 
-## Role of DataHub and Template
+## Role of Data Hub and Template
 
-Alternatively, for the device to recognize certificates issued by CA, it is necessary for the device to know and accept these CAs. The only way of conveying CA information to the device is via a DataHub and/or a Template. Therefore, careful consideration is essential in selecting the appropriate CA when configuring the DataHub and Template.
+Alternatively, for the device to recognize certificates issued by CA, it is necessary for the device to know and accept these CAs. The only way of conveying CA information to the device is via a Data Hub and/or a Template. Therefore, careful consideration is essential in selecting the appropriate CA when configuring the Data Hub and Template.
 
-After choosing the suitable CA, the details entered into DataHub and Template are transmitted to the device.
+After choosing the suitable CA, the details entered into Data Hub and Template are transmitted to the device.
 
 :::info 
-Choose appropriate KEYNOA or Enterprise CA while creating a DataHub. When this DataHub is selected while creating a Template, all Certificate Policy Configurations (Step 3 of [Create Template](/tutorial/Thingsboard%20-%20Rule%20Engine/KEYNOA#create-template)) are auto populated. 
+Choose an appropriate KEYNOA or Enterprise CA while creating a Data Hub. When this Data Hub is selected while creating a Template, all Certificate Policy Configurations (Step 3 of [Create Template](/tutorial/Thingsboard%20-%20Rule%20Engine/KEYNOA#create-template)) are auto populated. 
 :::
 
 ## KEYNOA CA
@@ -47,7 +47,7 @@ This CA is local to KEYNOA cloud. It verifies the identities of device applicati
 
 ## Enterprise CA
 
-An Enterprise CA operates independently from the KEYNOA cloud environment. This could be a Private CA exclusive to a particular Enterprise. To facilitate the issuance of application certificates by this Enterprise CA, it is required to create an Intermediate CA. The newly created intermediate CA is signed by the Enterprise CA. Subsequently, the Intermediate CA is set up as a local CA within the KEYNOA cloud. Follow the steps to create an [Enterprise CA](#create-an-enterprise-ca) signed Intermediate CA.
+An Enterprise CA operates independently from the KEYNOA cloud environment. This could be a Private CA exclusive to a particular enterprise. To facilitate the issuance of application certificates by this Enterprise CA, it is required to create an Intermediate CA. The newly created Intermediate CA is signed by the Enterprise CA. Subsequently, the Intermediate CA is set up as a local CA within the KEYNOA cloud. Follow the steps to create an [Enterprise CA](#create-an-enterprise-ca) signed Intermediate CA.
 
 <!-- To create an Intermediate CA, follow the steps below.  -->
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/External-CA-concept.png)
@@ -80,7 +80,7 @@ Follow the steps below to create an KEYNOA CA.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/5-KEYNOA-CA-Set-Cert-Policies.png)
 
-A suitable application, MQTT or OPCUA, could also be chosen from the drop down menu. Along with 'Key Usage' and 'Extended Key Usage' fileds, other fields will be auto populated. 
+A suitable application, MQTT or OPC UA, could also be chosen from the drop down menu. Along with 'Key Usage' and 'Extended Key Usage' fileds, other fields will be auto populated. 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/4-Choose-Application.png)
 
@@ -89,7 +89,7 @@ A suitable application, MQTT or OPCUA, could also be chosen from the drop down m
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/6-KEYNOA-CA-KEYNOA-CA-Finish.png)
 
-6. The newly created KEYNOA CA is now listed as a valid 'Certificate Authority'. Click on the hamburger menu, to manage this CA. 
+6. The newly created KEYNOA CA is now listed as a valid 'Certificate Authority'. Click on the burger menu, to manage this CA. 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/7-KEYNOA-CA-New-CA-Listed.png)
 
@@ -97,7 +97,7 @@ A suitable application, MQTT or OPCUA, could also be chosen from the drop down m
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/8-KEYNOA-CA-Use-New-CA-Data-Hub.png)
 
-8. The newly created CA will also show up in the 'Certificate Authority' drop-down menu, while creating the OPCUA Template. If it is selected, this CA issues the application certificate for the OPC UA application.
+8. The newly created CA will also show up in the 'Certificate Authority' drop-down menu, while creating the OPC UA Template. If it is selected, this CA issues the application certificate for the OPC UA application.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/9-KEYNOA-CA-Use-New-CA-Template.png)
 
@@ -113,7 +113,7 @@ Follow the steps below to create an Intermediate CA, signed by an Enterprise Roo
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/1-create-Ext-CA.png)
 
 
-2. A certificate template for applications, either MQTT or OPCUA, is configured here. The fileds are auto-populated with suggested values. However, each field can be modified with values suitable for your required security level. Configure all the fields and click 'Submit'.
+2. A certificate template for applications, either MQTT or OPC UA, is configured here. The fileds are auto-populated with suggested values. However, each field can be modified with values suitable for your required security level. Configure all the fields and click 'Submit'.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/3-Cert-Template.png)
 
@@ -125,25 +125,25 @@ Follow the steps below to create an Intermediate CA, signed by an Enterprise Roo
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/5-Download-CSR.png)
 
-5. Submit the downloaded Certificate Signing Request (CSR) to the Enterprise Root CA for obtaining an Intermediate CA certificate. Save this intermediate CA certificate on your computer and have it prepared for uploading in the upcoming prompt.
+5. Submit the downloaded Certificate Signing Request (CSR) to the Enterprise Root CA for obtaining an Intermediate CA certificate. Save this intermediate CA certificate on your disk and have it prepared for uploading in the upcoming prompt.
 
     :::info
-    Step 5 is executed outside of KEYNOA cloud environment. 
+    Step 5 is executed outside of KEYNOA environment. 
     :::
 
 6. Browse the Intermediate CA Certificate you saved on your disk in previous step. Upload it, and then click on 'Next'.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/6-Upload-Int-CA-Cert.png)
 
-7. The Intermediate CA, signed by the Enterprise Root CA, has been successfully uploaded to the KEYNOA cloud. This implies that the application certificates issued by the Intermediate CA are trusted by the Enterprise Root CA. Consequently, all device App Certificates are (indirectly) issued by the Enterprise Root CA.
+7. The Intermediate CA, signed by the Enterprise Root CA, has been successfully uploaded to KEYNOA. This implies that the application certificates issued by the Intermediate CA are trusted by the Enterprise Root CA. Consequently, all device application certificates are (indirectly) issued by the Enterprise Root CA.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/7-Upload-Successful.png)
 
-8. The newly created Intermediate CA will be listed as one of the Certificate Authority. 
+8. The newly created Intermediate CA will be listed as Certificate Authority. 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/8-IntCA-Listed.png)
 
-9. The newly created CA will also show up in the 'Certificate Authority' drop-down menu, while creating the OPCUA Template or the MQTT Data Hub. If it is selected, this CA issues the application certificate for either an OPC UA or an MQTT application respectively.
+9. The newly created CA will also show up in the 'Certificate Authority' drop-down menu, while creating the OPC UA Template or the MQTT Data Hub. If it is selected, this CA issues the application certificate for either an OPC UA or an MQTT application respectively.
 
 
 
