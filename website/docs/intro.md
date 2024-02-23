@@ -6,10 +6,10 @@ slug: /
 ---
 
 ## Overview
-KEYNOA is a software to securely connect smart devices to any cloud or on-premises data platform on massive scale in industrial use cases. 
+KEYNOA is a software to securely connect devices to any cloud or on-premises data platform on massive scale in industrial use cases. 
 
 It consists of two components: KEYONA Engine and KEYNOA.
-- KEYNOA Eval Kit is a software client for device manufacturer. It is responsible for issuing a unique identity to every device produced.
+- KEYNOA Engine is a software client (SDK) for devices. It is responsible for issuing a unique identity to every device. It also queries KEYNOA instances to initiate an automatic provisioning process.
 - KEYNOA is responsible for transferring device identities, configuring and onboarding groups of devices and managing devices during the life cycle. It consists of a web application, backend software, enrollment service, middleware, and API.
 
 KEYNOA empowers you to:
@@ -27,7 +27,7 @@ KEYNOA empowers you to:
 - Protect devices and data from unauthorized access with a build in user and access management system.
 - Roll out updates with new functionality or security patches.
 
-You will find more information about KEYNOA on our [website](https://devity.eu/keynoa/). 
+You will find more information about KEYNOA on our [website](https://devity.eu/how-it-works/). 
 
 ## KEYNOA - How it works!
 
@@ -46,7 +46,7 @@ The illustration below gives a gist of how zero-touch secure onboarding of your 
     - Data Hub,
     - Template,
     - Certificate Authority (optional),
-    - TrustAnchor (optional), etc using our web platform.
+    - Trust Anchor (optional)
 4. A person who does not have to be trustworthy installs and starts the device.
 5. The device reports its identity to KEYNOA.
 6. KEYNOA authenticates the device and authorizes the exchange of information over a secure channel.
@@ -55,7 +55,7 @@ The illustration below gives a gist of how zero-touch secure onboarding of your 
 The device is now ready to send telemetry data to its cloud counterpart securely over a secure channel.
 
 
-This documentation guides you step-by-step through the whole process from device preparation to cloud connection till data visulization. You can start the tutorials with our KEYNOA Eval Kit [here](https://devity-iot.github.io/tutorial/).
+This documentation guides you step-by-step through the whole process from device preparation to cloud connection until data visulization. You can start the tutorials with our KEYNOA Eval Kit [here](https://devity-iot.github.io/tutorial/).
 
 ## KEYNOA Eval Kit 
 
