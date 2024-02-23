@@ -37,7 +37,7 @@ The Data Hub collects the topic for which the device is going to publish the tel
 
 ### Certificate Authority
 
-By selecting the **Certificate Authority**, you can choose which CA can issue a certificate to the MQTT application running on the Device. This application certificate will then be used to securely connect to the cloud platform before starting to send the telemetry data.
+By selecting the **Certificate Authority**, you can choose which CA can issue a certificate to the MQTT application running on the device. This application certificate will then be used to securely connect to the cloud platform before starting to send the telemetry data.
 
 ### Trust Anchor
 
