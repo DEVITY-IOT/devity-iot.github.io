@@ -67,6 +67,8 @@ You can also add a new CA from "Create" button on top right corner.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/CABasicDetails.png)
 
+  Know more about the [Certificate Properties here.](/reference/certificate-properties)
+
 5a-4. The values in "Issuer Details" determine the device's certificate content when a device is provisioned later.
 Select MQTT in the dropdown `Load default values for` to load the default issuer configuration for an MQTT use case.
 Fields are autofilled with relevant values, but can be modified.

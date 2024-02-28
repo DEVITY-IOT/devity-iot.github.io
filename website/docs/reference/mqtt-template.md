@@ -1,7 +1,7 @@
 ---
-sidebar_position: 5
-sidebar_label: "MQTT Template"
-title: MQTT Template
+sidebar_position: 6
+sidebar_label: "Template"
+title: Template
 ---
 
 A template is created to serve three main purposes.
@@ -10,7 +10,7 @@ A template is created to serve three main purposes.
 2. To update certificate template configurations, specifically for MQTT or OPC UA application certificates.  
 3. To select device properties.
 
-The device has the option to use either MQTT or OPC UA as its communication protocol. Depending on whether the device requires configuration to connect to an MQTT client or an OP CUA server, a corresponding template - an MQTT template or an OPC UA template - needs to be created. 
+The device has the option to use either MQTT or OPC UA as its communication protocol. Depending on whether the device requires configuration to connect to an MQTT client or an OPC UA server, a corresponding template - an MQTT template or an OPC UA template - needs to be created. 
 
 ### 1. To Link the Data Hub to a Device
 
