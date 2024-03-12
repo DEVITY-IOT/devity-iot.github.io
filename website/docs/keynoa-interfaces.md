@@ -12,32 +12,35 @@ KEYNOA implements a number of standard applications, proprietry applications (co
 
 # Components
 
-### Producer Service
-The Producer Service is used in production by the device manufacturer. It helps generate and manage the cryptographic identities in the device. In other words, it creates a certificate establishing ownership of the device, and signs the device. The device identities are then transferred directly to the owner via the producer service, so that the IT administrator (at owner's site)  could configure the device before physical delivery to the owner.
-
 ### KEYNOA Engine
 
-KEYNOA.engine is integrated into the device software/firmware and can be obtained as a Linux package, binary, C-SDK or source code. It is responsible for issuing a unique identity to every device produced. It queries KEYNOA to initiate automatic provisioning
+KEYNOA.engine is integrated into the device software/firmware and can be obtained as a Linux package, binary, C-SDK or source code. It is responsible for issuing a unique identity to every device produced. It queries KEYNOA to initiate automatic provisioning.
+
+
+### Producer Service
+The Producer Service creates the proof of ownership for the device and signs the device. It is responsible for the allocation to the respective customer using serial numbers and API to commissioning systems.
+It is preferably located at the device manufacturer's production facility, but can alternatively also operated by integrators or operators.
+
 
 ### KEYNOA 
 
 KEYNOA is available as SaaS or on-premise and used by manufacturers, OEMs, integrators or operators. KEYNOA verifies the device identity and provides the device with information about which entities are trusted. After mutual authentication, a secure channel is established between the device and this server, through which the data required for onboarding automation is sent to the device.
 
 KEYNOA offers a variety of features for efficient and secure processes. 
--  Onboarding
-- Cloud connection
-- Fleet Management
-- User management
-- Updates
-- IT security
+- Zero-Touch Onboarding
+- Secure Cloud Connectivity
+- Configuration Management
+- Certificate Management
+- User Identity and Access Management
+- Over-the-Air Updates
 
 ### KEYNOA UI (SPA)
 
-Also known as Devity Dashboard, allows you to configure the device, once you receive the device identities like the Ownership Voucher, UID, etc. The configurations include creating a Template, a Data Hub, a Certificate Authority, or a Trust Anchor. 
+KEYNOA UI is the user interface hosted by DEVITY as web application to define the operation purpose of each device group. Once you have received the device identities such as Ownership Voucher, UID, etc. you can start configure the buyed devices. The configuration steps include creating a Template, a Data Hub, a Certificate Authority, or a Trust Anchor. 
 
 # Applications
 
-Following are the list of applications, the KEYNOA has been integrated with at present. The list is evolving to address the customer needs and to offer a complete solution. 
+Following are the list of applications, KEYNOA has been integrated as of now. The list is evolving to address the customer needs and to offer an even more sophisticated solution. Please reach out to us if you miss crucial functionalities.
 
 ### OpenSSH
 
@@ -120,7 +123,7 @@ For all other use cases, DEVITY also offers a user interface (UI) in the form of
 
 ### External PKIs
 
-Although KEYNOA includes a full-fledged certificate management system, there is the possibility of integrating an external Certificate management system.
+Although KEYNOA includes a full-fledged certificate management system, there is the possibility of integrating an external certificate management system.
 
 ### Secret Manager
 
@@ -128,7 +131,7 @@ Secrets, such as passwords or tokens for devices, can also be managed in an exte
 
 ### Device Configurator
 
-The device configurator interface makes it easier to set up devices in complex scenarios, e.g. in case where the Trust or network zones must be distinguished. The interface makes it possible to provide individual devices with additional (virtual) Assign characteristics.
+The device configurator interface makes it easier to set up devices in complex scenarios, e.g. in cases where the trust or network zones must be distinguished. The interface makes it possible to provide individual devices with additional (virtual) assigned characteristics.
 
 The "Attributor” is a mobile application that allows devices to be assigned to specific trust spaces.
 
@@ -138,11 +141,11 @@ The interface to asset management systems allows automatic inventory of devices 
 
 ### Existing User Management
 
-For use in your own company, especially in on-premises operations, the company-wide User management can be connected to KEYNOA for access control.
+For use in your own company, especially in on-premises operations, the company-wide User Management can be connected to KEYNOA for access control.
  
 ### Claiming via ERP systems
 
-The Prdoucer service and KEYNOA offer a claiming interface with which the transfer of ownership rights can be linked to other processes (e.g. ordering, shipping, picking or sales processes).
+The Prdoucer Service and KEYNOA offer a claiming interface with which the transfer of ownership rights can be linked to other processes (e.g. ordering, shipping, picking or sales processes).
 
 
 
