@@ -4,12 +4,12 @@ sidebar_label: "Certificate Authority"
 title: Certificate Authority
 ---
 
-A Certificate Authority (CA) attests the identity of an entity, and binds it to cryptographic keys by issuing a valid digital certificate. The entity can make use of its certificate to prove its identity to other entities. This enables an authenticated and secure connection between the two parties.
+A Certificate Authority (CA) attests the identity of an entity, and binds it to cryptographic keys by issuing a valid digital certificate. The entity can make use of its certificate to prove its identity to other entities. This enables an authenticated and secure connection between the two entities.
 
-## Why a CA is Necessary?
+## Why is a CA necessary?
 
 Every device powered by the KEYNOA Engine can host multiple applications.
-An application needs to connect **securely** to a service to exchange information. A service can be an IoT Cloud Like Azure or a SCADA System.
+An application needs to connect **securely** to a service to exchange information. A service can be an IoT Cloud like Azure or a SCADA System.
     
 The security is ensured by X.509 certificates.
 Thus, it is crucial that the device applications use certificates that are issued by a reliable, and trustworthy Certificate Authority.
@@ -22,9 +22,9 @@ A CA in KEYNOA is responsible to issue application certificates to all KEYNOA En
 
 ![KEYNOA](/img/KEYNOA/reference-doc/CA-1.png)
 
-It is possible to create a new CA specific to your security requirements. You could create
+It is possible to create a new CA that is specific to your security requirements. You can create
 - A [KEYNOA CA](#keynoa-ca) local to KEYNOA.
-- An Intermediate CA signed by your  [Enterprise CA](#enterprise-ca)
+- An Intermediate CA signed by your  [Enterprise CA](#enterprise-ca).
 - Or, employ one recommended by DEVITY as the default option.
 
 A maximum of five new CAs can be created.

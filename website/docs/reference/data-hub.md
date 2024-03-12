@@ -4,7 +4,7 @@ sidebar_label: "Data Hub"
 title: Data Hub
 ---
 
-A **Data Hub** is an information collector (related to messaging protocol), which helps the device connect to the cloud. It is required to be configured when the device needs to send telemetry data using MQTT. It enables you to select the cloud, like Thingsboard, Azure, or AWS. The device’s telemetry data will then be transmitted to the chosen cloud. It gathers critical MQTT-related details, including:
+A **Data Hub** is an information collector (related to messaging protocol), which helps the device to connect to the cloud. It is required to be configured when the device needs to send telemetry data using MQTT. It enables you to select the cloud, like ThingsBoard, Azure, or AWS. The device’s telemetry data will then be transmitted to the chosen cloud. It gathers required MQTT-related details, including:
 
 - MQTT Broker URL
 - MQTT Topic
@@ -41,12 +41,12 @@ By selecting the **Certificate Authority**, you can choose which CA can issue a 
 
 ### Trust Anchor
 
-Having a Trust Anchor (Private CA) allows you to protect and manage the resources in-house. For instance, utilizing an AWS Private CA offers protection for resources such as servers and applications. However, it is crucial to share CA details with the device.
+Having a Trust Anchor (private CA) allows you to protect and manage the resources in-house. For instance, utilizing an AWS private CA offers protection for resources such as servers and applications. However, it is crucial to share CA details with the device.
 
-When creating a Data Hub, providing a **Trust Anchor** certificate enables the device to access the specifics of your Private CA. This certificate serves the purpose of authenticating cloud certificates, establishing a secure connection between the device and the cloud.
+When creating a Data Hub, providing a **Trust Anchor** certificate enables the device to access the specifics of your private CA. This certificate serves the purpose of authenticating cloud certificates, establishing a secure connection between the device and the cloud.
 
 You want to switch your device between clouds? It is possible! Check how it works [here.](docs/reference/change-datahub.md)
 
-To dive deeper into understanding the CA and Trust Anchor, please refer to [Certificate Authority] and [Trust Anchor] for detailed information.
+To dive deeper into understanding the concepts of CA and Trust Anchor, please refer to [Certificate Authority] and [Trust Anchor] for detailed information.
 
 [Deep Dive MQTT](https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.pdf)

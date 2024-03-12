@@ -4,7 +4,7 @@ sidebar_label: "Trust Anchor"
 title: Trust Anchor
 ---
 
-A Trust Anchor, often represented by a Root CA, is responsible for issuing valid TLS certificates to cloud. Prominently, a Trust Anchor is considered to be a distinct certificate that symbolizes the highest level of trust within a PKI system.
+A Trust Anchor, often represented by a Root CA, is responsible for issuing valid TLS certificates to a cloud. Prominently, a Trust Anchor is considered to be a distinct certificate that symbolizes the highest level of trust within a PKI system.
 
 ## Role of Trust Anchor in KEYNOA
 

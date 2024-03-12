@@ -6,7 +6,7 @@ title: Template
 
 A template is created to serve three main purposes.
 
-1. To link the Data Hub to a device
+1. To link the Data Hub to a device.
 2. To update certificate template configurations, specifically for MQTT or OPC UA application certificates.  
 3. To select device properties.
 
