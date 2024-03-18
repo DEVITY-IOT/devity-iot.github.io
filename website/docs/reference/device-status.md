@@ -6,8 +6,6 @@ title: Device Status
 
 This page explains the possible device status which is shown in device list.
 
-## Device Status
-
 The status gives information about the life cycle of a device with respect to KEYNOA.
 First there is only a ("new") voucher known to KEYNOA. After uploading the voucher, KEYNOA needs some time to prepare for the device.
 Then KEYNOA is ("waiting") for the device to connect.

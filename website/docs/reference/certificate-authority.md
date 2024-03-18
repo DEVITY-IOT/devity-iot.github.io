@@ -1,30 +1,30 @@
 ---
-sidebar_position: 8
+sidebar_position: 7
 sidebar_label: "Certificate Authority"
 title: Certificate Authority
 ---
 
-A Certificate Authority (CA) attests the identity of an entity, and binds it to cryptographic keys by issuing a valid digital certificate. The entity can make use of its certificate to prove its identity to other entities. This enables an authenticated and secure connection between the two parties.
+A Certificate Authority (CA) attests the identity of an entity, and binds it to cryptographic keys by issuing a valid digital certificate. The entity can make use of its certificate to prove its identity to other entities. This enables an authenticated and secure connection between the two entities.
 
-## Why a CA is Necessary?
+## Why is a CA necessary?
 
 Every device powered by the KEYNOA Engine can host multiple applications.
-An application needs to connect **securely** to a service to exchange information. A service can be an IoT Cloud Like Azure or a SCADA System.
+An application needs to connect **securely** to a service to exchange information. A service can be an IoT Cloud like Azure or a SCADA System.
     
 The security is ensured by X.509 certificates.
 Thus, it is crucial that the device applications use certificates that are issued by a reliable, and trustworthy Certificate Authority.
 These certificates are enrolled within the onboarding phase and are managed along the life cycle of the device by KEYNOA.
-Since these certificates are used by the application to authenticate, we call them App(lication) Certificates.
+Since these certificates are used by the application to authenticate, we call them App(lication) certificates.
 
 ## Role of CA in KEYNOA
 
-A CA in KEYNOA is responsible to issue App Certificates to all KEYNOA Engine applications on the device as shown in the figure below. 
+A CA in KEYNOA is responsible to issue application certificates to all KEYNOA Engine applications on the device as shown in the figure below. 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/CA-1.png)
 
-It is possible to create a new CA specific to your security requirements. You could create
-- A [KEYNOA CA](#keynoa-ca) local to KEYNOA cloud.
-- An Intermediate CA signed by your  [Enterprise CA](#enterprise-ca)
+It is possible to create a new CA that is specific to your security requirements. You can create
+- A [KEYNOA CA](#keynoa-ca) local to KEYNOA.
+- An Intermediate CA signed by your  [Enterprise CA](#enterprise-ca).
 - Or, employ one recommended by DEVITY as the default option.
 
 A maximum of five new CAs can be created.
@@ -36,18 +36,18 @@ Alternatively, for the device to recognize certificates issued by CA, it is nece
 After choosing the suitable CA, the details entered into Data Hub and Template are transmitted to the device.
 
 :::info 
-Choose an appropriate KEYNOA or Enterprise CA while creating a Data Hub. When this Data Hub is selected while creating a Template, all Certificate Policy Configurations (Step 3 of [Create Template](/tutorial/Thingsboard%20-%20Rule%20Engine/KEYNOA#create-template)) are auto populated. 
+Choose an appropriate (KEYNOA or Enterprise) CA while creating a Data Hub. When this Data Hub is selected while creating a Template, all **Policy Configuration** parameters (Step 3 of [Create Template](/tutorial/Thingsboard%20-%20Rule%20Engine/KEYNOA#create-template)) are automatically filled, inline with **Certificate Policy** parameters configured in Data Hub.. 
 :::
 
 ## KEYNOA CA
 
-This CA is local to KEYNOA cloud. It verifies the identities of device applications and issues them valid certificates. You have complete control over the CA policies and certificates, when you create a new KEYNOA CA. Follow the steps to [Create a KEYNOA CA](#create-a-keynoa-ca). 
+This CA is local to KEYNOA. It verifies the identities of device applications and issues them valid certificates. You have complete control over the CA policies and certificates, when you create a new KEYNOA CA. Follow the steps to [Create a KEYNOA CA](#create-a-keynoa-ca). 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/Internal-CA.png)
 
 ## Enterprise CA
 
-An Enterprise CA operates independently from the KEYNOA cloud environment. This could be a Private CA exclusive to a particular enterprise. To facilitate the issuance of application certificates by this Enterprise CA, it is required to create an Intermediate CA. The newly created Intermediate CA is signed by the Enterprise CA. Subsequently, the Intermediate CA is set up as a local CA within the KEYNOA cloud. Follow the steps to create an [Enterprise CA](#create-an-enterprise-ca) signed Intermediate CA.
+An Enterprise CA operates independently from the KEYNOA environment. This could be a Private CA exclusive to a particular enterprise. To facilitate the issuance of application certificates by this Enterprise CA, it is required to create an Intermediate CA. The newly created Intermediate CA is signed by the Enterprise CA. Subsequently, the Intermediate CA is set up as a local CA within the KEYNOA. Follow the steps to create an [Enterprise CA](#create-an-enterprise-ca) signed Intermediate CA.
 
 <!-- To create an Intermediate CA, follow the steps below.  -->
 ![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/External-CA-concept.png)

@@ -10,7 +10,7 @@ KEYNOA is a software to securely connect devices to any cloud or on-premises dat
 
 It consists of two components: KEYONA Engine and KEYNOA.
 - KEYNOA Engine is a software client (SDK) for devices. It is responsible for issuing a unique identity to every device. It also queries KEYNOA instances to initiate an automatic provisioning process.
-- KEYNOA is responsible for transferring device identities, configuring and onboarding groups of devices and managing devices during the life cycle. It consists of a web application, backend software, enrollment service, middleware, and API.
+- KEYNOA is responsible for transferring device identities, configuring and onboarding groups of devices and managing devices during the Life cycle. It consists of a web application, backend software, enrollment service, middleware, and API.
 
 KEYNOA empowers you to:
 
@@ -40,8 +40,8 @@ The illustration below gives a gist of how zero-touch secure onboarding of your 
 
 ![KEYNOA](/img/KEYNOA/Overview.png)
 
-1. IoT Device Manufacturer produces device with unique identity, and sends the device to its owner.
-2. The Manufacturer creates a proof of ownership (Ownership Voucher), and transfers it to the owner using KENYOA.  
+1. IoT Device Manufacturer produces a device with unique identity (UID), and sends the device to its owner.
+2. The Manufacturer creates a proof of ownership (Ownership Voucher specific to UID), and transfers it to the owner using KENYOA.  
 3. The owner uploads the voucher to KEYNOA, and creates required configurations, like,
     - Data Hub,
     - Template,
@@ -50,8 +50,7 @@ The illustration below gives a gist of how zero-touch secure onboarding of your 
 4. A person who does not have to be trustworthy installs and starts the device.
 5. The device reports its identity to KEYNOA.
 6. KEYNOA authenticates the device and authorizes the exchange of information over a secure channel.
-7. The device downloads secrets and files from KEYNOA over the secure channel. It then performs automatic, zero-touch configurations according to the specifications mentioned above. Within seconds, your device is securely provisioned, and automatically monitored. 
-
+7. The device downloads secrets and files from KEYNOA over the secure channel. It then performs automatic, zero-touch configurations according to the specifications mentioned above. Within seconds, your device is securely provisioned.
 The device is now ready to send telemetry data to its cloud counterpart securely over a secure channel.
 
 
