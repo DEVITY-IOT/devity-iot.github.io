@@ -46,5 +46,5 @@ To change the Data Hub, follow the steps below.
 :::info
 Data Hub hot swap is supported from  0.7.0 release onwards. 
 
-Please refer [Update KEYNOA.engine](/website/docs/reference/update-keynoa.engine.md) for more information.
+Please refer **[Update KEYNOA.engine](docs/reference/update-keynoa.engine.md)** for more information.
 :::
