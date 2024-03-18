@@ -1,9 +1,10 @@
 ---
+sidebar_position: 2
 sidebar_label: "Device Properties"
 title: Device Properties
 ---
 
-This page lists the porperty values usable at KEYNOA Data Huba and Template creation:
+This page lists the porperty values usable at KEYNOA Data Hub and Template creation:
 
 | Property          | Usage                                                             |
 | ----------------- | ----------------------------------------------------------------- |

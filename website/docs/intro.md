@@ -6,11 +6,11 @@ slug: /
 ---
 
 ## Overview
-KEYNOA is a software to securely connect smart devices to any cloud or on-premises data platform on massive scale in industrial use cases. 
+KEYNOA is a software to securely connect devices to any cloud or on-premises data platform on massive scale in industrial use cases. 
 
 It consists of two components: KEYONA Engine and KEYNOA.
-- KEYNOA Eval Kit is a software client for device manufacturer. It is responsible for issuing a unique identity to every device produced.
-- KEYNOA is responsible for transferring device identities, configuring and onboarding groups of devices and managing devices during the life cycle. It consists of a web application, backend software, enrollment service, middleware, and API.
+- KEYNOA Engine is a software client (SDK) for devices. It is responsible for issuing a unique identity to every device. It also queries KEYNOA instances to initiate an automatic provisioning process.
+- KEYNOA is responsible for transferring device identities, configuring and onboarding groups of devices and managing devices during the Life cycle. It consists of a web application, backend software, enrollment service, middleware, and API.
 
 KEYNOA empowers you to:
 
@@ -27,18 +27,48 @@ KEYNOA empowers you to:
 - Protect devices and data from unauthorized access with a build in user and access management system.
 - Roll out updates with new functionality or security patches.
 
-You will find more information about KEYNOA on our [website](https://devity.eu/keynoa/).
+You will find more information about KEYNOA on our [website](https://devity.eu/how-it-works/). 
+
+## KEYNOA - How it works!
+
+<!-- 
+Note: 
+This section has been written in tandem with the information at https://devity.eu/how-it-works/, so that there is consistency in information. 
+-->
+
+The illustration below gives a gist of how zero-touch secure onboarding of your IoT device(s) is carried out by the KEYNOA Engine and KEYNOA together. 
+
+![KEYNOA](/img/KEYNOA/Overview.png)
+
+1. IoT Device Manufacturer produces a device with unique identity (UID), and sends the device to its owner.
+2. The Manufacturer creates a proof of ownership (Ownership Voucher specific to UID), and transfers it to the owner using KENYOA.  
+3. The owner uploads the voucher to KEYNOA, and creates required configurations, like,
+    - Data Hub,
+    - Template,
+    - Certificate Authority (optional),
+    - Trust Anchor (optional)
+4. A person who does not have to be trustworthy installs and starts the device.
+5. The device reports its identity to KEYNOA.
+6. KEYNOA authenticates the device and authorizes the exchange of information over a secure channel.
+7. The device downloads secrets and files from KEYNOA over the secure channel. It then performs automatic, zero-touch configurations according to the specifications mentioned above. Within seconds, your device is securely provisioned.
+The device is now ready to send telemetry data to its cloud counterpart securely over a secure channel.
+
+
+This documentation guides you step-by-step through the whole process from device preparation to cloud connection until data visulization. You can start the tutorials with our KEYNOA Eval Kit [here](https://devity-iot.github.io/tutorial/).
 
 ## KEYNOA Eval Kit 
 
 The KEYNOA Eval Kit is desgined for users that want to get a first idea on how to use IoT clouds to process data. It gives you the opportunity to get a feeling of how easy it is to onboard a device to three different clouds and building your own IoT use cases from scratch by sending real-time data. You will learn how to use AWS, Azure and ThingsBoard clouds to visualize data and defining rules for your own IoT application. Moreover, you gain an impression of how you can use KEYNOA to build your own scalable IoT product or provide your customers the flexible and secure connection technology they need. You can also setup your own MQTT Broker and receieve or send data to devices.
 
-The KEYNOA Eval Kit consists of an Industrial Embedded Controller (based on Raspberry Pi 3+) from our partner [Janz Tec](https://www.janztec.com/en/) with a pre-installed KEYNOA Engine. [Here](https://www.janztec.com/sicherheit-im-maschinenbau/) you can order a Eval Kit.  
+The KEYNOA Eval Kit consists of an Industrial Embedded Controller (based on Raspberry Pi 3+) from our partner [Janz Tec](https://www.janztec.com/en/) with a pre-installed KEYNOA Engine. [Here](https://www.janztec.com/sicherheit-im-maschinenbau/) you can order a Eval Kit. 
 
-The documentation guides you step-by-step through the whole process from device preparation to cloud connection till data visulization. You can start the tutorials with our KEYNOA Eval Kit here (//Link einfügen).
+<!-- 
+### How to get a KEYNOA Eval Kit?
+If you haven not tried KEYNOA yet, you can order a device from our partner JanzTec and test KEYNOA for 4 weeks [here](https://www.janztec.com/sicherheit-im-maschinenbau/).
+-->
 
-### How to get a KEYNOA Eval Kit
-If you haven not tried KEYNOA yet, you can order a device from our partner JanzTec and test KEYNOA for 30 days [here](https://www.janztec.com/sicherheit-im-maschinenbau/).
+### Haven't tried KEYNOA yet?
+[Order](https://www.janztec.com/sicherheit-im-maschinenbau/) a device from our partner JanzTec and test KEYNOA for 4 weeks!
 
 ## About DEVITY
 

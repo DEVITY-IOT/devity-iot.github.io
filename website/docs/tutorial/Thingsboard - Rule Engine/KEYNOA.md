@@ -3,13 +3,15 @@ sidebar_position: 2
 ---
 
 # KEYNOA Setup
-In this step, you will configure KEYNOA to connect your device to your ThingsBoard account.
+In this step, you will configure KEYNOA to onboard your device and to connect to your ThingsBoard account.
 
 ## Before you start
 
 Before you start, make sure that you fulfill all [prerequisites](/tutorial/Prerequsites).
 
-If you already used the device before, make sure to [reset the device](/reference/reset-device) and [remove any MQTT templates](/reference/mqtt-template#remove-mqtt-template) from the list.
+If you already used the device before, make sure to 
+- [reset the device](/reference/reset-device).
+- [remove any MQTT templates](/reference/mqtt-template#remove-mqtt-template) from the list.
 
 In the following steps the device configuration is applied to KEYNOA and not to the device.
 Hence, the **device is powered off** until KEYNOA is ready.
@@ -22,6 +24,9 @@ If multiple MQTT Templates exist, the newer template will be ignored. Hence your
 
 
 ## Create Data Hub
+
+Refer [Data Hub](/reference/data-hub) to know more. Follow the steps to create a new Data Hub on your KEYNOA tenant.
+
 1. In KEYNOA "Create" the Data Hub you want your device to connect to.
 ![KEYNOA](/img/KEYNOA/Dashboard.png) 
 
@@ -88,13 +93,15 @@ You can also add a new CA from "Create" button on top right corner.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/LevelOfExperience.png)
 
-5a-2. Choose "CA Type" `Internal CA` and provide a "CA Name". CA name could be any text to identify the correct CA.
+5a-2. Choose "CA Type" `KEYNOA CA` and provide a "CA Name". CA name could be any text to identify the correct CA.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/ChooseCAName.png)
 
-5a-3. Basic details of CA are auto loaded. The fields can be modified to suit the CA. 
+5a-3. Basic details of CA are automatically loaded. The fields can be modified to suit the CA. 
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/CABasicDetails.png)
+
+Know more about the [Certificate Properties here.](/reference/certificate-properties)
 
 5a-4. The values in "Issuer Details" determine the device's certificate content when a device is provisioned later.
 Select MQTT in the dropdown `Load default values for` to load the default issuer configuration for an MQTT use case.

@@ -59,13 +59,15 @@ You can also add a new CA from "Create" button on top right corner.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/LevelOfExperience.png)
 
-5a-2. Choose "CA Type" `Internal CA` and provide a "CA Name". CA name could be any text to identify the correct CA.
+5a-2. Choose "CA Type" `KEYNOA CA` and provide a "CA Name". CA name could be any text to identify the correct CA.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/ChooseCAName.png)
 
 5a-3. Basic details of CA are automatically loaded. The fields can be modified to suit the CA. 
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/CABasicDetails.png)
+
+  Know more about the [Certificate Properties here.](/reference/certificate-properties)
 
 5a-4. The values in "Issuer Details" determine the device's certificate content when a device is provisioned later.
 Select MQTT in the dropdown `Load default values for` to load the default issuer configuration for an MQTT use case.
