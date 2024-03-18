@@ -14,7 +14,7 @@ The device has the option to use either MQTT or OPC UA as its communication prot
 
 ### 1. To Link the Data Hub to a Device
 
-A [Data Hub](/website/docs/reference/data-hub.md) defines the configuration requirements for the device's MQTT Client to connect to its designated MQTT broker. Beyond just MQTT details, the Data Hub also outlines CA and Trust Anchor information. When an **MQTT Template** associates a Data Hub with a Device, all MQTT settings, CA, and Trust Anchor specifics are applied to configure the device.
+A [Data Hub](docs/reference/data-hub.md) defines the configuration requirements for the device's MQTT Client to connect to its designated MQTT broker. Beyond just MQTT details, the Data Hub also outlines CA and Trust Anchor information. When an **MQTT Template** associates a Data Hub with a Device, all MQTT settings, CA, and Trust Anchor specifics are applied to configure the device.
 
 The CA and Trust Anchor-related specifics are updated directly while creating an **OPC UA Template**. The device is configured using this template information to connect to the OPC UA server securely.
 
