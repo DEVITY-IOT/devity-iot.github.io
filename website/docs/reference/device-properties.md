@@ -4,7 +4,7 @@ sidebar_label: "Device Properties"
 title: Device Properties
 ---
 
-The device orperties and their values usable while creating Data Hub and Template at KEYNOA:
+The device properties and their values usable while creating Data Hub and Template at KEYNOA:
 
 | Property          | Usage                                                             |
 | ----------------- | ----------------------------------------------------------------- |
@@ -30,14 +30,15 @@ Most of the properties are determined while creating the device specific Ownersh
 
 ### KEYNOA Dashboard
 
-Access the device summary under `All Devices` on KEYNOA, as shown below. The summary fetches device details from the Ownership Voucher and displays the below details: 
+Access the device summary under `All Devices` on KEYNOA, as shown below. KEYNOA fetches device details from the Ownership Voucher and displays below details as part of device summary.
+
 - `Device Model`
 - `Serial No`
 - `GUID`
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Device-Properties/device-summary.png)
 
-Alternatively, when you click on the :gear: button of the device, a detailed device settings can be viewed as shown below. The same details are displayed as highlighted below.
+Alternatively, when you click on the :gear: button of the device, a detailed device settings can be viewed as shown below. The same details as in summary, are displayed as highlighted below.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Device-Properties/device-detailed-settings-1.png)
 
