@@ -4,7 +4,7 @@ sidebar_label: "Certificate Properties"
 title: Certificate Properties
 ---
 
-The table below lists and explains all the certificate properties you come across while creating a CA, a Trust Anchor, or a certificate template. 
+Certificate properties you come across while creating a CA, a Trust Anchor, or a certificate template are explained below. 
 
 | Property            | Explanation                                                                                         |
 | -----------------   | ----------------------------------------------------------------------------------------------------|
