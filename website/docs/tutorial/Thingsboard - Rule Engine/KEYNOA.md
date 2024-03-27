@@ -11,7 +11,7 @@ Before you start, make sure that you fulfill all [prerequisites](/tutorial/Prere
 
 If you already used the device before, make sure to 
 - [reset the device](/reference/reset-device).
-- [remove any MQTT templates](/reference/mqtt-template#remove-mqtt-template) from the list.
+- [remove any MQTT templates](/reference/mqtt-template#2-remove-mqtt-template) from the list.
 
 In the following steps the device configuration is applied to KEYNOA and not to the device.
 Hence, the **device is powered off** until KEYNOA is ready.
@@ -25,9 +25,9 @@ If multiple MQTT Templates exist, the newer template will be ignored. Hence your
 
 ## Create Data Hub
 
-Refer [Data Hub](/reference/data-hub) to know more. Follow the steps to create a new Data Hub on your KEYNOA tenant.
+Refer [Data Hub](/reference/data-hub) to know more about it and why it is required to be created. Follow the steps to create a new Data Hub on KEYNOA.
 
-1. In KEYNOA "Create" the Data Hub you want your device to connect to.
+1. In KEYNOA, "Create" the Data Hub you want your device to connect to.
 ![KEYNOA](/img/KEYNOA/Dashboard.png) 
 
 
@@ -81,7 +81,7 @@ Refer [Data Hub](/reference/data-hub) to know more. Follow the steps to create a
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/Device-provisioning.png)
 
-5. To add a new "Certificate Authority" click on "Add Certificate".
+5. To add a new "Certificate Authority" click on "Add Certificate". To know why you may want to add a new Certificate Authority, [click here.](/reference/certificate-authority)
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/AddCert.png)
 
@@ -119,7 +119,7 @@ Click on "Submit" to create a new CA.
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/NewCAListed.png)
 
-6. To add a new "Trust Anchor", click on "Create" and choose "Trust Anchor".
+6. To add a new "Trust Anchor", click on "Create" and choose "Trust Anchor". To know why you may want to add a new Trust Anchor, [click here.](/reference/trust-anchor)
 
 ![KEYNOA](/img/KEYNOA/Thingsboard/CreateNewTrustAnchor.png)
 
@@ -133,65 +133,56 @@ Click on "Submit" to create a new CA.
 
 
 ## Create Template
+
+Refer [Template](/reference/mqtt-template) to know more about it and why it is required to be created. Follow the steps to create a new Template on KEYNOA.
+
 :::info
 If you have not uploaded your voucher yet and therefore the list of all devices is empty, then [upload the voucher](/tutorial/Prerequsites#upload-voucher) now.
 :::
 :::caution
-If MQTT templates already exist, please delete them by clicking on the burger menu in column "Action" and selecting "Delete".
+If MQTT templates already exist, please delete them by clicking on the burger menu in "Action" column and selecting "Delete". 
+
+Follow [this link](/reference/mqtt-template#2-remove-mqtt-template) for instructions.
 :::
 
-1. Create the MQTT template that assigns your device to the Data Hub.
-Use the "Create" button and click on "MQTT template".
+1. Create the MQTT template that assigns your device to the Data Hub. Use the "Create" button and click on "MQTT template". 
+
 ![KEYNOA](/img/KEYNOA/MQTTCreateTemplate.png)
 
 2. Select your Data Hub. Click on "Next".
 ![KEYNOA](/img/KEYNOA/MQTT1SelectDataHub.png)
 
-3. Populate the "Policy Configurations" which will be used to create MQTT application certificate. 
-The Policy Configurations are autofilled from the values we put in while creating the CA.
+3. Fill in the 'Policy Configurations' necessary for generating the MQTT application certificate. These configurations\* are automatically populated based on the input values provided during the creation of the CA. You may also modify them. 
 
-\*Hover over the `i` circles for more information about each configuration. 
+\*Hover over the `i` circles for more information about each configuration. Alternatively, [Click here](/reference/certificate-properties) to know more about each configuration.
 
 ![KEYNOA](/img/KEYNOA/MQTT2PolicyConfigurations.png)
 
 4. Use the device details as shown below and click on "Next".
-
 - Choose Device Property: `Device Model`
 - Type in the following Device Model for your Janz Tec Eval Kit Device: `sy-epc-rpi30`
 
 These properties will be matched against the information which the device provides about itself during the onboarding process. If it matches the template, the template will be used to configure the device.
- 
 ![KEYNOA](/img/KEYNOA/MQTT3FilterDevices.png)
 
-:::info
-For more information about the template concept see the [MQTT Templates Section](/reference/mqtt-template)
-:::
-
 5. Give the template an Identifier Name and click on "Save".
-
 - Identifier Name: `Thingsboard MQTT template`
-
 ![KEYNOA](/img/KEYNOA/MQTT4TemplateID.png)
 
 6. You have now created the setup instruction for your device.
 KEYNOA and ThingsBoard are now set up and your device is now ready for the onboarding process.
-
 ![KEYNOA](/img/KEYNOA/MQTTTemplateCreated.png)
-
 :::info
 Connect your device to the internet via an ethernet cable and power it up.
 :::
 
 7. The onboarding is completed, when the device status in KEYNOA switches to **provisioned**. You can refresh the table by clicking the refresh button in the top right corner.
-
 :::info
 The onboarding including the boot process should not take longer than two minutes.
 :::
-
 ![KEYNOA](/img/KEYNOA/devices_list_refresh.png)
 
 8. Your device is now provisioned to ThingsBoard. Continue with the setup of ThingsBoard.
-
 :::info
 Check the devices section of your ThingsBoard to see the new device.
 :::

@@ -9,7 +9,9 @@ In this step, you will configure KEYNOA to connect your device to your Azure acc
 
 Before you start, make sure that you fulfill all [prerequisites](/tutorial/Prerequsites).
 
-If you already used the device before, make sure to [reset the device](/reference/reset-device) and [remove any MQTT templates](/reference/mqtt-template#remove-mqtt-template) from the list.
+If you already used the device before, make sure to 
+- [reset the device](/reference/reset-device) and 
+- [remove any MQTT templates](/reference/mqtt-template#2-remove-mqtt-template) from the list.
 
 In the following steps, the device configuration is applied to KEYNOA and not to the device.
 Hence, the **device is powered off** until KEYNOA is ready.
@@ -21,6 +23,9 @@ If multiple MQTT Templates exist, the newer template will be ignored. Hence, you
 :::
 
 ## Create Data Hub
+
+Refer [Data Hub](/reference/data-hub) to know more about it and why it is required to be created. Follow the steps to create a new Data Hub on KEYNOA.
+
 1. In KEYNOA, create the Data Hub you want your device to connect to.
 ![KEYNOA](/img/KEYNOA/Dashboard.png)
 
@@ -60,9 +65,13 @@ Please note that Microsoft Azure uses Single-Sign-On (SSO) functionalities. Sign
 
 7. You need to have admin access to the IoT Central Hub to perform this action: Click on "Create Configuration".
 
-8. To add a new CA, click "Create" and then "Certificate Authority".
+8. To add a new "Certificate Authority" click on "Add Certificate". To know why you may want to add a new Certificate Authority, [click here.](/reference/certificate-authority)
 
 ![KEYNOA](/img/KEYNOA/IoT-Central/Azure_AddNewCA.png)
+
+You can also add a new CA from "Create" button on top right corner.
+
+![KEYNOA](/img/KEYNOA/Thingsboard/Thingsboard_AddNewCA)
 
 8a-1. Choose your level of expertise to create a new CA.
 
@@ -95,49 +104,47 @@ Click on "Submit" to create a new CA.
 ![KEYNOA](/img/KEYNOA/Thingsboard/NewCAListed.png)
 
 ## Create Template
+
+Refer [Template](/reference/mqtt-template) to know more about it and why it is required to be created. Follow the steps to create a new Template on KEYNOA.
+
 :::info
 If you have not uploaded your voucher yet and therefore the list of all devices is empty, then [upload the voucher](/tutorial/Prerequsites#upload-voucher).
 :::
 :::caution
 If there are already MQTT templates, make sure they do not match your device. If you are unsure how to do this, you can also remove them:
-You can delete a template by clicking the burger menu in the right of the template's row and select ("Delete").
+by clicking on the burger menu in "Action" column and selecting "Delete". 
+
+Follow [this link](/reference/mqtt-template#2-remove-mqtt-template) for instructions.
 :::
-1. Create the MQTT Template that assigns your device to the Data Hub.
+
+1. Create the MQTT template that assigns your device to the Data Hub. Use the "Create" button and click on "MQTT template". 
+
 ![KEYNOA](/img/KEYNOA/MQTTCreateTemplate.png)
 
 2. Select your Data Hub ("IoT Central connector"). Click on "Next".
 ![KEYNOA](/img/KEYNOA/IoT-Central/IoTCentral_CreateTemplate.png)
 
-3. Populate the "Policy Configurations" which will be used to create MQTT application certificate. 
-The Policy Configurations are autofilled from the values we put in while creating the CA.
+3. Fill in the 'Policy Configurations' necessary for generating the MQTT application certificate. These configurations\* are automatically populated based on the input values provided during the creation of the CA. You may also modify them. 
 
-\*Hover over the `i` circles for more information about each configuration. 
+\*Hover over the `i` circles for more information about each configuration. Alternatively, [Click here](/reference/certificate-properties) to know more about each configuration. 
 
 ![KEYNOA](/img/KEYNOA/IoT-Central/IoTCentral_2PolicyConfigs.png)
 
 4. Fill in the device details.
-
 - Device Property: `Device Model`
 - your-device-model-number: `sy-epc-rpi30`
 
 These properties will be matched against the information which the device provides about itself during the onboarding process. If it matches the template, the template will be used to configure the device.
-
-:::info
-For more information about the template concept see the [MQTT Templates Section](/reference/mqtt-template)
-:::
-
 ![KEYNOA](/img/KEYNOA/IoT-Central/IoTCentral_3FilterDevices.png)
 
 
 5. Give the template an identifier and click on "Save".
 
 - Identifier Name: `Azure IoT MQTT template`
-
 ![KEYNOA](/img/KEYNOA/IoT-Central/IoTCentral_NameIdentifier.png)
 
 6. You have now created the setup instruction for your device.
 KEYNOA and IoT Central are now fully configured and your device is now ready to be onboarded.
-
 :::info
 Power up your device and connect it to the internet via an ethernet cable.
 :::
@@ -151,7 +158,6 @@ The onboarding including the boot process should not take longer than 2 minutes.
 ![KEYNOA](/img/KEYNOA/devices_list_refresh.png)
 
 8. Your device is now provisioned with KEYNOA. Continue with the setup of IoT Central.
-
 :::info
 Checkout the devices section of your IoT Central to see the new device.
 :::
