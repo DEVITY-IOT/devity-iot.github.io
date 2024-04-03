@@ -50,7 +50,7 @@ mkdir client-sdk
 ```
 tar xfz client-sdk."${VERSION}".tar.gz --directory client-sdk
 ```
-2. To begin with, the manufacturer creates the key pair for the device. Device Initialize Protocol stores the key pair as Device Credentials in the device and creates the Ownership Voucher to complement these credentials. It stores the OVHeader field of the Ownership Voucher and a hash of the Device Certificate chain in the device. When the owner of the device changes over the supply chain, the Voucher chain keeps building up as shown below.
+2. Prepare to generate device identity: Create a key pair for the device. The DI stores the key pair as Device Credentials in the device and creates the Ownership Voucher to complement these credentials. It stores the OVHeader field of the Ownership Voucher and a hash of the Device Certificate chain in the device. When the owner of the device changes over the supply chain, the Voucher chain keeps building up as shown below.
 
 ![KEYNOA](/img/KEYNOA/ownership-voucher-chain.png)
 
