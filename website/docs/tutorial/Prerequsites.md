@@ -53,7 +53,7 @@ The processing of a new voucher in KEYNOA should not take longer than 5 minutes!
 :::
 
 :::info
-To find out more about the device status go to the [Device Status](/reference/device-status#device-status) section.
+To know more about the Device Status, [click here!](/reference/device-status#device-status).
 :::
 
 
