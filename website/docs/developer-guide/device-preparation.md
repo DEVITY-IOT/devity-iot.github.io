@@ -26,7 +26,7 @@ A rendezvous server serves as a mediator for the initial communication between t
 
 ## Ownership Voucher
 
-A voucher is a structured digital document that links the device (manufacturer) with the owner. It contains the GUID, make, model, and more information about the device. The owner receives the voucher only once per device. This voucher information is used by KEYNOA to authenticate the device before onboarding it.  
+A voucher is a structured digital document that links the device (manufacturer) with the owner. It contains the device's GUID and model, and cryptographic information necessary to prove the identity of the device and the owner. The owner receives the voucher only once per device. This voucher information is used by KEYNOA to authenticate the device before onboarding it.  
 
 ## How to Prepare the Device
 ![KEYNOA](/img/KEYNOA/Developer-Guide.png)
