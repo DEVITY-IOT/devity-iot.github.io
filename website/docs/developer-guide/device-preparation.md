@@ -63,7 +63,7 @@ Please [contact our team](https://devity.eu/contact/) for assistence with prepar
 
 6. The owner uploads the voucher to KEYNOA. KEYNOA now has all the information of the device, such as, its GUID, Model, Serial Number, Manufacturer etc.
 
-7. KEYNOA identifies itself to the Rendezvous Server. It then indicates its intention and proves it is capable of taking control of the device, based on the device’s current GUID. The Rendezvous Server has an entry in a table that associates, for a specified interval of time, the Device GUID with the KEYNOA IP. It establishes the mapping of GUID to the Owner IP address.
+7. KEYNOA announces its location (IP address or domain name) to the Rendezvous Server. It then indicates its intention and proves it is capable of taking control of the device, based on the device’s current GUID. The Rendezvous Server has an entry in a table that associates, for a specified interval of time, the device GUID with the KEYNOA's location. It establishes the mapping of GUID to the Owner's location.
 
 8. The device has rendezvous information stored in it, before shipping it to its owner. When the device is powered on, it identifies itself to the Rendezvous Server with its GUID. The Rendezvous Server points the device to the KEYNOA IP address, based on its mapping of GUID to the Owner IP address. 
 
