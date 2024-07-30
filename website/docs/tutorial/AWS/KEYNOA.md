@@ -150,3 +150,6 @@ The voucher enables KEYNOA to connect securely to the device and therefore to pr
 :::info
 Checkout the Things section of your AWS IoT Core to see the new device.
 :::
+:::caution
+Incorrect configurations may result in device provisioning failure. Please verify the status of the device, including the "Failed Provisioning Reason" and the "Last Provisioning Time" to follow up on the process.
+:::

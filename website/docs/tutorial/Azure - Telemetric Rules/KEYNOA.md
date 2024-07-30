@@ -161,3 +161,6 @@ The onboarding including the boot process should not take longer than 2 minutes.
 :::info
 Checkout the devices section of your IoT Central to see the new device.
 :::
+:::caution
+Incorrect configurations may result in device provisioning failure. Please verify the status of the device, including the "Failed Provisioning Reason" and the "Last Provisioning Time" to follow up on the process.
+:::
