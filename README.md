@@ -7,6 +7,7 @@ Most of the documentation is written is markdown. See the [documentation on mark
 ### Local Development
 
 ```
+$ nvm use v16.14.2
 $ cd website
 $ npx docusaurus start
 ```

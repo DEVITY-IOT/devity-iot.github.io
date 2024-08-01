@@ -186,3 +186,6 @@ The onboarding including the boot process should not take longer than two minute
 :::info
 Check the devices section of your ThingsBoard to see the new device.
 :::
+:::caution
+Incorrect configurations may result in device provisioning failure. Please verify the status of the device, including the "Failed Provisioning Reason" and the "Last Provisioning Time" to follow up on the process.
+:::
