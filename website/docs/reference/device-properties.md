@@ -44,17 +44,17 @@ in the Certificate Policy.
 
 Certificate Policy can be edited in
 - Create Certificate Authority
-  ![Edit Certficate Policy when creating CA](/website/static/img/KEYNOA/reference-doc/Device-Properties/default-cert-template-create-CA.png)
+  ![Edit Certficate Policy when creating CA](/img/KEYNOA/reference-doc/Device-Properties/default-cert-template-create-CA.png)
 - Edit Certificate Policy of a Certificate Authority
-  ![Edit Certficate Policy when editing CA](/website/static/img/KEYNOA/reference-doc/Device-Properties/default-cert-template-edit-CA.png)
+  ![Edit Certficate Policy when editing CA](/img/KEYNOA/reference-doc/Device-Properties/default-cert-template-edit-CA.png)
 - Create MQTT Template
-  ![Edit Certficate Policy when creating MQTT template](/website/static/img/KEYNOA/reference-doc/Device-Properties/cert-template-create-mqtt.png)
+  ![Edit Certficate Policy when creating MQTT template](/img/KEYNOA/reference-doc/Device-Properties/cert-template-create-mqtt.png)
 - Edit MQTT Template
-  ![Edit Certficate Policy when editing MQTT template](/website/static/img/KEYNOA/reference-doc/Device-Properties/cert-template-edit-mqtt.png)
+  ![Edit Certficate Policy when editing MQTT template](/img/KEYNOA/reference-doc/Device-Properties/cert-template-edit-mqtt.png)
 - Create OPC UA Template
-  ![Edit Certficate Policy when creating OPC UA template](/website/static/img/KEYNOA/reference-doc/Device-Properties/cert-template-create-OPCUA.png)
+  ![Edit Certficate Policy when creating OPC UA template](/img/KEYNOA/reference-doc/Device-Properties/cert-template-create-OPCUA.png)
 - Edit OPC UA Template
-  ![Edit Certficate Policy when editing OPC UA template](/website/static/img/KEYNOA/reference-doc/Device-Properties/cert-template-edit-OPCUA.png)
+  ![Edit Certficate Policy when editing OPC UA template](/img/KEYNOA/reference-doc/Device-Properties/cert-template-edit-OPCUA.png)
 
 
 ## How to access device properties?
