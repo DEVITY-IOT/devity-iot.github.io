@@ -26,7 +26,38 @@ The device properties and their values usable while creating Data Hub and Templa
 | $(localization) | The localization which was assigned by the Attributor |
 | $(building)     | The building which was assigned by the Attributor     |
 
-## How to access the device properties?
+### How to use device properties?
+Think of device properties as placeholders. 
+When the user doesn't know the device property value at the time but still want to use it, eg. the device serial number,
+the user can reference it via the property name, `$(serial)`. 
+
+The device properties can be put in words or a sentence. Let's assume the device serial number is `SERIAL_123`, then 
+`pre-$(serial)-post` will be rendered to `pre-SERIAL_123-post`.
+Multiple device properties can be used at once. Assume the device model is `MODEL_abc`, then `I am $(model)-$(serial)` will be
+transformed into `I am MODEL_abc-SERIAL_123`.
+
+Please be aware that the length of the words or a sentence after the device properties are rendered should not be too long.
+
+### Where to use device properties?
+Device properties can be used in the text input field of `Serial Number`, `Common Name`, `SAN DNS`, `SAN URI` 
+in the Certificate Policy.
+
+Certificate Policy can be edited in
+- Create Certificate Authority
+  ![Edit Certficate Policy when creating CA](/website/static/img/KEYNOA/reference-doc/Device-Properties/default-cert-template-create-CA.png)
+- Edit Certificate Policy of a Certificate Authority
+  ![Edit Certficate Policy when editing CA](/website/static/img/KEYNOA/reference-doc/Device-Properties/default-cert-template-edit-CA.png)
+- Create MQTT Template
+  ![Edit Certficate Policy when creating MQTT template](/website/static/img/KEYNOA/reference-doc/Device-Properties/cert-template-create-mqtt.png)
+- Edit MQTT Template
+  ![Edit Certficate Policy when editing MQTT template](/website/static/img/KEYNOA/reference-doc/Device-Properties/cert-template-edit-mqtt.png)
+- Create OPC UA Template
+  ![Edit Certficate Policy when creating OPC UA template](/website/static/img/KEYNOA/reference-doc/Device-Properties/cert-template-create-OPCUA.png)
+- Edit OPC UA Template
+  ![Edit Certficate Policy when editing OPC UA template](/website/static/img/KEYNOA/reference-doc/Device-Properties/cert-template-edit-OPCUA.png)
+
+
+## How to access device properties?
 
 Prior to creating a MQTT and/or an OPC UA Template on KEYNOA, it is essential to know the device properties. The following guide facilitates to access critical device details. 
 
