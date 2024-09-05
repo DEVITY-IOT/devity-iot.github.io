@@ -31,12 +31,17 @@ Think of device properties as placeholders.
 When the user doesn't know the device property value at the time but still want to use it, eg. the device serial number,
 the user can reference it via the property name, `$(serial)`. 
 
-The device properties can be put in words or a sentence. Let's assume the device serial number is `SERIAL_123`, then 
+The device properties can be put in word(s). Let's assume the device serial number is `SERIAL_123`, then 
 `pre-$(serial)-post` will be rendered to `pre-SERIAL_123-post`.
 Multiple device properties can be used at once. Assume the device model is `MODEL_abc`, then `I am $(model)-$(serial)` will be
 transformed into `I am MODEL_abc-SERIAL_123`.
 
-Please be aware that the length of the words or a sentence after the device properties are rendered should not be too long.
+Please be aware that the length of the word(s) after the device properties are rendered should not be too long, 
+depending on where the word(s) is used. 
+For example, the common name (CN) is `a long $(serial) --- 0123456789 0123456789 0123456789 0123456789`.
+The length before expanding into real value is 64 characters, which is still a valid CN length.
+But after expanding, it turns into `a long SERIAL_123 --- 0123456789 0123456789 0123456789 0123456789`, 
+which has a length of 65 characters and is no longer a valid CN.
 
 ### Where to use device properties?
 Device properties can be used in the text input field of `Serial Number`, `Common Name`, `SAN DNS`, `SAN URI` 
