@@ -14,7 +14,6 @@ The device properties and their values usable while creating Data Hub and Templa
 | $(guid_enc)     | The Base62 encoded device GUID                        |
 | $(urn)          | The uniform resource name                             |
 | $(osName)       | The device OS name                                    |
-| $(osVersion)    | The Keynoa-Engine version on device                   |
 | $(osArch)       | The device OS architecture                            |
 | $(deviceIp)     | The device IP address                                 |
 | $(productUri)   | The globally unique identifier for the product        |
