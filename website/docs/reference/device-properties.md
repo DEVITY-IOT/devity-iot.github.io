@@ -6,7 +6,7 @@ title: Device Properties
 
 The device properties and their values usable while creating Data Hub and Template at KEYNOA:
 
-| Property           | Usage                                                 |
+| Property Template  | Usage                                                 |
 |--------------------|-------------------------------------------------------|
 | $(serial)          | The device serial number                              |
 | $(guid)            | The device GUID                                       |
@@ -44,8 +44,11 @@ But after expanding, it turns into `a long SERIAL_123 --- 0123456789 0123456789 
 which has a length of 65 characters and is no longer a valid CN.
 
 ### Where to use device properties?
-Device properties can be used in the text input field of `Serial Number`, `Common Name`, `SAN DNS`, `SAN URI` 
-in the Certificate Policy.
+Users can match application templates with only devices satisfying certain device properties. 
+See more information in [To Select Device Properties](/reference/mqtt-template.md#to-select-device-properties).
+
+Device property templates, e.g. `$(serial)`,
+can be used in the text input field of `Serial Number`, `Common Name`, `SAN DNS`, `SAN URI` in the Certificate Policy. 
 
 Certificate Policy can be edited in
 - Create Certificate Authority
@@ -60,6 +63,9 @@ Certificate Policy can be edited in
   ![Edit Certficate Policy when creating OPC UA template](/img/KEYNOA/reference-doc/Device-Properties/cert-template-create-OPCUA.png)
 - Edit OPC UA Template
   ![Edit Certficate Policy when editing OPC UA template](/img/KEYNOA/reference-doc/Device-Properties/cert-template-edit-OPCUA.png)
+
+Device property templates can also be used in ThingsBoard Data Hub and custom Data Hub, which will in turn
+be used to render MQTT application configuration.
 
 
 ## How to access device properties?
