@@ -4,7 +4,10 @@ sidebar_label: "Data Hub"
 title: Data Hub
 ---
 
-A **Data Hub** is an information collector (related to messaging protocol), which helps the device to connect to the cloud. It is required to be configured when the device needs to send telemetry data using MQTT. It enables you to select the cloud, like ThingsBoard, Azure, or AWS. The device’s telemetry data will then be transmitted to the chosen cloud. It gathers required MQTT-related details, including:
+A **Data Hub** is an information aggregator, related to the messaging protocol, that facilitates device connectivity to the cloud.
+It must be configured when the device sends telemetry data via MQTT and allows you to select a cloud provider, such as ThingsBoard, Azure, or AWS. Once configured, the device’s telemetry data is sent to the chosen cloud platform.
+
+The Data Hub collects essential MQTT configuration details, including:
 
 - MQTT Broker URL
 - MQTT Topic
@@ -12,12 +15,15 @@ A **Data Hub** is an information collector (related to messaging protocol), whic
 - Trust Anchor
 
 ### What is MQTT? 
+ 
+**MQTT** (Message Queuing Telemetry Transport) is a lightweight, publish-subscribe messaging protocol widely used for communication between IoT (Internet of Things) devices. Its efficiency and low bandwidth usage make it ideal for devices that transmit small amounts of data over unreliable networks, such as sensors, mobile devices, and embedded systems.
 
-**MQTT** is a standard messaging protocol for devices. It is preferred since it is extremely lightweight protocol, which needs minimal network bandwidth and energy for communicating the telemetry data. 
+In MQTT, devices (known as clients) can either publish data to or subscribe to specific topics managed by an MQTT broker. The broker serves as a middleman, handling data published by clients and directing it to subscribers who need that information. This model allows for real-time, event-driven data exchange without requiring a direct connection between publishers and subscribers, which improves scalability and reduces network demand.
 
-It is a publish-subscribe protocol, where the device publishes its data to an MQTT broker. The cloud will subscribe to the data for a specific topic. MQTT Broker will send the data to interested parties as and when it is available from the device, as shown in the below diagram.
+The chosen cloud platform subscribes to data from a specific topic. The MQTT broker then sends this data to all subscribed parties as soon as it becomes available from the device, as illustrated in the diagram below.
 
-![what-is-mqtt](/img/KEYNOA/MQTT.png)
+![what-is-mqtt](/img/KEYNOA/What_is_MQTT_new)
+
 
 ### MQTT Broker URL
 
@@ -37,16 +43,18 @@ The Data Hub collects the topic for which the device is going to publish the tel
 
 ### Certificate Authority
 
-By selecting the **Certificate Authority**, you can choose which CA can issue a certificate to the MQTT application running on the device. This application certificate will then be used to securely connect to the cloud before starting to send the telemetry data.
+By selecting the **Certificate Authority**, you can choose which CA can issue a certificate to the MQTT application running on the device. This application certificate will then be used to securely connect to the cloud before starting to send the telemetry data. You can learn more about Certificate Authorities [here](https://devity-iot.github.io/reference/certificate-authority).
+
+
 
 ### Trust Anchor
 
-Having a Trust Anchor (private CA) allows you to protect and manage the resources in-house. For instance, utilizing an AWS private CA offers protection for resources such as servers and applications. However, it is crucial to share CA details with the device.
+Using a **Trust Anchor**, typically through a private Certificate Authority (CA), gives you direct control over securing and managing resources in-house. For example, with an AWS Private CA, you can securely manage servers, applications, and other resources. However, to fully enable device compatibility with your private CA, you must provide devices with the necessary CA details.
 
-When creating a Data Hub, providing a **Trust Anchor** certificate enables the device to access the specifics of your private CA. This certificate serves the purpose of authenticating cloud certificates, establishing a secure connection between the device and the cloud.
+When creating a Data Hub, adding a Trust Anchor certificate allows the device to recognize and authenticate your private CA. This certificate is crucial as it authenticates cloud certificates, establishing a secure communication between your device and the cloud environment.
 
-You want to switch your device between clouds? It is possible! Check how it works [here.](docs/reference/change-datahub.md)
+Switching your device across cloud platforms? This is fully supported! Follow our guidelines [here](docs/reference/change-datahub.md) to explore this process.
 
-To dive deeper into understanding the concepts of CA and Trust Anchor, please refer to [Certificate Authority] and [Trust Anchor] for detailed information.
+You can deepen your understanding of Trust Anchors [here](https://devity-iot.github.io/reference/data-hub).
 
-[Deep Dive MQTT](https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.pdf)
+If you want to deep dive into MQTT, we recommend to read through the [OASIS Standard](https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.pdf)

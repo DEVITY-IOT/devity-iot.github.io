@@ -4,49 +4,49 @@ sidebar_label: "KEYNOA Ecosystem"
 title: KEYNOA Ecosystem
 ---
 
-KEYNOA enables a device manufacturer, as well as the device owner to improve the functionality of the devices by centrally handling the configuration and using the latest industrial protocols securely. 
+KEYNOA enables the device manufacturer, as well as the device owner to improve the functionality and protection of the devices by centrally defining the configuration and using the latest industrial protocols with modern encryption. 
 
-KEYNOA implements a number of standard applications, proprietry applications (components), and interfaces as shown in the below diagram, to realize the zero-touch onboarding. 
+KEYNOA implements a number of standard technologies, proprietary applications (components), and interfaces as shown in the below diagram, to realize automatic zero-touch onboarding and identity management. 
 
-![KEYNOA](/img/KEYNOA/KEYNOA-Interfaces.png)
+![KEYNOA](/img/KEYNOA/KEYNOA_Ecosystem_new.png)
 
 # Components
 
 ### KEYNOA Engine
 
-KEYNOA.engine is integrated into the device software/firmware and can be obtained as a Linux package, binary, C-SDK or source code. It is responsible for issuing a unique identity to every device produced. It queries KEYNOA to initiate automatic provisioning.
+KEYNOA Engine is integrated into the device software/ firmware and can be obtained as a Linux package, binary, C-SDK or source code. It is responsible for issuing a unique identity to every device produced. It queries KEYNOA to initiate automatic provisioning.
 
 
 ### Producer Service
-The Producer Service creates the proof of ownership for the device and signs the device. It is responsible for the allocation to the respective customer using serial numbers and API to commissioning systems.
-It is preferably located at the device manufacturer's production facility, but can alternatively also operated by integrators or operators.
+The Producer Service creates the proof of ownership (Ownership Voucher) and signs the device. The Producer Service is also responsible for the allocation to the respective customer using serial numbers and API to commissioning systems.
+It is preferably located in the device manufacturer's production facility, but can also can be operated by integrators or operators.
 
 
 ### KEYNOA 
 
-KEYNOA is available as SaaS or on-premise and used by manufacturers, OEMs, integrators or operators. KEYNOA verifies the device identity and provides the device with information about which entities are trusted. After mutual authentication, a secure channel is established between the device and this server, through which the data required for onboarding automation is sent to the device.
+KEYNOA is available as SaaS or on-premise and used by manufacturers, OEMs, integrators or operators. It verifies the device identity and provides the device with information about which entities are trusted. After mutual authentication, a secure channel is established between the device and this trusted entities, through which the data required for onboarding automation is sent to the device. Afer first onboarding, KEYNOA serves as a tool for automatic identity and device management functionalities.
 
 KEYNOA offers a variety of features for efficient and secure processes. 
 - Zero-Touch Onboarding
-- Secure Cloud Connectivity
 - Configuration Management
 - Certificate Management
+- Ownership Management
+- Policy Management
 - User Identity and Access Management
-- Over-the-Air Updates
 
 ### KEYNOA UI (SPA)
 
-KEYNOA UI is the user interface hosted by DEVITY as web application to define the operation purpose of each device group. Once you have received the device identities such as Ownership Voucher, UID, etc. you can start configure the buyed devices. The configuration steps include creating a Template, a Data Hub, a Certificate Authority, or a Trust Anchor. 
+KEYNOA UI is the user interface hosted by DEVITY as a web application to define the operation purpose of each device (group). Once you have received the device identities such as Ownership Voucher, UID, etc. you can start configure the received devices. The configuration steps include creating a Template, a Data Hub, a Certificate Authority, and/ or a Trust Anchor. 
 
 # Applications
 
-Following are the list of applications, KEYNOA has been integrated as of now. The list is evolving to address the customer needs and to offer an even more sophisticated solution. Please reach out to us if you miss crucial functionalities.
+In the following, you can find a list of the applications KEYNOA has been integrated as of now. The list is evolving to address the customer needs and to offer an even more sophisticated solution. Please reach out to us if you miss crucial functionalities.
 
 ### OpenSSH
 
 A standard connectivity tool for remote login with the SSH protocol. 
 
-It allows to encrypts all traffic to eliminate eavesdropping, connection hijacking, and other attacks. In addition, OpenSSH provides a large suite of secure tunneling capabilities, several authentication methods, and sophisticated configuration options. 
+It allows to encrypting all traffic to eliminate eavesdropping, connection hijacking, and other attacks. In addition, OpenSSH provides a large suite of secure tunneling capabilities, several authentication methods, and sophisticated configuration options. 
 
 A most widely used tool is *Key management* with ssh-keysign, ssh-keygen.
 
@@ -93,19 +93,20 @@ In order to implement the required security mechanisms on the device, a secure e
 ### Configuration Management
 
 The configuration management service,
-- defines device specific configurations, e.g., to configure MQTT topics based on the devices’ serial number and usecase.
+- defines device specific configurations, e.g., to configure MQTT topics based on the devices’ serial number and use case.
 - modifies application configuration for many devices at once, e.g., to adapt to infrastructure changes.
 
 ### Certificate Management
 
 The certificate management system ensures, 
-- to automatically renew device certificates.
-- to automatically distribute CRLs.
-- to periodically check for certificate revocations.
-- to maintain and distribute devices’ trust.
-- to revoke certificates, individual or all, from one device.
-
-TLS also can be configured for secure authentication and authorization.
+- Creation of Certificate Authorities and Trust Anchors.
+- PKI hierarchy.
+- Automatic renewal of device certificates.
+- Automatic distribution of CRLs.
+- Periodic checks for certificate revocations.
+- Maintenance and distribution of devices’ trust.
+- Revocation of certificates, individual or all, from one device.
+- Configuration of TLS for secure authentication and authorization.
 
 ### FIDO Device Onboarding
 
@@ -117,13 +118,13 @@ KEYNOA supports the OPC UA protocol to initially authenticate devices.
 
 ### Zero Touch Provisioning Configuration
 
-Zero-touch provisioning must be defined in advance, utilizing KEYNOA's corresponding APIs. With intelligent rules as the foundation, easily determine the provisioning requirements for new devices. KEYNOA adheres to the API-first principle, seamlessly integrating as middleware alongside existing MES, SCADA, or cloud solutions
+With intelligent rules as the foundation, easily determine the provisioning requirements for new devices. KEYNOA adheres to the API-first principle, seamlessly integrating as middleware alongside existing MES, SCADA, or cloud solutions. Zero-touch provisioning must be defined in advance, utilizing KEYNOA's corresponding APIs.
 
 For all other use cases, DEVITY also offers a user interface (UI) in the form of a web-based single page application.
 
 ### External PKIs
 
-Although KEYNOA includes a full-fledged certificate management system, there is the possibility of integrating an external certificate management system.
+Although KEYNOA includes a full-fledged certificate management system, it offers also the option to integrate external certificate management systems.
 
 ### Secret Manager
 
@@ -131,7 +132,7 @@ Secrets, such as passwords or tokens for devices, can also be managed in an exte
 
 ### Device Configurator
 
-The device configurator interface makes it easier to set up devices in complex scenarios, e.g. in cases where the trust or network zones must be distinguished. The interface makes it possible to provide individual devices with additional (virtual) assigned characteristics.
+The device configurator interface makes it easier to set up devices in complex scenarios, e.g., in cases where the trust or network zones must be distinguished. The interface makes it possible to provide individual devices with additional (virtual) assigned characteristics.
 
 The "Attributor” is a mobile application that allows devices to be assigned to specific trust spaces.
 
@@ -141,7 +142,7 @@ The interface to asset management systems allows automatic inventory of devices 
 
 ### Existing User Management
 
-For use in your own company, especially in on-premises operations, the company-wide User Management can be connected to KEYNOA for access control.
+For use in your own company, especially in on-premises operations, the company-wide user management can be connected to KEYNOA for access control.
  
 ### Claiming via ERP systems
 

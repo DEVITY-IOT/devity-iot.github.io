@@ -4,13 +4,13 @@ sidebar_label: "Device Properties"
 title: Device Properties
 ---
 
-The device properties and their values usable while creating Data Hub and Template at KEYNOA:
+The device properties and their values are usable while creating a Data Hub and/ or a Template with KEYNOA:
 
 | Property Template  | Usage                                                 |
 |--------------------|-------------------------------------------------------|
 | $(serial)          | The device serial number                              |
 | $(guid)            | The device GUID                                       |
-| $(model)           | The device device model                               |
+| $(model)           | The device model                               |
 | $(guid_enc)        | The Base62 encoded device GUID                        |
 | $(urn)             | The uniform resource name                             |
 | $(osName)          | The device OS name                                    |
@@ -37,14 +37,14 @@ Multiple device properties can be used at once. Assume the device model is `MODE
 transformed into `I am MODEL_abc-SERIAL_123`.
 
 Please be aware that the length of the word(s) after the device properties are rendered should not be too long, 
-depending on where the word(s) is used. 
+depending on where the word(s) is (are) used. 
 For example, the common name (CN) is `a long $(serial) --- 0123456789 0123456789 0123456789 0123456789`.
 The length before the words expand into real value is 64 characters, which is still a valid CN length.
 But after expanding, it turns into `a long SERIAL_123 --- 0123456789 0123456789 0123456789 0123456789`, 
 which has a length of 65 characters and is no longer a valid CN.
 
 ### Where to use device properties?
-Users can match application templates with only devices satisfying certain device properties. 
+Users can match application templates only with devices satisfying certain device properties. 
 See more information in [To Select Device Properties](/reference/mqtt-template.md#to-select-device-properties).
 
 Device property templates, e.g. `$(serial)`,
@@ -64,8 +64,7 @@ Certificate Policy can be edited in
 - Edit OPC UA Template
   ![Edit Certficate Policy when editing OPC UA template](/img/KEYNOA/reference-doc/Device-Properties/cert-template-edit-OPCUA.png)
 
-Device property templates can also be used in ThingsBoard Data Hub and custom Data Hub, which will in turn
-be used to render MQTT application configuration.
+Device property templates can also be used in ThingsBoard Data Hub and custom Data Hub, which will in turn be used to render MQTT application configuration.
 
 
 ## How to access device properties?
@@ -74,12 +73,12 @@ Prior to creating a MQTT and/or an OPC UA Template on KEYNOA, it is essential to
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Device-Properties/device-properties.png)
 
-Most of the properties are determined while creating the device specific Ownership Voucher. It is done at the manufacturing site. As part of device onboarding procedure, you will upload the voucher to KEYNOA. KEYNOA will help you visualize all critical device properties, very well before the device is fully provisioned.
+Most of the properties are determined while creating the device specific Ownership Voucher. It is done at the manufacturing site. As part of device onboarding procedure, you will upload the voucher to KEYNOA. KEYNOA will help you visualize all critical device properties very well before the device is fully provisioned.
 
 
 ### KEYNOA Dashboard
 
-Access the device summary under `All Devices` on KEYNOA, as shown below. KEYNOA fetches device details from the Ownership Voucher and displays below details as part of device summary.
+Access the device summary under `All Devices` on KEYNOA, as shown below. KEYNOA fetches device details from the Ownership Voucher and displays below details as part of device summary, such as:
 
 - `Device Model`
 - `Serial No`
@@ -87,12 +86,12 @@ Access the device summary under `All Devices` on KEYNOA, as shown below. KEYNOA 
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Device-Properties/device-summary.png)
 
-Alternatively, when you click on the :gear: button of the device, a detailed device settings can be viewed as shown below. The same details as in summary, are displayed as highlighted below.
+Furthermore, you can access a more detailes about the device settings by clicking the ⚙️ button for the device in the last column of the table. This will display the same information as in the summary, with additional details highlighted below.
 
 ![KEYNOA](/img/KEYNOA/reference-doc/Device-Properties/device-detailed-settings-1.png)
 
 
-The device settings page also displays more details of the device, if they are configured while creating the voucher. The details, like
+The device settings page also displays more details of the device, if they are configured while creating the voucher or using the attributor, such as:
 
 - `Plant`
 - `Location`
@@ -100,7 +99,7 @@ The device settings page also displays more details of the device, if they are c
  
 ![KEYNOA](/img/KEYNOA/reference-doc/Device-Properties/device-detailed-settings-2.png)
 
-The device firmware however, can be accessed once the device is powered ON. Execute any one of the commands below on your RPi device to display its firmware version.
+The device firmware however, can be accessed once the device is powered onN. Execute any of the commands below on your device to display its firmware version.
 
 ```
 vcgencmd version

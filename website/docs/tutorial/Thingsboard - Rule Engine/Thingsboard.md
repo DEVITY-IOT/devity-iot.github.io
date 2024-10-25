@@ -18,7 +18,7 @@ The aim of this tutorial is to define a rule that immediately detects failures o
 1. In ThingsBoard Cloud go to Rule Chains section and open Root Rule Chain.
 ![Temperature Validation Node](/img/tb/rule-chain.png)
 
-2. Familiarise yourself with the rule chain. Focus only on the red area. Incoming messages are distributed via the switch. If a message contains telemetry data, it is stored. We now want to check the stored data.
+2. Familiarize yourself with the rule chain. Focus only on the red area. Incoming messages are distributed via the switch. If a message contains telemetry data, it is stored. We now want to check the stored data.
 ![Temperature Validation Node](/img/tb/rule-chain-default.png)
 
 3. Create a new script via drag and drop. Enter a name and adapt the function as shown. Click on "Add".
@@ -53,7 +53,7 @@ The aim of this tutorial is to define a rule that immediately detects failures o
 
 ## Build Dashboard
 
-1. After customising the rule chain, we build a dashboard to visualise the alarms. Navigate to the section "Dashboards". At the top right you will find the "+" to create a new dashboard. Enter Title and Description and hit "Add".
+1. After customizing the rule chain, we build a dashboard to visualise the alarms. Navigate to the section "Dashboards". At the top right you will find the "+" to create a new dashboard. Enter Title and Description and hit "Add".
 ![Temperature Validation Node](/img/tb/dashboard.png)
 
 2. Open the newly created dashboard.
@@ -67,7 +67,7 @@ The aim of this tutorial is to define a rule that immediately detects failures o
 
 
 ### Temperature Display
-1. First of all, we want to create a temperature display. To do this, select the "Cards" widget type.
+1. First, we want to create a temperature display. To do this, select the "Cards" widget type.
 ![Temperature Validation Node](/img/tb/dashboard-cards.png)
 
 2. Choose "Simple card".
@@ -76,7 +76,7 @@ The aim of this tutorial is to define a rule that immediately detects failures o
 3. ThingsBoard uses aliases as data source. Therefore, for the first widget we need to create an alias. To do this, select on "Create a new one!" from the drop-down menu.
 ![Temperature Validation Node](/img/tb/dashboard-create-data-source.png)
 
-4. Enter the alias information shown in the screenshot below. For the device select your device and click on "Add"
+4. Enter the alias information shown in the screenshot below. For the device select your device and click on "Add".
 ![Temperature Validation Node](/img/tb/dashboard-create-data-source-2.png)
 
 5. Now you can choose the newly created alias as data source. Choose "temperature" as attribute. Click "Add". 
@@ -124,7 +124,7 @@ Otherwise your Dashboard won't be saved.
 ![Temperature Validation Node](/img/tb/dashboard-rearrange.png)
 
 
-6. YYou can set the sending interval of the device by entering a new value in the field “value”. You confirm this value by clicking the checkmark. Soon you can recognice that the interval between messages has changed.
+6. You can set the sending interval of the device by entering a new value in the field “value”. You confirm this value by clicking the checkmark. Soon you can recognize that the interval between messages has changed.
 ![Apply Changes](/img/tb/dashboard-set-attribute.png)
 
 ## Check Incoming Alarms

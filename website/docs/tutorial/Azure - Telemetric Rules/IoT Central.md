@@ -31,7 +31,7 @@ During the onboarding process the device will be assigned to the device Group Ev
 5. Enable the schedule. Set the recurrence to "Daily". Enter 6 o'clock in the evening as the time. Click "Next".
 ![DevityHub](/img/az/jobs_schedule.png)
 
-6. After reviewing your job configuration you can click on "Schedule".
+6. After reviewing your job configuration, you can click on "Schedule".
 ![DevityHub](/img/az/jobs_review.png)
 
 ## Create a Dashboard to test the job

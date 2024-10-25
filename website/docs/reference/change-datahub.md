@@ -4,14 +4,14 @@ sidebar_label: "Change Data Hub"
 title: Change Data Hub
 ---
 
-It is possible to change the Data Hub on a fully provisioned device. This means, you can now send the device telemetry data to a new cloud, without resetting the device. 
+You can change the Data Hub of a fully provisioned device without needing to reset it. This allows the device to send its telemetry data to a new cloud platform seamlessly during operation.
 
-For example, the device is first configured to send telemetry data to ThingsBoard cloud. You want the device to switch to AWS cloud, while the device continues to be operational. Create a new Data Hub for AWS cloud, and change the device configurations to switch to AWS. 
+For example, if the device was initially configured to send telemetry data to the ThingsBoard cloud, but you now want to switch to AWS Cloud in operation, follow these steps:
 
 ## How to Change Data Hub?
 To change the Data Hub, follow the steps below. 
 
-1. Create a new Data Hub for the required cloud service.
+1.  Login to KEYNOA. Create a new Data Hub for the required cloud service.
 
     <!-- Create a [Thingsboard](docs/tutorial/Thingsboard%20-%20Rule%20Engine/KEYNOA.md) Data Hub by following these steps.
 
@@ -27,7 +27,7 @@ To change the Data Hub, follow the steps below.
 
 ![KEYNOA](/img/KEYNOA/AWS/Data-Hub-details-2.png) -->
 
-2. Login to KEYNOA. Choose the device for which the Data Hub needs to be changed. Click on the device settings.
+2. Choose the device for which the Data Hub needs to be changed. Click on the device settings.
 
 ![KEYNOA](/img/KEYNOA/change-datahub-device-settings.png)
 

@@ -20,7 +20,9 @@ Since these certificates are used by the application to authenticate, we call th
 
 A CA in KEYNOA is responsible to issue application certificates to all KEYNOA Engine applications on the device as shown in the figure below. 
 
-![KEYNOA](/img/KEYNOA/reference-doc/CA-1.png)
+![KEYNOA](/img/KEYNOA/Role_of_CA_in_KEYNOA.png)
+
+
 
 It is possible to create a new CA that is specific to your security requirements. You can create
 - A [KEYNOA CA](#keynoa-ca) local to KEYNOA.
@@ -43,14 +45,15 @@ Choose an appropriate (KEYNOA or Enterprise) CA while creating a Data Hub. When 
 
 This CA is local to KEYNOA. It verifies the identities of device applications and issues them valid certificates. You have complete control over the CA policies and certificates, when you create a new KEYNOA CA. Follow the steps to [Create a KEYNOA CA](#create-a-keynoa-ca). 
 
-![KEYNOA](/img/KEYNOA/reference-doc/KEYNOA-CA/Internal-CA.png)
+![KEYNOA](/img/KEYNOA\KEYNOA_CA_new.png)
+
 
 ## Enterprise CA
 
 An Enterprise CA operates independently from the KEYNOA environment. This could be a Private CA exclusive to a particular enterprise. To facilitate the issuance of application certificates by this Enterprise CA, it is required to create an Intermediate CA. The newly created Intermediate CA is signed by the Enterprise CA. Subsequently, the Intermediate CA is set up as a local CA within the KEYNOA. Follow the steps to create an [Enterprise CA](#create-an-enterprise-ca) signed Intermediate CA.
 
 <!-- To create an Intermediate CA, follow the steps below.  -->
-![KEYNOA](/img/KEYNOA/reference-doc/Enterprise-CA/External-CA-concept.png)
+![KEYNOA](/img/KEYNOA/Enterprise_CA_new.png)
 
 ## Create a KEYNOA CA
 

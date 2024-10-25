@@ -10,9 +10,9 @@ In your research as a marine biologist, you have the task to investigate the inf
 
 ## AWS SiteWise
 
-AWS IoT SiteWise is another service provided by AWS that enables you to visualuzie and analyse your data.
+AWS IoT SiteWise is another service provided by AWS that enables you to visualize and analyze your data.
 The following steps are for professional users.
-Alternitively DEVITY can provide you with a complete solution.
+Alternativley, DEVITY can provide you with a complete solution.
 With AWS IoT SiteWise you can visualize the data collected by AWS IoT Core.
 Follow these steps to create a SiteWise Portal Dashboard:
 
@@ -20,7 +20,7 @@ Follow these steps to create a SiteWise Portal Dashboard:
 1. On the landing page of the portal start by clicking on "Create Dashboard".
 ![SiteWise](/img/AWS/landing.png)
 
-2. Give the dashboard an appropiate name. Additionally, create two tiles for the given properties by dragging them from the right column to the dashboard.
+2. Give the dashboard an appropriate name. Additionally, create two tiles for the given properties by dragging them from the right column to the dashboard.
 ![SiteWise](/img/AWS/create-dashboard.png)
 
 3. Once you are done with the layout out the dashboard, click on "Save Dashboard".

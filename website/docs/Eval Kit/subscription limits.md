@@ -5,10 +5,10 @@ title: Cloud Subscription Limits
 ---
 
 ## Subscription Limits 
-Please note that there is a subscription limit for Azure IoT Central and AWS IoT Core. We provide you a 5 € limited subscrition for free, where access to the device will be cut if the limit is exceeded. Hence, do not let the device run unsupervised for an extendeed period of time. Please see below a sample calculation for the respective cloud.
+Please note that there is a subscription limit for Azure IoT Central and AWS IoT Core. We provide you a 5 € limited subscription for free, where access to the device will be cut if the limit is exceeded. Hence, do not let the device run unsupervised for an extendeed period of time. Please see below a sample calculation for the respective cloud.
 
-### Thingsboard
-For the Eval Kit you have unlimited data usage in Thingsboard. [Here](https://thingsboard.io/pricing/) you can learn more about the pricing models of Thingsboard.
+### ThingsBoard
+For the Eval Kit you have unlimited data usage in ThingsBoard. [Here](https://thingsboard.io/pricing/) you can learn more about the pricing models of ThingsBoard.
 
 ### Azure IoT Central
     You have 1 device that is free with the subscribtion sending one message every 10 seconds.
