@@ -22,7 +22,7 @@ In MQTT, devices (known as clients) can either publish data to or subscribe to s
 
 The chosen cloud platform subscribes to data from a specific topic. The MQTT broker then sends this data to all subscribed parties as soon as it becomes available from the device, as illustrated in the diagram below.
 
-![what-is-mqtt](/img/KEYNOA/What_is_MQTT_new)
+![what-is-mqtt](/img/KEYNOA/What_is_MQTT_new.png)
 
 
 ### MQTT Broker URL
