@@ -10,4 +10,4 @@ AWS IoT provides the cloud services that connect your IoT devices to other devic
 
 ## Subscription Limitations
 
-The AWS subscription used with the KEYNOA Eval Kit is limited in its usage to 5 €.To apply the fair usage, we encourage you to not let the device run unsupervised. Find the subscription limitations and a cost table in [Cloud Subscription Limits section.](/Eval%20Kit/subscription%20limits#aws)
+The AWS subscription used with the KEYNOA Eval Kit is limited in its usage to 5 €. To apply the fair usage, we encourage you to not let the device run unsupervised. Find the subscription limitations and a cost table in [Cloud Subscription Limits section.](/Eval%20Kit/subscription%20limits#aws)

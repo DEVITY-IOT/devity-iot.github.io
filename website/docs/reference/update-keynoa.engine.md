@@ -1,12 +1,12 @@
 ---
 sidebar_position: 10
-sidebar_label: "Update KEYNOA.engine"
-title: Update KEYNOA.engine
+sidebar_label: "Update KEYNOA Engine"
+title: Update KEYNOA Engine
 ---
 
-## Update KEYNOA.engine from 0.6.6 to 0.7.0
+## Update KEYNOA Engine from 0.6.6 to 0.7.0
 
-KEYNOA Release 0.7.0 requires an update of KEYNOA.engine to 0.7.0.
+KEYNOA Release 0.7.0 requires an update of KEYNOA Engine to 0.7.0.
 
 The update works for already provisioned devices as well as for unprovisioned devices.
 
@@ -15,21 +15,21 @@ The trust store under /etc/keynoa-engine/truststore gets deleted on migration.
 If you have added own files in there, they will be lost.
 :::
 
-### Update KEYNOA EvalKit Device from JanzTec
+### Update KEYNOA Eval Kit Device from Janz Tec
 
 ```sh
 sudo apt update
 sudo apt upgrade
 ```
 
-#### To update only keynoa engine
+#### To update only Keynoa Engine
 
 ```sh
 sudo apt update
 sudo apt install --only-upgrade keynoa-engine
 ```
 
-### Update KEYNOA EvalKit Container
+### Update KEYNOA Eval Kit Container
 
 
 :::caution

@@ -4,12 +4,12 @@ sidebar_label: "Device Status"
 title: Device Status
 ---
 
-This page explains the possible device status which is shown in device list.
+This page explains the possible device status which is shown in the device list.
 
 The status gives information about the life cycle of a device with respect to KEYNOA.
-First there is only a ("new") voucher known to KEYNOA. After uploading the voucher, KEYNOA needs some time to prepare for the device.
+First there is only a ("new") voucher known to KEYNOA. After uploading the voucher, KEYNOA needs some time to prepare the device.
 Then KEYNOA is ("waiting") for the device to connect.
-When the device onbording protocol was executed, the device is either ("provisioned") to KEYNOA successfully or it is in an ("error") state.
+When the device onboarding protocol was executed, the device is either ("provisioned") to KEYNOA successfully or it is in an ("error") state.
 
 | Status            | Explanation                                                       |
 | ----------------- | ----------------------------------------------------------------- |

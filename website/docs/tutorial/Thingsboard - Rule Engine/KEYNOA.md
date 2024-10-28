@@ -3,31 +3,31 @@ sidebar_position: 2
 ---
 
 # KEYNOA Setup
-In this step, you will configure KEYNOA to onboard your device and to connect to your ThingsBoard account.
+In this step, you will configure KEYNOA to onboard your device and connect it to your ThingsBoard account.
 
 ## Before you start
 
-Before you start, make sure that you fulfill all [prerequisites](/tutorial/Prerequsites).
+Before you beginn, ensure that you fulfill all [prerequisites](/tutorial/Prerequsites).
 
-If you already used the device before, make sure to 
-- [reset the device](/reference/reset-device).
-- [remove any MQTT templates](/reference/mqtt-template#2-remove-mqtt-template) from the list.
+If you have used the device previously, make sure to 
+- [Reset the device](/reference/reset-device).
+- [Remove any MQTT templates](/reference/mqtt-template#2-remove-mqtt-template) from the list.
 
-In the following steps the device configuration is applied to KEYNOA and not to the device.
-Hence, the **device is powered off** until KEYNOA is ready.
+In the following steps the device configuration is applied to KEYNOA and not directly to the device.
+Therefore, the **device is powered off** until KEYNOA is ready.
 The device will be turned on in the end of this guide.
 
 :::caution
-For a specific application like MQTT only a single template can be applied.
-If multiple MQTT Templates exist, the newer template will be ignored. Hence your new template referring to a new data hub will not be used because another template is already applied.
+For a specific application like MQTT, only a single template can be applied.
+If multiple MQTT Templates exist, the newer template will be ignored. Hence, your new template referring to a new data hub will not be used if another template is already applied.
 :::
 
 
 ## Create Data Hub
 
-Refer [Data Hub](/reference/data-hub) to know more about it and why it is required to be created. Follow the steps to create a new Data Hub on KEYNOA.
+Refer to the [Data Hub](/reference/data-hub) to understand why it is necassary to create one. Follow these steps to create a new Data Hub on KEYNOA.
 
-1. In KEYNOA, "Create" the Data Hub you want your device to connect to.
+1. In KEYNOA, "Create" the Data Hub to which you want your device to connect to.
 ![KEYNOA](/img/KEYNOA/Dashboard.png) 
 
 
@@ -185,4 +185,7 @@ The onboarding including the boot process should not take longer than two minute
 8. Your device is now provisioned to ThingsBoard. Continue with the setup of ThingsBoard.
 :::info
 Check the devices section of your ThingsBoard to see the new device.
+:::
+:::caution
+Incorrect configurations may result in device provisioning failure. Please verify the status of the device, including the "Failed Provisioning Reason" and the "Last Provisioning Time" to follow up on the process.
 :::

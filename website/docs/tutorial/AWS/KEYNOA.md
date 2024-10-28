@@ -10,8 +10,8 @@ In this step, you will configure KEYNOA to connect your device to your AWS accou
 Before you start, make sure that you fulfill all [prerequisites](/tutorial/Prerequsites).
 
 If you already used the device before, make sure to 
-- [reset the device](/reference/reset-device) and 
-- [remove any MQTT templates](/reference/mqtt-template#2-remove-mqtt-template) from the list.
+- [Reset the device](/reference/reset-device) and 
+- [Remove any MQTT templates](/reference/mqtt-template#2-remove-mqtt-template) from the list.
 
 In the following steps, the device configuration is applied to KEYNOA and not to the device.
 Hence, the **device is powered off** until KEYNOA is ready.
@@ -112,7 +112,7 @@ Follow [this link](/reference/mqtt-template#2-remove-mqtt-template) for instruct
 
 3. Fill in the 'Policy Configurations' necessary for generating the MQTT application certificate. These configurations\* are automatically populated based on the input values provided during the creation of the CA. You may also modify them. 
 
-\*Hover over the `i` circles for more information about each configuration. Alternatively, [Click here](/reference/certificate-properties) to know more about each configuration.
+\*Hover over the `i` circles for more information about each configuration. Alternatively, [click here](/reference/certificate-properties) to know more about each configuration.
 
 ![KEYNOA](/img/KEYNOA/MQTT2PolicyConfigurations.png)
 
@@ -149,4 +149,7 @@ The voucher enables KEYNOA to connect securely to the device and therefore to pr
 8. Your device is now provisioned to AWS IoT Core. Continue with the setup of AWS IoT Core.
 :::info
 Checkout the Things section of your AWS IoT Core to see the new device.
+:::
+:::caution
+Incorrect configurations may result in device provisioning failure. Please verify the status of the device, including the "Failed Provisioning Reason" and the "Last Provisioning Time" to follow up on the process.
 :::

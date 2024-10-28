@@ -4,22 +4,22 @@ sidebar_label: "Prerequisites"
 title: Prerequisites
 ---
 
-Please use the following check list to make sure to fullfill all prerequisites for starting the Eval Kit. 
+Please use the following check list to ensure to fullfill all prerequisites for starting the Eval Kit. 
 
 - You have the Eval Kit Device (Janz Tec emPC-A/RPI3+ with pre-installed KEYNOA Engine) ready for operation.
     - You have a 24V power supply compatible with the device ready. Do not attach the power yet.
     - You have prepared an ethernet cable to connect to the device for the internet connection. The network should provide DHCP and DNS service. Connect the cable to the device.
 - You have access to your KEYNOA tenant (see [Access to KEYNOA](#access-to-keynoa) section).
 - You have received a device ownership voucher via e-mail (see [Device Voucher](#device-voucher) section).
-- You have uploaded the device ownership voucher to KEYNOA (see [Upload Voucher](#upload-voucher) section)
+- You have uploaded the device ownership voucher to KEYNOA (see [Upload Voucher](#upload-voucher) section).
 - You have checked that in your KEYNOA tenant there are **no** MQTT templates defined. See [Remove MQTT Templates](/Reference/mqtt-template#remove-mqtt-template) on how to remove MQTT templates.
 - You have access to ThingsBoard, Azure, and AWS. See [Access to ThingsBoard, Azure, and AWS](#access-to-thingsboard-azure-and-aws) section to find out about how to access these clouds.
 
 ### Access to KEYNOA
-You will get the access to your own KEYNOA tenant via email from DEVITY. Please use the link from the e-mail to create a new password for your KEYNOA account.
+You will get access to your own KEYNOA tenant via e-mail from DEVITY. Please use the link from the e-mail to create a new password for your KEYNOA account.
 
 :::info
-Your e-mail address is your user name.
+Your e-mail address is your username.
 :::
 
 ### Device Voucher

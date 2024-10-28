@@ -11,4 +11,4 @@ Together with KEYNOA, AWS enables you to setup entire new facilities quickly.
 
 ## Explore portal
 Look further through the portal and explore dashboards, alarms and notifications.
-Set up alarms to get notifications when your machines diverge from normal opperation parameters.
+Set up alarms to get notifications when your machines diverge from normal operation parameters.

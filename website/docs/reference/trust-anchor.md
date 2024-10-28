@@ -14,7 +14,7 @@ The security aspect is ensured by exchanging valid certificates by both parties.
 
 The Data Hub ensures that the Trust Anchor certificate is shared with the device before it tries to establish a secure channel with its counterpart. 
 
-![KEYNOA](/img/KEYNOA/reference-doc/Trust-anchor/Trust-Anchor-concept.png)
+![KEYNOA](/img/KEYNOA/Role_of_Trust_anchor_new.png)
 
 1. KEYNOA CA issues a valid certificate to the device application running the messaging protocol.
 2. Thingsboard Trust Anchor issues a valid certificate to the application running in cloud, which receives data from device. 
