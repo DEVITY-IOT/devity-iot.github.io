@@ -6,25 +6,27 @@ title: Device Properties
 
 The device properties and their values are usable while creating a Data Hub and/ or a Template with KEYNOA:
 
-| Property Template  | Usage                                                 |
-|--------------------|-------------------------------------------------------|
-| $(serial)          | The device serial number                              |
-| $(guid)            | The device GUID                                       |
-| $(model)           | The device model                               |
-| $(guid_enc)        | The Base62 encoded device GUID                        |
-| $(urn)             | The uniform resource name                             |
-| $(osName)          | The device OS name                                    |
-| $(osArch)          | The device OS architecture                            |
-| $(deviceIp)        | The device IP address                                 |
-| $(opcUaServerPort) | The port exposed by the OPC UA server on the device   |
-| $(productUri)      | The globally unique identifier for the product        |
-| $(mac)             | The device MAC address                                |
-| $(vendor)          | The name of the vendor of the device                  |
-| $(hw_version)      | The hardware version (production data)                |
-| $(application)     | The application which was assigned by the Attributor  |
-| $(plant)           | The plant which was assigned by the Attributor        |
-| $(localization)    | The localization which was assigned by the Attributor |
-| $(building)        | The building which was assigned by the Attributor     |
+| Property Template      | Usage                                                 |
+|------------------------|-------------------------------------------------------|
+| $(serial)              | The device serial number                              |
+| $(guid)                | The device GUID                                       |
+| $(model)               | The device model                                      |
+| $(guid_enc)            | The Base62 encoded device GUID                        |
+| $(urn)                 | The uniform resource name                             |
+| $(osName)              | The device OS name                                    |
+| $(osArch)              | The device OS architecture                            |
+| $(osVersion)           | The device OS version                                 |
+| $(keynoaEngineVersion) | The Keynoa-Engine version on device                   |
+| $(deviceIp)            | The device IP address                                 |
+| $(opcUaServerPort)     | The port exposed by the OPC UA server on the device   |
+| $(productUri)          | The globally unique identifier for the product        |
+| $(mac)                 | The device MAC address                                |
+| $(vendor)              | The name of the vendor of the device                  |
+| $(hw_version)          | The hardware version (production data)                |
+| $(application)         | The application which was assigned by the Attributor  |
+| $(plant)               | The plant which was assigned by the Attributor        |
+| $(localization)        | The localization which was assigned by the Attributor |
+| $(building)            | The building which was assigned by the Attributor     |
 
 ### How to use device properties?
 Think of device properties as placeholders. 
